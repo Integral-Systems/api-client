@@ -1,0 +1,39 @@
+meta {
+  name: freshx_maintenance_mapping
+  type: http
+  seq: 1
+}
+
+put {
+  url: {{host}}/_index_template/freshx_maintenance
+  body: json
+  auth: basic
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}
+
+body:json {
+  {
+      "index_patterns": ["freshx_maintenance"],
+      "template": {
+          "settings": {
+          },
+          "mappings": {
+              "properties": {}
+          }
+      },
+      "priority": 10,
+      "version": 3,
+      "composed_of": ["freshx_maintenance_mapping", "default_index_allocation"], 
+      "_meta": {
+          "description": "FreshX maintenance template"
+      }
+  }
+}

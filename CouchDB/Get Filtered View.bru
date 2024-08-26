@@ -1,0 +1,25 @@
+meta {
+  name: Get Filtered View
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{host}}/vapiha-results/_design/results/_view/currentTest?&startkey=["gradlon",false,{}]&endkey=["gradlon",false]&descending=true&limit=1&include_docs=true
+  body: none
+  auth: basic
+}
+
+params:query {
+  null: null
+  startkey: ["gradlon",false,{}]
+  endkey: ["gradlon",false]
+  descending: true
+  limit: 1
+  include_docs: true
+}
+
+auth:basic {
+  username: dev
+  password: dev
+}

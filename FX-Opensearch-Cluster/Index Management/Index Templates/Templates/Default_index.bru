@@ -1,0 +1,41 @@
+meta {
+  name: Default_index
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{host}}/_index_template/default
+  body: json
+  auth: basic
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}
+
+body:json {
+  {
+    "index_patterns": ["*"],
+    "template": {
+      "settings": {
+         "index.number_of_shards": 3,
+         "number_of_replicas" : "1",
+         "index.routing.allocation.require.temp" : "hot"
+      },
+      "mappings": {
+          "properties": {}
+      }
+    },
+    "priority": 1,
+    "version": 3,
+    "_meta": {
+      "description": "Default Template"
+    }
+  }
+}

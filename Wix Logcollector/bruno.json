@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Wix Logcollector",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

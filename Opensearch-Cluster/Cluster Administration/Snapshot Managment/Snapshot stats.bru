@@ -1,0 +1,20 @@
+meta {
+  name: Snapshot stats
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{host}}/_snapshot/
+  body: json
+  auth: basic
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}

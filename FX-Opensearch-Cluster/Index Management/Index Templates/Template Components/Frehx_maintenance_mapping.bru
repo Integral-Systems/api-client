@@ -1,0 +1,90 @@
+meta {
+  name: Frehx_maintenance_mapping
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{host}}/_component_template/freshx_maintenance_mapping
+  body: json
+  auth: basic
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}
+
+body:json {
+  {
+    "template": {
+      "mappings": {
+          "properties": {
+                  "STATE": {
+                      "type": "text"
+                  },
+                  "atempted_hosts": {
+                      "type": "object"
+                  },
+                  "connected_to_node": {
+                      "type": "text"
+                  },
+                  "curate_execution": {
+                      "type": "text"
+                  },
+                  "curate_log": {
+                      "type": "text"
+                  },
+                  "curator": {
+                      "properties": {
+                          "jobs": {
+                              "type": "nested"
+                          },
+                          "snapshot_state": {
+                              "type": "text"
+                          },
+                          "started": {
+                              "type": "date"
+                          },
+                          "state": {
+                              "type": "text"
+                          },
+                          "stoped": {
+                              "type": "date"
+                          }
+                      }
+                  },
+                  "date": {
+                      "type": "date"
+                  },
+                  "dsgvo": {
+                      "properties": {
+                          "completion": {
+                              "type": "text"
+                          },
+                          "executor_host": {
+                              "type": "text"
+                          },
+                          "peding": {
+                              "type": "text"
+                          },
+                          "start": {
+                              "type": "date"
+                          },
+                          "state": {
+                              "type": "text"
+                          },
+                          "stop": {
+                              "type": "date"
+                          }
+                      }
+                  }
+              }
+          }
+      }
+  }
+}

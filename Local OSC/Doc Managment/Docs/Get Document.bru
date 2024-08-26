@@ -1,0 +1,20 @@
+meta {
+  name: Get Document
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{host}}/foerster-indexer_production2_history_couchdb_foerster-calfhistory_9c1df24ed9/_doc/weight:9223642516816051695:1594116138028
+  body: json
+  auth: basic
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: health_user
+}

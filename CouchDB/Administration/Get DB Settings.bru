@@ -1,0 +1,20 @@
+meta {
+  name: Get DB Settings
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{host}}/foerster_messages
+  body: text
+  auth: basic
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}
+
+body:text {
+  "600"
+}

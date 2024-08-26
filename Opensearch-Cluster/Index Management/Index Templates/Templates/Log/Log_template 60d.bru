@@ -1,0 +1,36 @@
+meta {
+  name: Log_template 60d
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{Host}}/_index_template/og_60d
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "index_patterns": ["log_60d*"],
+      "template": {
+          "settings": {
+              "plugins": {
+                  "index_state_management": {
+                      "rollover_alias": "log_60d"
+                  }
+              }
+          }
+      },
+      "priority": 20,
+      "version": 3,
+      "composed_of": ["default_log_mapping", "default_index_allocation"], 
+      "_meta": {
+          "description": "Log template"
+      }
+  }
+}

@@ -1,0 +1,26 @@
+meta {
+  name: New Request Copy 2
+  type: http
+  seq: 3
+}
+
+put {
+  url: https://controller.integral-systems.ch/api/stacks/49/git/redeploy?endpointId=10
+  body: json
+  auth: none
+}
+
+params:query {
+  endpointId: 10
+}
+
+headers {
+  X-API-Key: {{key}}
+}
+
+body:json {
+  {
+    "prune": false,
+    "pullImage": true
+  }
+}

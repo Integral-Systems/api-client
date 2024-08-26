@@ -1,0 +1,26 @@
+meta {
+  name: Logs 360d
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{host}}/ich_log_30d-000001
+  body: json
+  auth: basic
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}
+
+body:json {
+  {
+    "aliases": {
+      "ich_log_30d": {
+        "is_write_index": true
+      }
+    }
+  }
+}

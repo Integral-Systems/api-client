@@ -1,0 +1,20 @@
+meta {
+  name: Flush
+  type: http
+  seq: 16
+}
+
+post {
+  url: {{host}}/_flush
+  body: none
+  auth: basic
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}

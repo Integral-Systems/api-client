@@ -1,0 +1,20 @@
+meta {
+  name: New Request
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://assistant-b18.int.integral-systems.ch:1880/endpoint/abfallplan?type=hauskericht
+  body: none
+  auth: basic
+}
+
+params:query {
+  type: hauskericht
+}
+
+auth:basic {
+  username: {{user}}
+  password: {{password}}
+}

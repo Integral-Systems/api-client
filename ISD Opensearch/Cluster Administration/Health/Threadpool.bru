@@ -1,0 +1,20 @@
+meta {
+  name: Threadpool
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{host}}/_cluster/health
+  body: none
+  auth: basic
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}

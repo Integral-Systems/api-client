@@ -1,0 +1,16 @@
+meta {
+  name: Permission Read Test
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://cdc-client01.int.freshx.de:5984/foerster_calves
+  body: none
+  auth: basic
+}
+
+auth:basic {
+  username: foerster_indexer
+  password: readonly
+}

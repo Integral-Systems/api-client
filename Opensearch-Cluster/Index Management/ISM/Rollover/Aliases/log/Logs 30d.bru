@@ -1,0 +1,21 @@
+meta {
+  name: Logs 30d
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{Host}}/log_30d-000001
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "aliases": {
+      "log_30d": {
+        "is_write_index": true
+      }
+    }
+  }
+}

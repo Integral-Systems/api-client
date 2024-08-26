@@ -1,0 +1,16 @@
+meta {
+  name: Get State Copy
+  type: http
+  seq: 6
+}
+
+get {
+  url: http://cdc-client01.int.freshx.de:5984/_node/couchdb@cdc-data01.int.freshx.de/_config
+  body: none
+  auth: basic
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}

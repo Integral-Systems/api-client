@@ -1,0 +1,28 @@
+meta {
+  name: set cluster settings - circuit breaker
+  type: http
+  seq: 13
+}
+
+put {
+  url: {{host}}/_cluster/settings
+  body: json
+  auth: basic
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}
+
+body:json {
+  {
+  "persistent" : {
+  "indices.breaker.total.limit" : "70%"
+  }
+  }
+}

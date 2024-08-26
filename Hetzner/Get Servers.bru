@@ -1,0 +1,19 @@
+meta {
+  name: Get Servers
+  type: http
+  seq: 5
+}
+
+get {
+  url: https://api.hetzner.cloud/v1/servers?name=API
+  body: none
+  auth: bearer
+}
+
+params:query {
+  name: API
+}
+
+auth:bearer {
+  token: {{token}}
+}

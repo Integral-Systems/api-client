@@ -1,0 +1,20 @@
+meta {
+  name: GET UUID
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{host}}/_uuids?count=2
+  body: none
+  auth: basic
+}
+
+params:query {
+  count: 2
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}

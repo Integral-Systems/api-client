@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Opensearch-Cluster-new",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

@@ -1,0 +1,15 @@
+meta {
+  name: Get Floating IP
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://api.hetzner.cloud/v1/floating_ips
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

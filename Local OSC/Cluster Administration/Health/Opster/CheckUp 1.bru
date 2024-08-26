@@ -1,0 +1,25 @@
+meta {
+  name: CheckUp 1
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{host}}/_cluster/settings?pretty&include_defaults
+  body: none
+  auth: basic
+}
+
+params:query {
+  pretty: 
+  include_defaults: 
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}

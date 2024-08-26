@@ -1,0 +1,36 @@
+meta {
+  name: Log_template 7d
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{Host}}/_index_template/og_7d
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "index_patterns": ["log_7d*"],
+      "template": {
+          "settings": {
+              "plugins": {
+                  "index_state_management": {
+                      "rollover_alias": "log_7d"
+                  }
+              }
+          }
+      },
+      "priority": 20,
+      "version": 3,
+      "composed_of": ["default_log_mapping", "default_index_allocation"], 
+      "_meta": {
+          "description": "Log template"
+      }
+  }
+}

@@ -1,0 +1,42 @@
+meta {
+  name: Benchmark-metrics
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{host}}/_index_template/benchmark-metrics
+  body: json
+  auth: basic
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}
+
+body:json {
+  {
+    "index_patterns": ["benchmark-metrics-*"],
+    "template": {
+      "settings": {
+         "index.number_of_shards": 3,
+         "number_of_replicas" : "1",
+         "index.routing.allocation.require.temp" : "hot"
+      },
+      "mappings": {
+          "properties": {}
+      }
+    },
+    "priority": 0,
+    "version": 3,
+    "composed_of": ["benchmark-metrics_mapping"], 
+    "_meta": {
+      "description": "Benchmark-Metrics template"
+    }
+  }
+}

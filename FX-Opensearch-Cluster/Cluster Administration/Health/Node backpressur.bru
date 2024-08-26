@@ -1,0 +1,20 @@
+meta {
+  name: Node backpressur
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{host}}/_nodes/stats/
+  body: none
+  auth: basic
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}

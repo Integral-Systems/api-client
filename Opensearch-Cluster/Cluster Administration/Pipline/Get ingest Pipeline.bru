@@ -1,0 +1,16 @@
+meta {
+  name: Get ingest Pipeline
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{host}}/_ingest/pipeline/
+  body: none
+  auth: basic
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}

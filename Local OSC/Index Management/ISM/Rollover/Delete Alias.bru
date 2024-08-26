@@ -1,0 +1,27 @@
+meta {
+  name: Delete Alias
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{host}}/_index_template/ism_rollover
+  body: json
+  auth: basic
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: health_user
+}
+
+body:json {
+  {
+    "index_patterns": ["freshx_log_*"],
+    "template": {
+     "settings": {
+      "plugins.index_state_management.rollover_alias": "freshx_log_14d"
+     }
+   }
+  }
+}

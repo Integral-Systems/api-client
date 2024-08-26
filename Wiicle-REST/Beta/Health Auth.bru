@@ -1,0 +1,18 @@
+meta {
+  name: Health Auth
+  type: http
+  seq: 2
+}
+
+get {
+  url: https://app.beta.wiicle.co/health/auth
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "username": "admin",
+      "password": "admin"
+  }
+}

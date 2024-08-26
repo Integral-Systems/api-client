@@ -1,0 +1,21 @@
+meta {
+  name: Logs 720d
+  type: http
+  seq: 7
+}
+
+put {
+  url: {{Host}}/log_720d-000001
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "aliases": {
+      "log_720d": {
+        "is_write_index": true
+      }
+    }
+  }
+}

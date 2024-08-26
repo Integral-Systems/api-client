@@ -1,0 +1,20 @@
+meta {
+  name: status snaphsots
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{host}}/_snapshot/backup/_status
+  body: json
+  auth: basic
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: health_user
+}

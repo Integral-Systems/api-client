@@ -1,0 +1,20 @@
+meta {
+  name: Config Copy
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{host}}/_node/_local/_config/couch_httpd_auth/
+  body: text
+  auth: basic
+}
+
+auth:basic {
+  username: dev
+  password: dev
+}
+
+body:text {
+  "600"
+}

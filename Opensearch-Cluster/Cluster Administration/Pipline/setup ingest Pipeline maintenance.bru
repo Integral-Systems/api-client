@@ -1,0 +1,25 @@
+meta {
+  name: setup ingest Pipeline maintenance
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{Host}}/_ingest/pipeline/logs
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "description" : "Log Pipeline",
+    "processors" : [
+      {
+        "set" : {
+              "field": "_source.ingest_timestamp",
+              "value": "{{{_ingest.timestamp}}}"
+        }
+      }
+    ]
+  }
+}

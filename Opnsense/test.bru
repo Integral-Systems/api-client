@@ -1,0 +1,16 @@
+meta {
+  name: test
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{host}}/api/core/service/search
+  body: none
+  auth: basic
+}
+
+auth:basic {
+  username: {{User}}
+  password: {{Password}}
+}

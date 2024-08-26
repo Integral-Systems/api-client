@@ -1,0 +1,20 @@
+meta {
+  name: Start Sharding
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://cdc-client01.int.freshx.de:5984/_reshard/state
+  body: json
+  auth: basic
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}
+
+body:json {
+  {"state": "running"}
+}

@@ -1,0 +1,20 @@
+meta {
+  name: NodeExporter Test
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{host}}/_prometheus/metrics
+  body: none
+  auth: basic
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:basic {
+  username: prometheus
+  password: VkNYC6PlG5xF
+}

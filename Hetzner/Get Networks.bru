@@ -1,0 +1,15 @@
+meta {
+  name: Get Networks
+  type: http
+  seq: 2
+}
+
+get {
+  url: https://api.hetzner.cloud/v1/networks
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

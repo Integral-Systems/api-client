@@ -1,0 +1,20 @@
+meta {
+  name: Get logs
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{host}}/_plugins/_ism/explain/freshx_log_14d_1?pretty
+  body: json
+  auth: basic
+}
+
+params:query {
+  pretty: 
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: health_user
+}

@@ -1,0 +1,39 @@
+meta {
+  name: Remote
+  type: http
+  seq: 2
+}
+
+post {
+  url: https://logger.integral-systems.ch/wix
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "insertId":"6axgiF6X45ftx7A1bjJBCh",
+      "timestamp":"2023-07-15T10:42:04.606Z",
+      "labels":{
+          "siteUrl":"https://www.integral-systems.ch/",
+          "revision":"n/a",
+          "namespace":"Velo",
+          "tenantId":"196cf540-e817-4476-ad7b-2a8f14c2e03c",
+          "viewMode":"Preview"
+      },
+      "sourceLocation":{
+          "file":"backend/testfile2.js",
+          "line":8,
+          "column":10
+      },
+      "operation":{
+          "id":"1689349322.86112744949283419841",
+          "producer":"backend"
+      },
+      "jsonPayload":{
+          "message": "Redis2"
+      },
+      "severity":"WARNING",
+      "receiveTimestamp":"2023-07-15T10:42:04.782Z"
+  }
+}

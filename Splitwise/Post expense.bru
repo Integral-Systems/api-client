@@ -1,0 +1,40 @@
+meta {
+  name: Post expense
+  type: http
+  seq: 3
+}
+
+post {
+  url: https://secure.splitwise.com/api/v3.0/create_expense
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{splitwise_token}}
+}
+
+body:json {
+  {
+  "cost": "5.95",
+  "description": "Gefahren 4436224",
+  "details": "Gefahren Kilometer von 4436224",
+  "currency_code": "CHF",
+  "group_id": 45576248,
+  "users__0__user_id": "3943138",
+  "users__0__paid_share": "0.85",
+  "users__1__user_id": "4436224",
+  "users__1__paid_share": "0.85",
+  "users__2__user_id": "46519261",
+  "users__2__paid_share": "0.85",
+  "users__3__user_id": "52790808",
+  "users__3__paid_share": "0.85",
+  "users__4__user_id": "18442373",
+  "users__4__paid_share": "0.85",
+  "users__5__user_id": "45858018",
+  "users__5__paid_share": "0.85",
+  "users__6__user_id": "25793557",
+  "users__6__paid_share": "0.85"
+  }
+  
+}

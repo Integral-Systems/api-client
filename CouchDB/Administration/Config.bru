@@ -1,0 +1,20 @@
+meta {
+  name: Config
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{host}}/_node/_local/_config/couch_httpd_auth/timout
+  body: text
+  auth: basic
+}
+
+auth:basic {
+  username: dev
+  password: dev
+}
+
+body:text {
+  "600"
+}

@@ -1,0 +1,41 @@
+meta {
+  name: Get Index Template
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{host}}/_index_template/
+  body: json
+  auth: basic
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}
+
+body:json {
+  {
+    "index_patterns": ["foerster_indexer_*"],
+    "template": {
+      "settings": {
+         "index.number_of_shards": 3,
+         "number_of_replicas" : "1",
+         "index.routing.allocation.require.temp" : "hot"
+      },
+      "mappings": {
+          "properties": {}
+      }
+    },
+    "priority": 500,
+    "version": 3,
+    "_meta": {
+      "description": "Foerster Indexer template"
+    }
+  }
+}

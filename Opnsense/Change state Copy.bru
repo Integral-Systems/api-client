@@ -1,0 +1,27 @@
+meta {
+  name: Change state Copy
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{host}}/api/routes/routes/setroute/1d9788e6-73b3-4d72-889c-a1a60c8de16d
+  body: json
+  auth: basic
+}
+
+auth:basic {
+  username: {{User}}
+  password: {{Password}}
+}
+
+body:json {
+  {
+    "route": {
+      "disabled": "1",
+      "network": "10.100.0.0/16",
+      "gateway": "BACKPLANE_DHCP",
+      "descr": "WG_Server"
+    }
+  }
+}

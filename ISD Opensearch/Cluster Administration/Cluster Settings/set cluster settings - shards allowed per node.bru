@@ -1,0 +1,28 @@
+meta {
+  name: set cluster settings - shards allowed per node
+  type: http
+  seq: 14
+}
+
+put {
+  url: {{host}}/_cluster/settings
+  body: json
+  auth: basic
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}
+
+body:json {
+  {
+  "transient": {
+  "cluster.routing.allocation.total_shards_per_node":"1000"
+  }
+  }
+}

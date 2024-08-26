@@ -1,0 +1,19 @@
+meta {
+  name: ssh
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{host}}/_cluster/health?pretty
+  body: none
+  auth: none
+}
+
+params:query {
+  pretty: null
+}
+
+headers {
+  Content-Type: application/json
+}

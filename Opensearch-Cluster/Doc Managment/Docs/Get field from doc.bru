@@ -1,0 +1,33 @@
+meta {
+  name: Get field from doc
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{host}}/freshx_maintenance/_search?pretty
+  body: json
+  auth: basic
+}
+
+params:query {
+  pretty: null
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}
+
+body:json {
+  {
+      "_source": ["state", "dsgvo.state", "curator.state"],
+      "query" : {
+          "term" : { "_id" : "30-04-2022" }
+      }
+  }
+}

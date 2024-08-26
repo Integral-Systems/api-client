@@ -1,0 +1,24 @@
+meta {
+  name: Add Readonly Doc Copy
+  type: http
+  seq: 1
+}
+
+put {
+  url: http://cdc-client01.int.freshx.de:5984/foerster_permission-test/_design/auth
+  body: json
+  auth: basic
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}
+
+body:json {
+  {
+    "_id": "_design/auth",
+    "language": "javascript",
+    "validate_doc_update": "function(newDoc, oldDoc, userCtx) { if (/_readonly/.test(userCtx.roles.join())) {throw({forbidden : 'This is a readonly user!'});}}"
+  }
+}

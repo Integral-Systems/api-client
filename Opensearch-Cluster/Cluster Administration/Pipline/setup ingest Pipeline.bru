@@ -1,0 +1,35 @@
+meta {
+  name: setup ingest Pipeline
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{Host}}/_ingest/pipeline/logs
+  body: json
+  auth: basic
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}
+
+body:json {
+  {
+    "description" : "Logging Pipeline",
+    "processors" : [
+      {
+        "set" : {
+              "field": "ingest_timestamp",
+              "value": "{{{_ingest.timestamp}}}"
+        }
+      },
+      {
+        "script": {
+          "source": "if (ctx.com != null && ctx.com.docker != null && ctx.com.docker.swarm != null) { if (!(ctx.com.docker.swarm.task instanceof Map)) { ctx.com.docker.swarm.task = ctx.com.docker.swarm.task.toString(); } }"
+        }
+      }
+    ]
+  }
+}

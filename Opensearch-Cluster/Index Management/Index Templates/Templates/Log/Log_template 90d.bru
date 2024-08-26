@@ -1,0 +1,36 @@
+meta {
+  name: Log_template 90d
+  type: http
+  seq: 8
+}
+
+put {
+  url: {{Host}}/_index_template/log_90d
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "index_patterns": ["log_90d*"],
+      "template": {
+          "settings": {
+              "plugins": {
+                  "index_state_management": {
+                      "rollover_alias": "log_90d"
+                  }
+              }
+          }
+      },
+      "priority": 20,
+      "version": 3,
+      "composed_of": ["default_log_mapping", "default_index_allocation"], 
+      "_meta": {
+          "description": "Log template"
+      }
+  }
+}

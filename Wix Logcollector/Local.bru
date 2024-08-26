@@ -1,0 +1,39 @@
+meta {
+  name: Local
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/wix
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "insertId":"6axgiF6X45ftx7A1bjJBCh",
+      "timestamp":"2023-07-15T10:42:04.606Z",
+      "labels":{
+          "siteUrl":"https://www.integral-systems.ch/",
+          "revision":"n/a",
+          "namespace":"Velo",
+          "tenantId":"601ea6ec-7e6c-470c-bd59-5f86ac3252fa",
+          "viewMode":"Preview"
+      },
+      "sourceLocation":{
+          "file":"backend/testfile2.js",
+          "line":8,
+          "column":10
+      },
+      "operation":{
+          "id":"1689349322.86112744949283419841",
+          "producer":"backend"
+      },
+      "jsonPayload":{
+          "message": "Redis2"
+      },
+      "severity":"WARNING",
+      "receiveTimestamp":"2023-07-15T10:42:04.782Z"
+  }
+}

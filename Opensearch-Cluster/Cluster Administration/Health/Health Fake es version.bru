@@ -1,0 +1,20 @@
+meta {
+  name: Health Fake es version
+  type: http
+  seq: 13
+}
+
+get {
+  url: {{host}}/
+  body: none
+  auth: basic
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}

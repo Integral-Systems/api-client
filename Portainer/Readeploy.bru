@@ -1,0 +1,16 @@
+meta {
+  name: Readeploy
+  type: http
+  seq: 2
+}
+
+put {
+  url: https://controller.integral-systems.ch/api/stacks/49/git/redeploy
+  body: none
+  auth: none
+}
+
+headers {
+  X-API-Key: {{key}}
+  : 
+}

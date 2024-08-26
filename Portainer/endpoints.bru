@@ -1,0 +1,15 @@
+meta {
+  name: endpoints
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://controller.integral-systems.ch/api/endpoints
+  body: none
+  auth: none
+}
+
+headers {
+  X-API-Key: {{key}}
+}

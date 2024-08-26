@@ -1,0 +1,30 @@
+meta {
+  name: Delete Index
+  type: http
+  seq: 2
+}
+
+delete {
+  url: {{host}}/osmgeoshapes
+  body: json
+  auth: basic
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}
+
+body:json {
+  {
+      "type": "fs",
+      "settings": {
+          "location": "/data/elastic-backup",
+          "compress": true
+      }
+  }
+}

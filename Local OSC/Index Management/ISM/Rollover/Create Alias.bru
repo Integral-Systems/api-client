@@ -1,0 +1,27 @@
+meta {
+  name: Create Alias
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{host}}/_index_template/docker-logs
+  body: json
+  auth: basic
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: health_user
+}
+
+body:json {
+  {
+    "index_patterns": ["docker-logs-*"],
+    "template": {
+     "settings": {
+      "plugins.index_state_management.rollover_alias": "docker-logs"
+     }
+   }
+  }
+}

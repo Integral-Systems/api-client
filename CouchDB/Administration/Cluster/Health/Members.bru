@@ -1,0 +1,16 @@
+meta {
+  name: Members
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://cdc-client01.int.freshx.de:5984/_membership
+  body: none
+  auth: basic
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}

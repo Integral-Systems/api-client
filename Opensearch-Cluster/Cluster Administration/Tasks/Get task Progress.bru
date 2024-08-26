@@ -1,0 +1,33 @@
+meta {
+  name: Get task Progress
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{host}}/_tasks/LNMEft8oSymkAmBYXhbqmg:400137
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "script": {
+      "source": "ctx._source.remove(\"remote_host\")",
+      "lang": "painless"
+    },
+  "query":{
+    "range":{
+      "@timestamp":
+          { 
+              "lt" : "2022-04-26T16:23:00Z",
+              "gt" : "2022-03-29T17:56:00Z"
+          }
+      }
+    }
+  }
+}

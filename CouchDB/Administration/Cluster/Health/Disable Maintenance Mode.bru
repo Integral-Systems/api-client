@@ -1,0 +1,20 @@
+meta {
+  name: Disable Maintenance Mode
+  type: http
+  seq: 9
+}
+
+put {
+  url: http://cdc-client01.int.freshx.de:5984/_node/couchdb@cdc-data01.int.freshx.de/_config/couchdb/maintenance_mode
+  body: text
+  auth: basic
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}
+
+body:text {
+  "false"
+}

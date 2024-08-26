@@ -1,0 +1,32 @@
+meta {
+  name: Shrink Index
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{host}}/foerster-indexer_production_weight_couchdb_foerster-scale_4b2c6192f8/_shrink/shrunk_foerster-indexer_production_weight_couchdb_foerster-scale_4b2c6192f8
+  body: json
+  auth: basic
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}
+
+body:json {
+  {
+    "settings": {
+      "index.number_of_replicas": 1,
+      "index.number_of_shards": 3, 
+      "index.codec": "best_compression"
+    }
+  }
+  
+  
+}

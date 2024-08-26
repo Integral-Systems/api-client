@@ -1,0 +1,23 @@
+meta {
+  name: Set Index Setting
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{host}}/foerster_*/_settings
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "settings": {
+      "number_of_replicas": "1"
+    }
+  }
+}

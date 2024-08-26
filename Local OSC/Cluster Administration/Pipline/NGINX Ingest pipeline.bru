@@ -1,0 +1,36 @@
+meta {
+  name: NGINX Ingest pipeline
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{host}}/_ingest/pipeline/nginx-logs
+  body: json
+  auth: basic
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: health_user
+}
+
+body:json {
+  {
+    "description" : "Nginx Pileline",
+    "processors" : [
+      {
+        "set" : {
+              "field": "_source.ingest_timestamp",
+              "value": "{{{_ingest.timestamp}}}"
+        }
+      },
+      {
+        "script": {
+          "source": "if(ctx['longitude'] != null && ctx['latitude'] != null) {ctx['location'] = [ctx['longitude'], ctx['latitude']]}",
+          "lang": "painless"
+        }
+      }
+    ]
+  }
+}

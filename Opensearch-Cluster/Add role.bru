@@ -1,0 +1,19 @@
+meta {
+  name: Add role
+  type: http
+  seq: 3
+}
+
+post {
+  url: https://esc05.vpn.freshx.de/ _plugins/_security/api/rolesmapping/readall
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+   _plugins/_security/api/rolesmapping/readall
+}

@@ -1,0 +1,28 @@
+meta {
+  name: Add Document and Create Index
+  type: http
+  seq: 1
+}
+
+put {
+  url: {{host}}/freshx_maintenance/_doc/29-04-2022
+  body: json
+  auth: basic
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}
+
+body:json {
+  {
+    "curate_execution":"IN_PROGRESS",
+    "date":"26.4.2022",
+    "curator": {}
+  }
+}

@@ -1,0 +1,21 @@
+meta {
+  name: Logs 14d
+  type: http
+  seq: 1
+}
+
+put {
+  url: {{Host}}/log_14d-000001
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "aliases": {
+      "log_14d": {
+        "is_write_index": true
+      }
+    }
+  }
+}

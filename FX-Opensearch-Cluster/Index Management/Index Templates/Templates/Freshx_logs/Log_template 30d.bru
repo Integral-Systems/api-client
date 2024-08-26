@@ -1,0 +1,41 @@
+meta {
+  name: Log_template 30d
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{host}}/_index_template/freshx_log_30d
+  body: json
+  auth: basic
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}
+
+body:json {
+  {
+      "index_patterns": ["freshx_log_30d*"],
+      "template": {
+          "settings": {
+              "plugins": {
+                  "index_state_management": {
+                      "rollover_alias": "freshx_log_30d"
+                  }
+              }
+          }
+      },
+      "priority": 20,
+      "version": 3,
+      "composed_of": ["default_log_mapping", "default_index_allocation"], 
+      "_meta": {
+          "description": "FreshX Log template"
+      }
+  }
+}

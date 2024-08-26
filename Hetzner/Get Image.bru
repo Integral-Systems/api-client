@@ -1,0 +1,20 @@
+meta {
+  name: Get Image
+  type: http
+  seq: 6
+}
+
+get {
+  url: https://api.hetzner.cloud/v1/images?type=snapshot&label_selector=author=ansible
+  body: none
+  auth: bearer
+}
+
+params:query {
+  type: snapshot
+  label_selector: author=ansible
+}
+
+auth:bearer {
+  token: {{token}}
+}

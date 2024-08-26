@@ -1,0 +1,26 @@
+meta {
+  name: wix-logs
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{host}}/wix-logs-000001
+  body: json
+  auth: basic
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: health_user
+}
+
+body:json {
+  {
+    "aliases": {
+      "wix-logs": {
+        "is_write_index": true
+      }
+    }
+  }
+}

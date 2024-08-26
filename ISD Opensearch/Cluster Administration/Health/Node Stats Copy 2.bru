@@ -1,0 +1,20 @@
+meta {
+  name: Node Stats Copy 2
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{host}}/_template
+  body: none
+  auth: basic
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}

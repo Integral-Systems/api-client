@@ -1,0 +1,20 @@
+meta {
+  name: Snapshot-run
+  type: http
+  seq: 13
+}
+
+put {
+  url: {{host}}/_snapshot/backup/migrate
+  body: none
+  auth: basic
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: health_user
+}

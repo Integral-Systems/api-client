@@ -1,0 +1,15 @@
+meta {
+  name: Delete Image
+  type: http
+  seq: 7
+}
+
+delete {
+  url: https://api.hetzner.cloud/v1/images/90518855
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

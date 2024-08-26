@@ -1,0 +1,19 @@
+meta {
+  name: Get snapshot
+  type: http
+  seq: 4
+}
+
+get {
+  url: https://api.hetzner.cloud/v1/images
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {"description":"Ansible-Pre","labels":{"ansible":"ture"},"type":"snapshot"}
+}

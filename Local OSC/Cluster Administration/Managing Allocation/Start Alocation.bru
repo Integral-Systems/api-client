@@ -1,0 +1,28 @@
+meta {
+  name: Start Alocation
+  type: http
+  seq: 9
+}
+
+put {
+  url: {{host}}/_cluster/settings
+  body: json
+  auth: basic
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: health_user
+}
+
+body:json {
+  {
+    "persistent": {
+      "cluster.routing.allocation.enable": null
+    }
+  }
+}

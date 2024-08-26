@@ -1,0 +1,28 @@
+meta {
+  name: Permission Write Test
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://cdc-client01.int.freshx.de:5984/foerster_permission-test/TEST1
+  body: json
+  auth: basic
+}
+
+auth:basic {
+  username: foerster_indexer
+  password: readonly
+}
+
+body:json {
+  {
+      "description": "An Italian-American dish that usually consists of spaghetti, tomato sauce and meatballs.",
+      "ingredients": [
+          "spaghetti",
+          "tomato sauce",
+          "meatballs"
+      ],
+      "name": "Spaghetti with meatballs"
+  }
+}

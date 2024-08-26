@@ -1,0 +1,26 @@
+meta {
+  name: Get snapshot info
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{host}}/_snapshot/backup/migrate-new
+  body: json
+  auth: basic
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}
+
+body:json {
+  {
+    "indices": ".opendistro_security"
+  }
+}

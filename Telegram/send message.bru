@@ -1,0 +1,11 @@
+meta {
+  name: send message
+  type: http
+  seq: 2
+}
+
+get {
+  url: https://api.telegram.org/bot{{bot_token}}/sendMessage
+  body: none
+  auth: none
+}

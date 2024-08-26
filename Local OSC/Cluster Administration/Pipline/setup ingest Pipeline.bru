@@ -1,0 +1,30 @@
+meta {
+  name: setup ingest Pipeline
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{host}}/_ingest/pipeline/default
+  body: json
+  auth: basic
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: health_user
+}
+
+body:json {
+  {
+    "description" : "Logging Pipeline",
+    "processors" : [
+      {
+        "set" : {
+              "field": "ingest_timestamp",
+              "value": "{{{_ingest.timestamp}}}"
+        }
+      }
+    ]
+  }
+}

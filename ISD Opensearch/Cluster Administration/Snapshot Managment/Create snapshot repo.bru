@@ -1,0 +1,35 @@
+meta {
+  name: Create snapshot repo
+  type: http
+  seq: 13
+}
+
+put {
+  url: {{host}}/_snapshot/backup?verify=false
+  body: json
+  auth: basic
+}
+
+params:query {
+  verify: false
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}
+
+body:json {
+  {
+      "type": "fs",
+      "settings": {
+          "location": "/backup/backup",
+          "compress": true,
+          "readonly": false
+      }
+  }
+}

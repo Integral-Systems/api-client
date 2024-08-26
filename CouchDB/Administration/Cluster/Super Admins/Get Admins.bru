@@ -1,0 +1,16 @@
+meta {
+  name: Get Admins
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://cdc-data01.int.freshx.de:5984/_node/_local/_config/admins
+  body: json
+  auth: basic
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}

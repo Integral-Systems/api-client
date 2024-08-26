@@ -1,0 +1,15 @@
+meta {
+  name: User
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://secure.splitwise.com/api/v3.0/get_user
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{splitwise_token}}
+}

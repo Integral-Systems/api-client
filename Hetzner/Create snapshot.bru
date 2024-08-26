@@ -1,0 +1,19 @@
+meta {
+  name: Create snapshot
+  type: http
+  seq: 3
+}
+
+post {
+  url: https://api.hetzner.cloud/v1/servers/25934505/actions/create_image
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {"description":"Ansible-Pre","labels":{"ansible":"ture"},"type":"snapshot"}
+}

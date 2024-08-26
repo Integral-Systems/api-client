@@ -1,0 +1,27 @@
+meta {
+  name: Node Health
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{host}}/_plugins/_performanceanalyzer/batch?metrics=CPU_Utilization,IO_TotThroughput&starttime=1594412250000&endtime=1594412260000&samplingperiod=5
+  body: json
+  auth: basic
+}
+
+params:query {
+  metrics: CPU_Utilization,IO_TotThroughput
+  starttime: 1594412250000
+  endtime: 1594412260000
+  samplingperiod: 5
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}

@@ -1,0 +1,28 @@
+meta {
+  name: set cluster settings - cluster routing rebalance enable
+  type: http
+  seq: 15
+}
+
+put {
+  url: {{host}}/_cluster/settings
+  body: json
+  auth: basic
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}
+
+body:json {
+  {
+    "persistent" : {
+  	"cluster.routing.allocation.allow_rebalance" : true
+    }
+  }
+}

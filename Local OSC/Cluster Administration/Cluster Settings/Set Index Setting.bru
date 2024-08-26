@@ -1,0 +1,30 @@
+meta {
+  name: Set Index Setting
+  type: http
+  seq: 16
+}
+
+put {
+  url: {{host}}/_cluster/settings
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "persistent" : {
+      "opendistro" : {
+        "index_state_management" : {
+          "history" : {
+            "number_of_replicas" : "0"
+          }
+        }
+      }
+    }
+  }
+  
+}

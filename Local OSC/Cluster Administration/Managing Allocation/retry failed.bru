@@ -1,0 +1,24 @@
+meta {
+  name: retry failed
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{host}}/_cluster/reroute?retry_failed=true
+  body: none
+  auth: basic
+}
+
+params:query {
+  retry_failed: true
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: health_user
+}

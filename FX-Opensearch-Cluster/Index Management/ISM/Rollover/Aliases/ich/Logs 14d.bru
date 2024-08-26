@@ -1,0 +1,26 @@
+meta {
+  name: Logs 14d
+  type: http
+  seq: 1
+}
+
+put {
+  url: {{host}}/ich_log_14d-000001
+  body: json
+  auth: basic
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}
+
+body:json {
+  {
+    "aliases": {
+      "ich_log_14d": {
+        "is_write_index": true
+      }
+    }
+  }
+}

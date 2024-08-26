@@ -1,0 +1,20 @@
+meta {
+  name: Templates
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{host}}/_template
+  body: none
+  auth: basic
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}

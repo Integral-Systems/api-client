@@ -1,0 +1,41 @@
+meta {
+  name: WIX-Logs
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{host}}/_index_template/wix-logs
+  body: json
+  auth: basic
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}
+
+body:json {
+  {
+      "index_patterns": ["wix-logs-*"],
+      "template": {
+          "settings": {
+              "plugins": {
+                  "index_state_management": {
+                      "rollover_alias": "wix-logs"
+                  }
+              }
+          }
+      },
+      "priority": 20,
+      "version": 3,
+      "composed_of": ["default_wix_mapping", "default_index_allocation"], 
+      "_meta": {
+          "description": "WIX logs Template"
+      }
+  }
+}

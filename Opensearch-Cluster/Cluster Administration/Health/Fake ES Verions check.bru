@@ -1,0 +1,20 @@
+meta {
+  name: Fake ES Verions check
+  type: http
+  seq: 14
+}
+
+get {
+  url: {{host}}
+  body: none
+  auth: basic
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}

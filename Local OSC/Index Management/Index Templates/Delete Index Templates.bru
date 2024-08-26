@@ -1,0 +1,41 @@
+meta {
+  name: Delete Index Templates
+  type: http
+  seq: 1
+}
+
+delete {
+  url: {{host}}/_index_template/freshx_log_14d
+  body: json
+  auth: basic
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: health_user
+}
+
+body:json {
+  {
+    "index_patterns": ["foerster_indexer_*"],
+    "template": {
+      "settings": {
+         "index.number_of_shards": 3,
+         "number_of_replicas" : "1",
+         "index.routing.allocation.require.temp" : "hot"
+      },
+      "mappings": {
+          "properties": {}
+      }
+    },
+    "priority": 500,
+    "version": 3,
+    "_meta": {
+      "description": "Foerster Indexer template"
+    }
+  }
+}

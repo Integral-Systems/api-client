@@ -1,0 +1,20 @@
+meta {
+  name: Cluster State
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{host}}/_cluster/state
+  body: none
+  auth: basic
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}

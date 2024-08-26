@@ -1,0 +1,34 @@
+meta {
+  name: Default WIX Log Mapping
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{host}}/_component_template/default_wix_mapping
+  body: json
+  auth: basic
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: health_user
+}
+
+body:json {
+  {
+      "template": {
+          "mappings": {
+              "properties": {
+                  "message": {
+                      "type" : "nested"
+                  }
+              }
+          }
+    }
+  }
+}

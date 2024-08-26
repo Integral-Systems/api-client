@@ -1,0 +1,28 @@
+meta {
+  name: Add User
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://cdc.int.freshx.de:5984/_users
+  body: json
+  auth: basic
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}
+
+body:json {
+  {
+      "_id": "org.couchdb.user:dreihub_admin",
+      "name": "dreihub_admin",
+      "type": "user",
+      "roles": [
+          "dreihub_admin"
+      ],
+      "password": "xDVp1Nnn3YsjoogsTm5hKOHY"
+  }
+}

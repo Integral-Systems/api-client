@@ -1,0 +1,21 @@
+meta {
+  name: Logs 60d
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{Host}}/log_60d-000001
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "aliases": {
+      "log_60d": {
+        "is_write_index": true
+      }
+    }
+  }
+}

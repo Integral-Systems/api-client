@@ -1,0 +1,16 @@
+meta {
+  name: get wireguard
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{host}}/api/wireguard/server/get
+  body: none
+  auth: basic
+}
+
+auth:basic {
+  username: {{User}}
+  password: {{Password}}
+}

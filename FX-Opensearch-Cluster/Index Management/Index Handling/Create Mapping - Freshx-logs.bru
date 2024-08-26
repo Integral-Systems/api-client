@@ -1,0 +1,32 @@
+meta {
+  name: Create Mapping - Freshx-logs
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{host}}/freshx_log*/_mapping
+  body: json
+  auth: basic
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}
+
+body:json {
+  {
+      "properties": {
+          "remote_ip": { "type": "ip" },
+          "geoip.location" : { "type" : "geo_point" },
+          "geoip.latitude" : { "type" : "half_float" },
+          "geoip.longitude" : { "type" : "half_float" },
+          "pid": { "type": "integer" }      
+      }
+  }
+}
