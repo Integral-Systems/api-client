@@ -5,13 +5,14 @@ meta {
 }
 
 get {
-  url: {{host}}/_cluster/health?pretty
+  url: /_cat/indices?v&h=index,pri.store.size{{host}}/_cluster/health?pretty
   body: none
   auth: none
 }
 
 params:query {
-  pretty: null
+  v: 
+  h: index,pri.store.size{{host}}/_cluster/health?pretty
 }
 
 headers {

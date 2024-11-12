@@ -1,0 +1,17 @@
+meta {
+  name: get -api-get-user-payments
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{host}}/api/get-user-payments
+  body: none
+  auth: none
+}
+
+params:query {
+  owner: 
+  organization: 
+  user: 
+}

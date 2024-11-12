@@ -1,0 +1,15 @@
+meta {
+  name: get -api-get-providers
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{host}}/api/get-providers
+  body: none
+  auth: none
+}
+
+params:query {
+  owner: 
+}

@@ -1,0 +1,16 @@
+meta {
+  name: get -api-get-plan
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{host}}/api/get-plan
+  body: none
+  auth: none
+}
+
+params:query {
+  id: 
+  ~includeOption: 
+}

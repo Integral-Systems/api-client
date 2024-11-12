@@ -1,0 +1,15 @@
+meta {
+  name: get -api-get-sessions
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{host}}/api/get-sessions
+  body: none
+  auth: none
+}
+
+params:query {
+  owner: 
+}

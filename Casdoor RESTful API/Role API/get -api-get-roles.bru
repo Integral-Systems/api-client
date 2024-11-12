@@ -1,0 +1,15 @@
+meta {
+  name: get -api-get-roles
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{host}}/api/get-roles
+  body: none
+  auth: none
+}
+
+params:query {
+  owner: 
+}

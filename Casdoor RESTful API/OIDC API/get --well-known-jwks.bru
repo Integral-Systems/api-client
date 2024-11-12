@@ -1,0 +1,11 @@
+meta {
+  name: get --well-known-jwks
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{host}}/.well-known/jwks
+  body: none
+  auth: none
+}

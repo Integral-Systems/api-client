@@ -1,0 +1,17 @@
+meta {
+  name: post -api-batch-enforce
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{host}}/api/batch-enforce
+  body: none
+  auth: none
+}
+
+params:query {
+  ~permissionId: 
+  ~modelId: 
+  ~owner: 
+}

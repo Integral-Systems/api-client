@@ -1,0 +1,15 @@
+meta {
+  name: get -api-get-users
+  type: http
+  seq: 10
+}
+
+get {
+  url: {{host}}/api/get-users
+  body: none
+  auth: none
+}
+
+params:query {
+  owner: 
+}

@@ -1,0 +1,19 @@
+meta {
+  name: post -api-login-oauth-refresh_token
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{host}}/api/login/oauth/refresh_token
+  body: none
+  auth: none
+}
+
+params:query {
+  grant_type: 
+  refresh_token: 
+  scope: 
+  client_id: 
+  ~client_secret: 
+}

@@ -1,0 +1,16 @@
+meta {
+  name: get -api-is-session-duplicated
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{host}}/api/is-session-duplicated
+  body: none
+  auth: none
+}
+
+params:query {
+  id: 
+  sessionId: 
+}

@@ -1,0 +1,15 @@
+meta {
+  name: get -api-get-applications
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{host}}/api/get-applications
+  body: none
+  auth: none
+}
+
+params:query {
+  owner: 
+}

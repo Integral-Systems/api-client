@@ -1,0 +1,19 @@
+meta {
+  name: get -api-get-user
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{host}}/api/get-user
+  body: none
+  auth: none
+}
+
+params:query {
+  ~id: 
+  ~owner: 
+  ~email: 
+  ~phone: 
+  ~userId: 
+}

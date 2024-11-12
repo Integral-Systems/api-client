@@ -1,0 +1,15 @@
+meta {
+  name: get -api-get-organization-names
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{host}}/api/get-organization-names
+  body: none
+  auth: none
+}
+
+params:query {
+  owner: 
+}

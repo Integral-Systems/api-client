@@ -1,0 +1,18 @@
+meta {
+  name: post -api-enforce
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{host}}/api/enforce
+  body: none
+  auth: none
+}
+
+params:query {
+  ~permissionId: 
+  ~modelId: 
+  ~resourceId: 
+  ~owner: 
+}

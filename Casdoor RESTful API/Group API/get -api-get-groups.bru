@@ -1,0 +1,15 @@
+meta {
+  name: get -api-get-groups
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{host}}/api/get-groups
+  body: none
+  auth: none
+}
+
+params:query {
+  owner: 
+}

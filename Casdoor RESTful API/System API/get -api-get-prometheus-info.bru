@@ -1,0 +1,11 @@
+meta {
+  name: get -api-get-prometheus-info
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{host}}/api/get-prometheus-info
+  body: none
+  auth: none
+}

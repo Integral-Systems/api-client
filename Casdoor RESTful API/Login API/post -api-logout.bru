@@ -1,0 +1,17 @@
+meta {
+  name: post -api-logout
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{host}}/api/logout
+  body: none
+  auth: none
+}
+
+params:query {
+  ~id_token_hint: 
+  ~post_logout_redirect_uri: 
+  ~state: 
+}

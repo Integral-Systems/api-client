@@ -1,0 +1,15 @@
+meta {
+  name: get -api-get-organization-applications
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{host}}/api/get-organization-applications
+  body: none
+  auth: none
+}
+
+params:query {
+  organization: 
+}

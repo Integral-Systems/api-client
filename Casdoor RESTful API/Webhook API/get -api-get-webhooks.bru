@@ -1,0 +1,15 @@
+meta {
+  name: get -api-get-webhooks
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{host}}/api/get-webhooks
+  body: none
+  auth: none
+}
+
+params:query {
+  owner: 
+}
