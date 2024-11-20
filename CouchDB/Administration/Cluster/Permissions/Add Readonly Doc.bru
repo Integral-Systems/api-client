@@ -1,0 +1,24 @@
+meta {
+  name: Add Readonly Doc
+  type: http
+  seq: 1
+}
+
+put {
+  url: {{host}}/foerster_permission-test/_design/auth
+  body: json
+  auth: basic
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}
+
+body:json {
+  {
+    "_id": "_design/auth",
+    "language": "javascript",
+    "validate_doc_update": "function(newDoc, oldDoc, userCtx) { if (/_readonly/.test(userCtx.roles.join())) {throw({forbidden : 'This is a readonly user!'});}}"
+  }
+}

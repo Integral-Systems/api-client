@@ -7,11 +7,16 @@ meta {
 post {
   url: {{host}}/maintenance/_update/26-04-2022
   body: json
-  auth: none
+  auth: basic
 }
 
 headers {
   Content-Type: application/json
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
 }
 
 body:json {

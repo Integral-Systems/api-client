@@ -1,0 +1,26 @@
+meta {
+  name: Enable Perf Analyzer
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{host}}/_plugins/_performanceanalyzer/cluster/config
+  body: json
+  auth: basic
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_user}}
+}
+
+body:json {
+  {
+      "enabled": true
+  }
+}

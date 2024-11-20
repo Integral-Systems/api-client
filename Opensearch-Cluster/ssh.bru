@@ -5,9 +5,9 @@ meta {
 }
 
 get {
-  url: /_cat/indices?v&h=index,pri.store.size{{host}}/_cluster/health?pretty
+  url: {{host}}/_cat/indices?v&h=index,pri.store.size{{host}}/_cluster/health?pretty
   body: none
-  auth: none
+  auth: basic
 }
 
 params:query {
@@ -17,4 +17,9 @@ params:query {
 
 headers {
   Content-Type: application/json
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
 }

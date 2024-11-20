@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "name": "Opensearch-Cluster-new",
+  "name": "Opensearch-Cluster",
   "type": "collection",
   "ignore": [
     "node_modules",

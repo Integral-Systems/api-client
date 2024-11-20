@@ -1,0 +1,31 @@
+meta {
+  name: set cluster settings - flood marks
+  type: http
+  seq: 10
+}
+
+put {
+  url: {{host}}/_cluster/settings
+  body: json
+  auth: basic
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}
+
+body:json {
+  {
+    "transient": {
+      "cluster.routing.allocation.disk.watermark.low": "10gb",
+      "cluster.routing.allocation.disk.watermark.high": "5gb",
+      "cluster.routing.allocation.disk.watermark.flood_stage": "2gb",
+      "cluster.info.update.interval": "1m"
+    }
+  }
+}

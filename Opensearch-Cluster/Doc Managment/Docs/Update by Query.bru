@@ -7,7 +7,7 @@ meta {
 post {
   url: {{host}}/freshx_log_*/_update_by_query?wait_for_completion=false&conflicts=proceed&slices=auto
   body: json
-  auth: none
+  auth: basic
 }
 
 params:query {
@@ -18,6 +18,11 @@ params:query {
 
 headers {
   Content-Type: application/json
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
 }
 
 body:json {

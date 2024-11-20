@@ -5,7 +5,7 @@ meta {
 }
 
 put {
-  url: http://cdc-client01.int.freshx.de:5984/_node/couchdb@cdc-data01.int.freshx.de/_config/couchdb/maintenance_mode
+  url: {{host}}/_node/couchdb@cdc-data01.int.freshx.de/_config/couchdb/maintenance_mode
   body: text
   auth: basic
 }

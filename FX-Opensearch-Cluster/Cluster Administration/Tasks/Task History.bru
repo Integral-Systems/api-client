@@ -7,11 +7,16 @@ meta {
 post {
   url: {{host}}/.tasks/_search
   body: json
-  auth: none
+  auth: basic
 }
 
 headers {
   Content-Type: application/json
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
 }
 
 body:json {

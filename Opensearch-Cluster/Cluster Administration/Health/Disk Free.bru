@@ -1,17 +1,17 @@
 meta {
   name: Disk Free
   type: http
-  seq: 7
+  seq: 5
 }
 
 get {
-  url: {{host}}/_nodes/stats/fs?human
+  url: {{host}}/_nodes/stats/fs?human=true
   body: none
   auth: basic
 }
 
 params:query {
-  human: null
+  human: true
 }
 
 headers {

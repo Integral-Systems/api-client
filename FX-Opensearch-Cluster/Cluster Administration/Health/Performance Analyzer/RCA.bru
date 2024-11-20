@@ -1,0 +1,24 @@
+meta {
+  name: RCA
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{host}}/_plugins/_performanceanalyzer/rca?name=HighHeapUsageClusterRca
+  body: none
+  auth: basic
+}
+
+params:query {
+  name: HighHeapUsageClusterRca
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}

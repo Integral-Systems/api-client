@@ -5,12 +5,12 @@ meta {
 }
 
 get {
-  url: http://cdc-client01.int.freshx.de:5984/foerster_calves
+  url: {{host}}/foerster_calves
   body: none
   auth: basic
 }
 
 auth:basic {
-  username: foerster_indexer
+  username: indexer
   password: readonly
 }

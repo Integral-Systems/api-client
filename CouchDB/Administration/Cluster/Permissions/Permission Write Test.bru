@@ -5,13 +5,13 @@ meta {
 }
 
 put {
-  url: http://cdc-client01.int.freshx.de:5984/foerster_permission-test/TEST1
+  url: {{host}}/foerster_permission-test/TEST1
   body: json
   auth: basic
 }
 
 auth:basic {
-  username: foerster_indexer
+  username: indexer
   password: readonly
 }
 

@@ -5,14 +5,14 @@ meta {
 }
 
 get {
-  url: {{host}}/_cluster/settings?pretty&include_defaults
+  url: {{host}}/_cluster/settings?pretty=true&include_defaults=true
   body: none
   auth: basic
 }
 
 params:query {
-  pretty: null
-  include_defaults: null
+  pretty: true
+  include_defaults: true
 }
 
 headers {

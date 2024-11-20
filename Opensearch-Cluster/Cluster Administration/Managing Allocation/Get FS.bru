@@ -5,14 +5,14 @@ meta {
 }
 
 get {
-  url: {{host}}/_nodes/stats/fs?human&pretty
+  url: {{host}}/_nodes/stats/fs?human=true&pretty=true
   body: json
   auth: basic
 }
 
 params:query {
-  human: null
-  pretty: null
+  human: true
+  pretty: true
 }
 
 headers {

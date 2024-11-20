@@ -1,0 +1,26 @@
+meta {
+  name: Enable Perf Analyzer RCA
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{host}}/_plugins/_performanceanalyzer/rca/cluster/config
+  body: json
+  auth: basic
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:basic {
+  username: health
+  password: health
+}
+
+body:json {
+  {
+      "enabled": true
+  }
+}
