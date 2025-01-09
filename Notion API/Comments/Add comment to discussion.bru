@@ -1,0 +1,37 @@
+meta {
+  name: Add comment to discussion
+  type: http
+  seq: 3
+}
+
+post {
+  url: https://api.notion.com/v1/comments
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+  Notion-Version: {{NOTION_VERSION}}
+}
+
+auth:bearer {
+  token: {{BEARER_TOKEN}}
+}
+
+body:json {
+  {
+      "discussion_id": "{{DISCUSSION_ID}}",
+      "rich_text": [
+          {
+              "text": {
+                  "content": "https://www.healthline.com/nutrition/10-proven-benefits-of-kale",
+                  "link": {
+                      "type": "url",
+                      "url": "https://www.healthline.com/nutrition/10-proven-benefits-of-kale"
+                  }
+              }
+          }
+      ]
+  }
+}

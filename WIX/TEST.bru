@@ -1,0 +1,24 @@
+meta {
+  name: TEST
+  type: http
+  seq: 2
+}
+
+post {
+  url: https://www.integrale-akademie.ch/_functions/isAlive
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "data": {
+      "isAlive":"!"
+    },
+    "signature":"812412a724371885bd92452379966f90acfb274c44ed8083180b31f662838959"
+  }
+}
+
+body:text {
+  tea
+}

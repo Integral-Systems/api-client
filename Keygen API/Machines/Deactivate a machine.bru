@@ -1,0 +1,20 @@
+meta {
+  name: Deactivate a machine
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{baseUrl}}/accounts/:account/machines/:machine
+  body: none
+  auth: bearer
+}
+
+params:path {
+  account: 
+  machine: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

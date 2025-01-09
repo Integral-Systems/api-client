@@ -1,0 +1,20 @@
+meta {
+  name: Decrement license usage
+  type: http
+  seq: 15
+}
+
+post {
+  url: {{baseUrl}}/accounts/:account/licenses/:license/actions/decrement-usage
+  body: none
+  auth: bearer
+}
+
+params:path {
+  account: 
+  license: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

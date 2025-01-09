@@ -1,0 +1,20 @@
+meta {
+  name: Delete a product
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{baseUrl}}/accounts/:account/products/:product
+  body: none
+  auth: bearer
+}
+
+params:path {
+  account: 
+  product: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

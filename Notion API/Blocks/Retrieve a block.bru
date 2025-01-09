@@ -1,0 +1,23 @@
+meta {
+  name: Retrieve a block
+  type: http
+  seq: 4
+}
+
+get {
+  url: https://api.notion.com/v1/blocks/:id
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: {{BLOCK_ID}}
+}
+
+headers {
+  Notion-Version: {{NOTION_VERSION}}
+}
+
+auth:bearer {
+  token: {{BEARER_TOKEN}}
+}

@@ -1,0 +1,27 @@
+meta {
+  name: Retrieve a user
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://api.notion.com/v1/users/:id
+  body: formUrlEncoded
+  auth: bearer
+}
+
+params:path {
+  id: {{USER_ID}}
+}
+
+headers {
+  Notion-Version: {{NOTION_VERSION}}
+}
+
+auth:bearer {
+  token: {{BEARER_TOKEN}}
+}
+
+docs {
+  Retrieve a user object using the ID specified in the request path.
+}

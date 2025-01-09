@@ -1,0 +1,28 @@
+meta {
+  name: List all processes
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/accounts/:account/processes
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~page: 
+  ~limit: 
+  ~machine: 
+  ~license: 
+  ~user: 
+  ~product: 
+}
+
+params:path {
+  account: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

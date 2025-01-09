@@ -1,0 +1,25 @@
+meta {
+  name: List license entitlements
+  type: http
+  seq: 20
+}
+
+get {
+  url: {{baseUrl}}/accounts/:account/licenses/:license/entitlements
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~page: 
+  ~limit: 
+}
+
+params:path {
+  account: 
+  license: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

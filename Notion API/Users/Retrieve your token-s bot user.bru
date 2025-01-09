@@ -1,0 +1,19 @@
+meta {
+  name: Retrieve your token-s bot user
+  type: http
+  seq: 3
+}
+
+get {
+  url: https://api.notion.com/v1/users/me
+  body: none
+  auth: bearer
+}
+
+headers {
+  Notion-Version: {{NOTION_VERSION}}
+}
+
+auth:bearer {
+  token: {{BEARER_TOKEN}}
+}

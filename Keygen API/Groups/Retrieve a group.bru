@@ -1,0 +1,20 @@
+meta {
+  name: Retrieve a group
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/accounts/:account/groups/:group
+  body: none
+  auth: bearer
+}
+
+params:path {
+  account: 
+  group: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

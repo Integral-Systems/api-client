@@ -1,0 +1,20 @@
+meta {
+  name: Reinstate a license
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{baseUrl}}/accounts/:account/licenses/:license/actions/reinstate
+  body: none
+  auth: bearer
+}
+
+params:path {
+  account: 
+  license: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

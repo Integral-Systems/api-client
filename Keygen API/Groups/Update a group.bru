@@ -1,0 +1,20 @@
+meta {
+  name: Update a group
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{baseUrl}}/accounts/:account/groups/:group
+  body: none
+  auth: bearer
+}
+
+params:path {
+  account: 
+  group: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,20 @@
+meta {
+  name: Delete an entitlement
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{baseUrl}}/accounts/:account/entitlements/:entitlement
+  body: none
+  auth: bearer
+}
+
+params:path {
+  account: 
+  entitlement: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

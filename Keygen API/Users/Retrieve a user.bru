@@ -1,0 +1,20 @@
+meta {
+  name: Retrieve a user
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/accounts/:account/users/:user
+  body: none
+  auth: bearer
+}
+
+params:path {
+  account: 
+  user: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

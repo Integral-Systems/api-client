@@ -1,0 +1,20 @@
+meta {
+  name: Attach license entitlements
+  type: http
+  seq: 18
+}
+
+post {
+  url: {{baseUrl}}/accounts/:account/licenses/:license/entitlements
+  body: none
+  auth: bearer
+}
+
+params:path {
+  account: 
+  license: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

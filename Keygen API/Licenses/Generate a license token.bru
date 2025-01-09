@@ -1,0 +1,20 @@
+meta {
+  name: Generate a license token
+  type: http
+  seq: 17
+}
+
+post {
+  url: {{baseUrl}}/accounts/:account/licenses/:license/tokens
+  body: none
+  auth: bearer
+}
+
+params:path {
+  account: 
+  license: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

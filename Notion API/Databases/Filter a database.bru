@@ -1,0 +1,36 @@
+meta {
+  name: Filter a database
+  type: http
+  seq: 4
+}
+
+post {
+  url: https://api.notion.com/v1/databases/:id/query
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: {{DATABASE_ID}}
+}
+
+headers {
+  Authorization: Bearer secret_t1CdN9S8yicG5eWLUOfhcWaOscVnFXns
+  Content-Type: application/json
+  Notion-Version: {{NOTION_VERSION}}
+}
+
+auth:bearer {
+  token: {{BEARER_TOKEN}}
+}
+
+body:json {
+  {
+      "filter": {
+          "property": "Status",
+          "select": {
+              "equals": "Reading"
+          }
+      }
+  }
+}

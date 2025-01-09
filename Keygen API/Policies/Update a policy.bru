@@ -1,0 +1,20 @@
+meta {
+  name: Update a policy
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{baseUrl}}/accounts/:account/policies/:policy
+  body: none
+  auth: bearer
+}
+
+params:path {
+  account: 
+  policy: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

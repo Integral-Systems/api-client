@@ -1,0 +1,20 @@
+meta {
+  name: Ping
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/accounts/:account/processes/:process/actions/ping
+  body: none
+  auth: bearer
+}
+
+params:path {
+  account: 
+  process: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

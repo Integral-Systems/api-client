@@ -1,0 +1,20 @@
+meta {
+  name: Update an entitlement
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{baseUrl}}/accounts/:account/entitlements/:entitlement
+  body: none
+  auth: bearer
+}
+
+params:path {
+  account: 
+  entitlement: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

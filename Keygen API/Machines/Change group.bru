@@ -1,0 +1,20 @@
+meta {
+  name: Change group
+  type: http
+  seq: 9
+}
+
+put {
+  url: {{baseUrl}}/accounts/:account/machines/:machine/group
+  body: none
+  auth: bearer
+}
+
+params:path {
+  account: 
+  machine: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

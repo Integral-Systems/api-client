@@ -1,0 +1,19 @@
+meta {
+  name: Create a policy
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/accounts/:account/policies
+  body: none
+  auth: bearer
+}
+
+params:path {
+  account: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

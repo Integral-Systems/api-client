@@ -1,0 +1,20 @@
+meta {
+  name: Change policy
+  type: http
+  seq: 21
+}
+
+put {
+  url: {{baseUrl}}/accounts/:account/licenses/:license/policy
+  body: none
+  auth: bearer
+}
+
+params:path {
+  account: 
+  license: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

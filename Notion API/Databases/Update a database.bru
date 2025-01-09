@@ -1,0 +1,38 @@
+meta {
+  name: Update a database
+  type: http
+  seq: 6
+}
+
+patch {
+  url: https://api.notion.com/v1/databases/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: {{DATABASE_ID}}
+}
+
+headers {
+  Notion-Version: {{NOTION_VERSION}}
+}
+
+auth:bearer {
+  token: {{BEARER_TOKEN}}
+}
+
+body:json {
+  {
+      "title": [
+          {
+              "text": {
+                  "content": "Ever Better Reading List Title"
+              }
+          }
+      ],
+      "properties":{
+          "Wine Pairing": { "rich_text": {} } 
+      }
+  }
+}

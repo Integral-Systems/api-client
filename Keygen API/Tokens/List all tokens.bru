@@ -1,0 +1,25 @@
+meta {
+  name: List all tokens
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/accounts/:account/tokens
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~page: 
+  ~limit: 
+  ~bearer: 
+}
+
+params:path {
+  account: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

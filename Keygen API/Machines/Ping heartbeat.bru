@@ -1,0 +1,20 @@
+meta {
+  name: Ping heartbeat
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{baseUrl}}/accounts/:account/machines/:machine/actions/ping
+  body: none
+  auth: bearer
+}
+
+params:path {
+  account: 
+  machine: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

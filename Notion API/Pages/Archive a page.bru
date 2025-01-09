@@ -1,0 +1,29 @@
+meta {
+  name: Archive a page
+  type: http
+  seq: 5
+}
+
+patch {
+  url: https://api.notion.com/v1/pages/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: {{PAGE_ID}}
+}
+
+headers {
+  Notion-Version: {{NOTION_VERSION}}
+}
+
+auth:bearer {
+  token: {{BEARER_TOKEN}}
+}
+
+body:json {
+  {
+      "archived": true
+  }
+}

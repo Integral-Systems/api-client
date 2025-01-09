@@ -1,0 +1,20 @@
+meta {
+  name: Increment license usage
+  type: http
+  seq: 14
+}
+
+post {
+  url: {{baseUrl}}/accounts/:account/licenses/:license/actions/increment-usage
+  body: none
+  auth: bearer
+}
+
+params:path {
+  account: 
+  license: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

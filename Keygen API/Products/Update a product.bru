@@ -1,0 +1,20 @@
+meta {
+  name: Update a product
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{baseUrl}}/accounts/:account/products/:product
+  body: none
+  auth: bearer
+}
+
+params:path {
+  account: 
+  product: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

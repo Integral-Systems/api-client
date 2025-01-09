@@ -1,0 +1,28 @@
+meta {
+  name: Retrieve comments
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://api.notion.com/v1/comments?block_id={{BLOCK_ID}}&page_size=100
+  body: formUrlEncoded
+  auth: bearer
+}
+
+params:query {
+  block_id: {{BLOCK_ID}}
+  page_size: 100
+}
+
+headers {
+  Notion-Version: {{NOTION_VERSION}}
+}
+
+auth:bearer {
+  token: {{BEARER_TOKEN}}
+}
+
+docs {
+  Retrieve a user object using the ID specified in the request path.
+}

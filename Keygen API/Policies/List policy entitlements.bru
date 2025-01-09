@@ -1,0 +1,25 @@
+meta {
+  name: List policy entitlements
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{baseUrl}}/accounts/:account/policies/:policy/entitlements
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~page: 
+  ~limit: 
+}
+
+params:path {
+  account: 
+  policy: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

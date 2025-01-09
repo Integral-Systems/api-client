@@ -1,0 +1,20 @@
+meta {
+  name: Retrieve a process
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/accounts/:account/processes/:process
+  body: none
+  auth: bearer
+}
+
+params:path {
+  account: 
+  process: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

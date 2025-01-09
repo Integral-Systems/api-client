@@ -1,0 +1,20 @@
+meta {
+  name: Delete a license
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{baseUrl}}/accounts/:account/licenses/:license
+  body: none
+  auth: bearer
+}
+
+params:path {
+  account: 
+  license: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

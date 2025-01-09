@@ -1,0 +1,20 @@
+meta {
+  name: Update a machine
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{baseUrl}}/accounts/:account/machines/:machine
+  body: none
+  auth: bearer
+}
+
+params:path {
+  account: 
+  machine: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

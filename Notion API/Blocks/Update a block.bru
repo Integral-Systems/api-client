@@ -1,0 +1,38 @@
+meta {
+  name: Update a block
+  type: http
+  seq: 3
+}
+
+patch {
+  url: https://api.notion.com/v1/blocks/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: {{BLOCK_ID}}
+}
+
+headers {
+  Notion-Version: {{NOTION_VERSION}}
+}
+
+auth:bearer {
+  token: {{BEARER_TOKEN}}
+}
+
+body:json {
+  {
+      "paragraph": {
+          "rich_text": [{
+              "type": "text", 
+              "text": { "content": "hello to you"}
+          }]
+      }
+  }
+}
+
+docs {
+  This endpoint allows you to update block content. [See Full Documentation](https://developers.notion.com/reference/update-a-block)
+}

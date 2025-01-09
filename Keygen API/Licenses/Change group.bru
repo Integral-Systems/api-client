@@ -1,0 +1,20 @@
+meta {
+  name: Change group
+  type: http
+  seq: 23
+}
+
+put {
+  url: {{baseUrl}}/accounts/:account/licenses/:license/group
+  body: none
+  auth: bearer
+}
+
+params:path {
+  account: 
+  license: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

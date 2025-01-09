@@ -1,0 +1,19 @@
+meta {
+  name: Retrieve a page property item
+  type: http
+  seq: 6
+}
+
+get {
+  url: https://api.notion.com/v1/pages/176f7a6d-8ad6-80b3-94f7-fbace999dd0a/properties/m_Ml
+  body: none
+  auth: bearer
+}
+
+headers {
+  Notion-Version: {{NOTION_VERSION}}
+}
+
+auth:bearer {
+  token: {{BEARER_TOKEN}}
+}

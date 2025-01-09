@@ -1,0 +1,20 @@
+meta {
+  name: Delete a user
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{baseUrl}}/accounts/:account/users/:user
+  body: none
+  auth: bearer
+}
+
+params:path {
+  account: 
+  user: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

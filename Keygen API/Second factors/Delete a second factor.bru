@@ -1,0 +1,21 @@
+meta {
+  name: Delete a second factor
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{baseUrl}}/accounts/:account/users/:user/second-factors/:second-factor
+  body: none
+  auth: bearer
+}
+
+params:path {
+  account: 
+  user: 
+  second-factor: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

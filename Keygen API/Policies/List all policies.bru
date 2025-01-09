@@ -1,0 +1,25 @@
+meta {
+  name: List all policies
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/accounts/:account/policies
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~page: 
+  ~limit: 
+  ~product: 
+}
+
+params:path {
+  account: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

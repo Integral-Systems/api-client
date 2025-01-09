@@ -1,0 +1,33 @@
+meta {
+  name: List all licenses
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/accounts/:account/licenses
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~page: 
+  ~limit: 
+  ~expires: 
+  ~status: 
+  ~unassigned: 
+  ~product: 
+  ~policy: 
+  ~user: 
+  ~group: 
+  ~machine: 
+  ~metadata: 
+}
+
+params:path {
+  account: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

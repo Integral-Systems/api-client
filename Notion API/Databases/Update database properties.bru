@@ -1,0 +1,33 @@
+meta {
+  name: Update database properties
+  type: http
+  seq: 7
+}
+
+patch {
+  url: https://api.notion.com/v1/databases/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: {{DATABASE_ID}}
+}
+
+headers {
+  Notion-Version: {{NOTION_VERSION}}
+}
+
+auth:bearer {
+  token: {{BEARER_TOKEN}}
+}
+
+body:json {
+  {
+      "properties": {
+          "Wine Pairing": {
+              "name": "New Property Name"
+          }
+      }
+  }
+}

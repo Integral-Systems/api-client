@@ -1,0 +1,20 @@
+meta {
+  name: Retrieve a product
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/accounts/:account/products/:product
+  body: none
+  auth: bearer
+}
+
+params:path {
+  account: 
+  product: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

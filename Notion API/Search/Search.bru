@@ -1,0 +1,29 @@
+meta {
+  name: Search
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://api.notion.com/v1/search
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+  Notion-Version: {{NOTION_VERSION}}
+}
+
+auth:bearer {
+  token: {{BEARER_TOKEN}}
+}
+
+body:json {
+  {
+      "sort": {
+          "direction": "ascending",
+          "timestamp": "last_edited_time"
+      }
+  }
+}

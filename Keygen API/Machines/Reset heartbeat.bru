@@ -1,0 +1,20 @@
+meta {
+  name: Reset heartbeat
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{baseUrl}}/accounts/:account/machines/:machine/actions/reset
+  body: none
+  auth: bearer
+}
+
+params:path {
+  account: 
+  machine: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

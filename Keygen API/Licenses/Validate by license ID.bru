@@ -1,0 +1,20 @@
+meta {
+  name: Validate by license ID
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/accounts/:account/licenses/:license/actions/validate
+  body: none
+  auth: bearer
+}
+
+params:path {
+  account: 
+  license: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

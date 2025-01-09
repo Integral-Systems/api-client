@@ -1,0 +1,30 @@
+meta {
+  name: List all users
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/accounts/:account/users
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~page: 
+  ~limit: 
+  ~status: 
+  ~assigned: 
+  ~product: 
+  ~group: 
+  ~roles: 
+  ~metadata: 
+}
+
+params:path {
+  account: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

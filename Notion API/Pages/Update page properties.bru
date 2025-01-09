@@ -1,0 +1,40 @@
+meta {
+  name: Update page properties
+  type: http
+  seq: 4
+}
+
+patch {
+  url: https://api.notion.com/v1/pages/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: {{PAGE_ID}}
+}
+
+headers {
+  Content-Type: application/json
+  Notion-Version: {{NOTION_VERSION}}
+}
+
+auth:bearer {
+  token: {{BEARER_TOKEN}}
+}
+
+body:json {
+  {
+      "properties": {
+          "Status": {
+              "select": {
+                  "name": "Reading"
+              }
+          }
+      }
+  }
+}
+
+docs {
+  Updates a page by setting the values of any properties specified in the JSON body of the request. Properties not updated via parameters will remain unchanged. 
+}

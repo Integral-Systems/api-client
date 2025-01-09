@@ -1,0 +1,20 @@
+meta {
+  name: Unban user
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{baseUrl}}/accounts/:account/users/:user/actions/unban
+  body: none
+  auth: bearer
+}
+
+params:path {
+  account: 
+  user: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,20 @@
+meta {
+  name: Detach license entitlements
+  type: http
+  seq: 19
+}
+
+delete {
+  url: {{baseUrl}}/accounts/:account/licenses/:license/entitlements
+  body: none
+  auth: bearer
+}
+
+params:path {
+  account: 
+  license: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

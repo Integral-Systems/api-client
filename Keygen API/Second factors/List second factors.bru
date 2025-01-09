@@ -1,0 +1,20 @@
+meta {
+  name: List second factors
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/accounts/:account/users/:user/second-factors
+  body: none
+  auth: bearer
+}
+
+params:path {
+  account: 
+  user: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
