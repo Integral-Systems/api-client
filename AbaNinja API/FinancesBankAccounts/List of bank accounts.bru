@@ -1,0 +1,11 @@
+meta {
+  name: List of bank accounts
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/accounts/:accountUuid/finances/v2/bank-accounts
+  body: none
+  auth: none
+}

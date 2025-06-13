@@ -1,0 +1,25 @@
+meta {
+  name: Get one document
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{baseUrl}}/indexes/:indexUid/documents/:documentId
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields: 
+  ~retrieveVectors: 
+}
+
+params:path {
+  indexUid: 
+  documentId: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

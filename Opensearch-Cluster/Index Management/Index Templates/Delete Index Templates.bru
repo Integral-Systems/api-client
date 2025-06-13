@@ -5,7 +5,7 @@ meta {
 }
 
 delete {
-  url: {{host}}/_index_template/freshx_log_14d
+  url: {{host}}/_index_template/jaeger-span
   body: json
   auth: basic
 }
@@ -17,25 +17,4 @@ headers {
 auth:basic {
   username: {{admin_user}}
   password: {{admin_pass}}
-}
-
-body:json {
-  {
-    "index_patterns": ["foerster_indexer_*"],
-    "template": {
-      "settings": {
-         "index.number_of_shards": 3,
-         "number_of_replicas" : "1",
-         "index.routing.allocation.require.temp" : "hot"
-      },
-      "mappings": {
-          "properties": {}
-      }
-    },
-    "priority": 500,
-    "version": 3,
-    "_meta": {
-      "description": "Foerster Indexer template"
-    }
-  }
 }

@@ -1,0 +1,21 @@
+meta {
+  name: Update target of the console logs
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/logs/stderr
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "target": ""
+  }
+}

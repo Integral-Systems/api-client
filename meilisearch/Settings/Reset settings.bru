@@ -1,0 +1,19 @@
+meta {
+  name: Reset settings
+  type: http
+  seq: 2
+}
+
+delete {
+  url: {{baseUrl}}/indexes/:indexUid/settings
+  body: none
+  auth: bearer
+}
+
+params:path {
+  indexUid: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

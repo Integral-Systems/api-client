@@ -1,0 +1,11 @@
+meta {
+  name: Delete unit
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{baseUrl}}/accounts/:accountUuid/units/v2/units/:unitUuid
+  body: none
+  auth: none
+}

@@ -1,0 +1,21 @@
+meta {
+  name: Products List
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/accounts/:accountUuid/products/v2/products
+  body: none
+  auth: none
+}
+
+params:query {
+  ~limit: 
+  ~page: 
+  ~isArchived: 
+}
+
+params:path {
+  accountUuid: 
+}

@@ -1,0 +1,11 @@
+meta {
+  name: Single person access
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{baseUrl}}/accounts/:accountUuid/addresses/v2/persons/:personUuid
+  body: none
+  auth: none
+}

@@ -1,0 +1,23 @@
+meta {
+  name: Update synonyms
+  type: http
+  seq: 59
+}
+
+put {
+  url: {{baseUrl}}/indexes/:indexUid/settings/synonyms
+  body: json
+  auth: bearer
+}
+
+params:path {
+  indexUid: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {}
+}

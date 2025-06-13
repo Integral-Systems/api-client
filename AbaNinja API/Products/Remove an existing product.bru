@@ -1,0 +1,16 @@
+meta {
+  name: Remove an existing product
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{baseUrl}}/accounts/:accountUuid/products/v2/products/:productUuid
+  body: none
+  auth: none
+}
+
+params:path {
+  accountUuid: 
+  productUuid: 
+}

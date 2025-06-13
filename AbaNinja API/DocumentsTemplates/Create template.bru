@@ -1,0 +1,43 @@
+meta {
+  name: Create template
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/accounts/:accountUuid/documents/v2/templates
+  body: json
+  auth: none
+}
+
+params:path {
+  accountUuid: 
+}
+
+body:json {
+  {
+    "documents": [
+      {
+        "receiver": {},
+        "invoiceDate": "",
+        "dueDate": "",
+        "paymentInstructions": {},
+        "pricesIncludeVat": "",
+        "isVariantInvoice": "",
+        "documentTotal": "",
+        "positions": [
+          {
+            "positionNumber": ""
+          }
+        ],
+        "cashDiscounts": [
+          {
+            "days": "",
+            "percentage": ""
+          }
+        ],
+        "documentDiscount": {}
+      }
+    ]
+  }
+}

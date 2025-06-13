@@ -1,0 +1,38 @@
+meta {
+  name: Create holiday entry
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/accounts/:accountUuid/holidays/v2/holidays
+  body: json
+  auth: none
+}
+
+params:path {
+  accountUuid: 
+}
+
+body:json {
+  {
+    "date": "",
+    "countryCode": "",
+    "state": "",
+    "halfDay": "",
+    "translations": {
+      "de": {
+        "name": ""
+      },
+      "en": {
+        "name": ""
+      },
+      "fr": {
+        "name": ""
+      },
+      "it": {
+        "name": ""
+      }
+    }
+  }
+}

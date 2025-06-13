@@ -1,0 +1,17 @@
+meta {
+  name: Update holiday settings
+  type: http
+  seq: 19
+}
+
+patch {
+  url: {{baseUrl}}/accounts/:accountUuid/holidays/v2/settings
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "useSystemHolidays": ""
+  }
+}

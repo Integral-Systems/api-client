@@ -1,0 +1,19 @@
+meta {
+  name: Create new address for given account
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{baseUrl}}/accounts/:accountUuid/addresses/v2/addresses
+  body: json
+  auth: none
+}
+
+params:query {
+  ~force: 
+}
+
+params:path {
+  accountUuid: 
+}

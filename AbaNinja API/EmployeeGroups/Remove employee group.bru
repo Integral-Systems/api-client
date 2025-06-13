@@ -1,0 +1,11 @@
+meta {
+  name: Remove employee group
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{baseUrl}}/accounts/:accountUuid/time/v2/employee-groups/:employeeGroupUuid
+  body: none
+  auth: none
+}

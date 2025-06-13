@@ -1,0 +1,11 @@
+meta {
+  name: Remove bank account
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{baseUrl}}/accounts/:accountUuid/finances/v2/bank-accounts/:bankAccountUuid
+  body: none
+  auth: none
+}

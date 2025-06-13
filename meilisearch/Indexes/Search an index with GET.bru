@@ -1,0 +1,49 @@
+meta {
+  name: Search an index with GET
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/indexes/:indexUid/search
+  body: none
+  auth: bearer
+}
+
+params:query {
+  vector: 
+  offset: 
+  limit: 
+  attributesToRetrieve: 
+  retrieveVectors: 
+  attributesToCrop: 
+  cropLength: 
+  attributesToHighlight: 
+  showMatchesPosition: 
+  showRankingScore: 
+  showRankingScoreDetails: 
+  facets: 
+  highlightPreTag: 
+  highlightPostTag: 
+  cropMarker: 
+  matchingStrategy: 
+  attributesToSearchOn: 
+  hybridSemanticRatio: 
+  rankingScoreThreshold: 
+  locales: 
+  ~q: 
+  ~page: 
+  ~hitsPerPage: 
+  ~filter: 
+  ~sort: 
+  ~distinct: 
+  ~hybridEmbedder: 
+}
+
+params:path {
+  indexUid: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

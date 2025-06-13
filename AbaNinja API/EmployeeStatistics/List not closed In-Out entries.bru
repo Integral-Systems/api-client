@@ -1,0 +1,11 @@
+meta {
+  name: List not closed In-Out entries
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/accounts/:accountUuid/time/v2/employees/:employeeUuid/daily/:date/open-in-out
+  body: none
+  auth: none
+}

@@ -1,0 +1,11 @@
+meta {
+  name: Remove closure
+  type: http
+  seq: 16
+}
+
+delete {
+  url: {{baseUrl}}/accounts/:accountUuid/time/v2/employees/:employeeUuid/closures/:closureUuid
+  body: none
+  auth: none
+}

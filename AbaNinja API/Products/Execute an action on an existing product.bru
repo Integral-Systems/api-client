@@ -1,0 +1,17 @@
+meta {
+  name: Execute an action on an existing product
+  type: http
+  seq: 7
+}
+
+patch {
+  url: {{baseUrl}}/accounts/:accountUuid/products/v2/products/:productUuid/actions/:action
+  body: none
+  auth: none
+}
+
+params:path {
+  accountUuid: 
+  productUuid: 
+  action: 
+}

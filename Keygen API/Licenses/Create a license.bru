@@ -5,13 +5,9 @@ meta {
 }
 
 post {
-  url: {{baseUrl}}/accounts/:account/licenses
+  url: {{baseUrl}}/accounts/{{account}}/licenses
   body: none
   auth: bearer
-}
-
-params:path {
-  account: 
 }
 
 auth:bearer {

@@ -1,0 +1,11 @@
+meta {
+  name: Employee calendar
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/accounts/:accountUuid/time/v2/employees/:employeeUuid/calendar
+  body: none
+  auth: none
+}

@@ -1,0 +1,25 @@
+meta {
+  name: Reset filterableAttributes
+  type: http
+  seq: 24
+}
+
+delete {
+  url: {{baseUrl}}/indexes/:indexUid/settings/filterable-attributes
+  body: json
+  auth: bearer
+}
+
+params:path {
+  indexUid: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  [
+    {}
+  ]
+}

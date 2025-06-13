@@ -1,0 +1,23 @@
+meta {
+  name: Reset synonyms
+  type: http
+  seq: 60
+}
+
+delete {
+  url: {{baseUrl}}/indexes/:indexUid/settings/synonyms
+  body: json
+  auth: bearer
+}
+
+params:path {
+  indexUid: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {}
+}

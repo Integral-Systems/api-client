@@ -1,0 +1,11 @@
+meta {
+  name: Employee target time
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/accounts/:accountUuid/time/v2/employees/:employeeUuid/target-time
+  body: none
+  auth: none
+}

@@ -1,0 +1,16 @@
+meta {
+  name: Existing template
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/accounts/:accountUuid/documents/v2/templates/:documentUuid
+  body: none
+  auth: none
+}
+
+params:path {
+  accountUuid: 
+  documentUuid: 
+}

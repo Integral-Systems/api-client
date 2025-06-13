@@ -1,0 +1,25 @@
+meta {
+  name: Update stopWords
+  type: http
+  seq: 56
+}
+
+put {
+  url: {{baseUrl}}/indexes/:indexUid/settings/stop-words
+  body: json
+  auth: bearer
+}
+
+params:path {
+  indexUid: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  [
+    {}
+  ]
+}

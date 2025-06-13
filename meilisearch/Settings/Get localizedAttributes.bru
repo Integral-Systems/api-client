@@ -1,0 +1,19 @@
+meta {
+  name: Get localizedAttributes
+  type: http
+  seq: 25
+}
+
+get {
+  url: {{baseUrl}}/indexes/:indexUid/settings/localized-attributes
+  body: none
+  auth: bearer
+}
+
+params:path {
+  indexUid: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

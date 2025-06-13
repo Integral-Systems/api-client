@@ -1,0 +1,21 @@
+meta {
+  name: Quotes List
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/accounts/:accountUuid/documents/v2/quotes
+  body: none
+  auth: none
+}
+
+params:query {
+  ~updatedSince: 
+  ~limit: 
+  ~page: 
+}
+
+params:path {
+  accountUuid: 
+}

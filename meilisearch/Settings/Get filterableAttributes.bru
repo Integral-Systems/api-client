@@ -1,0 +1,19 @@
+meta {
+  name: Get filterableAttributes
+  type: http
+  seq: 22
+}
+
+get {
+  url: {{baseUrl}}/indexes/:indexUid/settings/filterable-attributes
+  body: none
+  auth: bearer
+}
+
+params:path {
+  indexUid: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

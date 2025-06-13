@@ -1,0 +1,43 @@
+meta {
+  name: Update work model
+  type: http
+  seq: 14
+}
+
+patch {
+  url: {{baseUrl}}/accounts/:accountUuid/time/v2/settings/work-models/:workModelUuid
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "hoursPerWeek": "",
+    "holidaysPerYear": "",
+    "monday": "",
+    "tuesday": "",
+    "wednesday": "",
+    "thursday": "",
+    "friday": "",
+    "saturday": "",
+    "sunday": "",
+    "translations": {
+      "de": {
+        "name": "",
+        "description": ""
+      },
+      "en": {
+        "name": "",
+        "description": ""
+      },
+      "fr": {
+        "name": "",
+        "description": ""
+      },
+      "it": {
+        "name": "",
+        "description": ""
+      }
+    }
+  }
+}

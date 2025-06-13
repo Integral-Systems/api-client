@@ -1,0 +1,19 @@
+meta {
+  name: Update prefixSearch
+  type: http
+  seq: 35
+}
+
+put {
+  url: {{baseUrl}}/indexes/:indexUid/settings/prefix-search
+  body: json
+  auth: bearer
+}
+
+params:path {
+  indexUid: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

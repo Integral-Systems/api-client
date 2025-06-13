@@ -1,0 +1,11 @@
+meta {
+  name: List employee groups
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/accounts/:accountUuid/time/v2/employee-groups
+  body: none
+  auth: none
+}

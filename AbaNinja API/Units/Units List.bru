@@ -1,0 +1,15 @@
+meta {
+  name: Units List
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/accounts/:accountUuid/units/v2/units
+  body: none
+  auth: none
+}
+
+params:path {
+  accountUuid: 
+}

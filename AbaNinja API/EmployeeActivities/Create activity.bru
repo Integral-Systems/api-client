@@ -1,0 +1,26 @@
+meta {
+  name: Create activity
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/accounts/:accountUuid/time/v2/employees/:employeeUuid/activities
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "activityTypeUuid": "",
+    "startDate": "",
+    "endDate": "",
+    "startTime": "",
+    "endTime": "",
+    "halfDay": "",
+    "addressUuid": "",
+    "contractNoteUuid": "",
+    "productUuid": "",
+    "description": ""
+  }
+}

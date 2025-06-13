@@ -7,15 +7,19 @@ meta {
 put {
   url: {{host}}/*/_settings
   body: json
-  auth: none
+  auth: basic
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
 }
 
 body:json {
   {
    "index" : {
-      "number_of_shards": 3,
-      "number_of_replicas" : "0",
-      "routing.allocation.require.tmp" : "hot"
+      "number_of_shards": 1,
+      "number_of_replicas" : "0"
    }
   }
 }

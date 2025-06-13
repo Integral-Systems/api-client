@@ -1,0 +1,16 @@
+meta {
+  name: Actions for an existing receipt
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/accounts/:accountUuid/documents/v2/receipts/:documentUuid/actions
+  body: none
+  auth: none
+}
+
+params:path {
+  accountUuid: 
+  documentUuid: 
+}

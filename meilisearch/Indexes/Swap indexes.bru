@@ -1,0 +1,23 @@
+meta {
+  name: Swap indexes
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{baseUrl}}/swap-indexes
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  [
+    {
+      "indexes": []
+    }
+  ]
+}

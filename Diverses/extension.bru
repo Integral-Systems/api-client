@@ -1,0 +1,22 @@
+meta {
+  name: extension
+  type: http
+  seq: 2
+}
+
+post {
+  url: https://shop.integralworks.ch/index.php?route=extension/payment/stripe/createPaymentIntent
+  body: json
+  auth: none
+}
+
+params:query {
+  route: extension/payment/stripe/createPaymentIntent
+}
+
+body:json {
+  {
+    "payment_method": "pm_1R3wDcE0NQjYQEubCWY7p9uJ",
+    "store_card": false
+  }
+}

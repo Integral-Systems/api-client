@@ -1,0 +1,17 @@
+meta {
+  name: Execute an action on an existing receipt
+  type: http
+  seq: 3
+}
+
+patch {
+  url: {{baseUrl}}/accounts/:accountUuid/documents/v2/receipts/:documentUuid/actions/:action
+  body: none
+  auth: none
+}
+
+params:path {
+  accountUuid: 
+  documentUuid: 
+  action: 
+}

@@ -1,0 +1,11 @@
+meta {
+  name: Employee daily
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/accounts/:accountUuid/time/v2/employees/:employeeUuid/daily/:date
+  body: none
+  auth: none
+}

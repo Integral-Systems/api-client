@@ -1,0 +1,50 @@
+meta {
+  name: Search with POST
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{baseUrl}}/indexes/:indexUid/search
+  body: json
+  auth: bearer
+}
+
+params:path {
+  indexUid: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "q": "",
+    "vector": "",
+    "hybrid": "",
+    "offset": "",
+    "limit": "",
+    "page": "",
+    "hits_per_page": "",
+    "attributes_to_retrieve": "",
+    "retrieve_vectors": "",
+    "attributes_to_crop": "",
+    "crop_length": "",
+    "attributes_to_highlight": "",
+    "show_matches_position": "",
+    "show_ranking_score": "",
+    "show_ranking_score_details": "",
+    "filter": "",
+    "sort": "",
+    "distinct": "",
+    "facets": "",
+    "highlight_pre_tag": "",
+    "highlight_post_tag": "",
+    "crop_marker": "",
+    "matching_strategy": "",
+    "attributes_to_search_on": "",
+    "ranking_score_threshold": "",
+    "locales": ""
+  }
+}

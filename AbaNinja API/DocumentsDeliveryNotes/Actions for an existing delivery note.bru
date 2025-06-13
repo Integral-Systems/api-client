@@ -1,0 +1,16 @@
+meta {
+  name: Actions for an existing delivery note
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/accounts/:accountUuid/documents/v2/delivery-notes/:documentUuid/actions
+  body: none
+  auth: none
+}
+
+params:path {
+  accountUuid: 
+  documentUuid: 
+}

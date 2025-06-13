@@ -5,11 +5,15 @@ meta {
 }
 
 post {
-  url: {{baseUrl}}/accounts/:account/licenses/actions/validate-key
-  body: none
+  url: {{baseUrl}}/accounts/{{account}}/licenses/actions/validate-key
+  body: json
   auth: none
 }
 
-params:path {
-  account: 
+body:json {
+  {
+    "meta": {
+      "key": "key/eyJhY2NvdW50Ijp7ImlkIjoiMjM0NzVmMzgtZDllZi00OGY3LWE1YzUtMTJhYjk4Nzc2MzkzIn0sInByb2R1Y3QiOnsiaWQiOiJiOWU5MDY0ZC03Zjk5LTQxYmQtYTNmMC01MGNmZTUwZTNhNTgifSwicG9saWN5Ijp7ImlkIjoiMjczYmVlOGQtNTQ3OS00ZGZlLThkN2QtYjRiMThmODA1MDM0IiwiZHVyYXRpb24iOm51bGx9LCJ1c2VyIjp7ImlkIjoiZTc0Y2Y2ZDktOTRjYS00OTAxLThhYjItMDkwZTRjMmVmZGU0IiwiZW1haWwiOiJncmFkbG9uQG1lLmNvbSJ9LCJsaWNlbnNlIjp7ImlkIjoiZGQ2MzRjYjctNWRkNi00MWQ2LWI0ZjUtZmRlZjQ1YWEyNDE0IiwiY3JlYXRlZCI6IjIwMjQtMTEtMTJUMTU6MDA6NTYuMzE3WiIsImV4cGlyeSI6bnVsbH19.621Rh-CrIaEemUrjQTdGgBmDazoto9G6C3H6OvuwzqmFd1xK_0DTUyEMOd5VQ6ep0aitiTZcNLnxnsJa08ajCg=="
+            }
+  }
 }

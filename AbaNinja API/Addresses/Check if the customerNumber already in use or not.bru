@@ -1,0 +1,11 @@
+meta {
+  name: Check if the customerNumber already in use or not
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/accounts/:accountUuid/addresses/v2/check-customer-number
+  body: none
+  auth: none
+}

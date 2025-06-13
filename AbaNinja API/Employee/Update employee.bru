@@ -1,0 +1,25 @@
+meta {
+  name: Update employee
+  type: http
+  seq: 5
+}
+
+patch {
+  url: {{baseUrl}}/accounts/:accountUuid/time/v2/employees/:employeeUuid
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "employeeNumber": "",
+    "firstName": "",
+    "lastName": "",
+    "userUuid": "",
+    "employmentStartDate": "",
+    "birthDate": "",
+    "addressUuid": "",
+    "employeeGroupUuid": "",
+    "timeTrackingStartDate": ""
+  }
+}

@@ -1,0 +1,37 @@
+meta {
+  name: Update contract note
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{baseUrl}}/accounts/:accountUuid/documents/v2/contract-notes/:documentUuid
+  body: json
+  auth: none
+}
+
+params:path {
+  accountUuid: 
+  documentUuid: 
+}
+
+body:json {
+  {
+    "documents": [
+      {
+        "isTemplate": "",
+        "receiver": {},
+        "contractNoteDate": "",
+        "dueDate": "",
+        "pricesIncludeVat": "",
+        "documentTotal": "",
+        "positions": [
+          {
+            "positionNumber": ""
+          }
+        ],
+        "documentDiscount": {}
+      }
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+meta {
+  name: Create new employee
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/accounts/:accountUuid/time/v2/employees
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "employeeNumber": "",
+    "firstName": "",
+    "lastName": "",
+    "userUuid": "",
+    "employmentStartDate": "",
+    "birthDate": "",
+    "addressUuid": "",
+    "employeeGroupUuid": "",
+    "timeTrackingStartDate": ""
+  }
+}

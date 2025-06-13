@@ -1,0 +1,11 @@
+meta {
+  name: Remove holiday
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{baseUrl}}/accounts/:accountUuid/holidays/v2/holidays/:holidayUuid
+  body: none
+  auth: none
+}

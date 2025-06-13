@@ -1,0 +1,20 @@
+meta {
+  name: Check product group number
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/accounts/:accountUuid/products/v2/product-groups/check-group-number
+  body: none
+  auth: none
+}
+
+params:query {
+  groupNumber: 
+  ~uuid: 
+}
+
+params:path {
+  accountUuid: 
+}

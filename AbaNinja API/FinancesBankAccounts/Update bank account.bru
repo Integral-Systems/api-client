@@ -1,0 +1,30 @@
+meta {
+  name: Update bank account
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{baseUrl}}/accounts/:accountUuid/finances/v2/bank-accounts/:bankAccountUuid
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "",
+    "bankName": "",
+    "bankAddress": "",
+    "bankCity": "",
+    "iban": "",
+    "bic": "",
+    "currencyCode": "",
+    "qrBill": {
+      "active": "",
+      "qrIban": "",
+      "besrId": ""
+    },
+    "isActive": "",
+    "isDefault": ""
+  }
+}

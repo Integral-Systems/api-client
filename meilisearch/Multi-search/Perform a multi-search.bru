@@ -1,0 +1,53 @@
+meta {
+  name: Perform a multi-search
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/multi-search
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "queries": [
+      {
+        "indexUid": "",
+        "q": "",
+        "vector": "",
+        "hybrid": "",
+        "offset": "",
+        "limit": "",
+        "page": "",
+        "hitsPerPage": "",
+        "attributesToRetrieve": "",
+        "retrieveVectors": "",
+        "attributesToCrop": "",
+        "cropLength": "",
+        "attributesToHighlight": "",
+        "showRankingScore": "",
+        "showRankingScoreDetails": "",
+        "showMatchesPosition": "",
+        "filter": "",
+        "sort": "",
+        "distinct": "",
+        "facets": "",
+        "highlightPreTag": "",
+        "highlightPostTag": "",
+        "cropMarker": "",
+        "matchingStrategy": "",
+        "attributesToSearchOn": "",
+        "rankingScoreThreshold": "",
+        "locales": "",
+        "federationOptions": ""
+      }
+    ],
+    "federation": ""
+  }
+}

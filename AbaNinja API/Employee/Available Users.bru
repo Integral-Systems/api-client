@@ -1,0 +1,11 @@
+meta {
+  name: Available Users
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/accounts/:accountUuid/time/v2/employees/available-users
+  body: none
+  auth: none
+}

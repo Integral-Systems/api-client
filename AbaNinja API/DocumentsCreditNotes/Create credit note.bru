@@ -1,0 +1,42 @@
+meta {
+  name: Create credit note
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/accounts/:accountUuid/documents/v2/credit-notes
+  body: json
+  auth: none
+}
+
+params:path {
+  accountUuid: 
+}
+
+body:json {
+  {
+    "documents": [
+      {
+        "isTemplate": "",
+        "receiver": {},
+        "creditNoteDate": "",
+        "dueDate": "",
+        "pricesIncludeVat": "",
+        "documentTotal": "",
+        "positions": [
+          {
+            "positionNumber": ""
+          }
+        ],
+        "cashDiscounts": [
+          {
+            "days": "",
+            "percentage": ""
+          }
+        ],
+        "documentDiscount": {}
+      }
+    ]
+  }
+}

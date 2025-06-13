@@ -1,0 +1,182 @@
+meta {
+  name: Jaeger-span
+  type: http
+  seq: 7
+}
+
+put {
+  url: {{host}}/_index_template/jaeger-span
+  body: json
+  auth: basic
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}
+
+body:json {
+  {
+    "index_patterns": ["jaeger-main-jaeger-span-*"],
+    "template": {
+    "mappings":{
+      "dynamic_templates":[
+        {
+          "span_tags_map":{
+            "mapping":{
+              "type":"keyword",
+              "ignore_above":256
+            },
+            "path_match":"tag.*"
+          }
+        },
+        {
+          "process_tags_map":{
+            "mapping":{
+              "type":"keyword",
+              "ignore_above":256
+            },
+            "path_match":"process.tag.*"
+          }
+        }
+      ],
+      "properties":{
+        "traceID":{
+          "type":"keyword",
+          "ignore_above":256
+        },
+        "parentSpanID":{
+          "type":"keyword",
+          "ignore_above":256
+        },
+        "spanID":{
+          "type":"keyword",
+          "ignore_above":256
+        },
+        "operationName":{
+          "type":"keyword",
+          "ignore_above":256
+        },
+        "startTime":{
+          "type":"long"
+        },
+        "startTimeMillis":{
+          "type":"date",
+          "format":"epoch_millis"
+        },
+        "duration":{
+          "type":"long"
+        },
+        "flags":{
+          "type":"integer"
+        },
+        "logs":{
+          "type":"nested",
+          "dynamic":false,
+          "properties":{
+            "timestamp":{
+              "type":"long"
+            },
+            "fields":{
+              "type":"nested",
+              "dynamic":false,
+              "properties":{
+                "key":{
+                  "type":"keyword",
+                  "ignore_above":256
+                },
+                "value":{
+                  "type":"keyword",
+                  "ignore_above":256
+                },
+                "type":{
+                  "type":"keyword",
+                  "ignore_above":256
+                }
+              }
+            }
+          }
+        },
+        "process":{
+          "properties":{
+            "serviceName":{
+              "type":"keyword",
+              "ignore_above":256
+            },
+            "tag":{
+              "type":"object"
+            },
+            "tags":{
+              "type":"nested",
+              "dynamic":false,
+              "properties":{
+                "key":{
+                  "type":"keyword",
+                  "ignore_above":256
+                },
+                "value":{
+                  "type":"keyword",
+                  "ignore_above":256
+                },
+                "type":{
+                  "type":"keyword",
+                  "ignore_above":256
+                }
+              }
+            }
+          }
+        },
+        "references":{
+          "type":"nested",
+          "dynamic":false,
+          "properties":{
+            "refType":{
+              "type":"keyword",
+              "ignore_above":256
+            },
+            "traceID":{
+              "type":"keyword",
+              "ignore_above":256
+            },
+            "spanID":{
+              "type":"keyword",
+              "ignore_above":256
+            }
+          }
+        },
+        "tag":{
+          "type":"object"
+        },
+        "tags":{
+          "type":"nested",
+          "dynamic":false,
+          "properties":{
+            "key":{
+              "type":"keyword",
+              "ignore_above":256
+            },
+            "value":{
+              "type":"keyword",
+              "ignore_above":256
+            },
+            "type":{
+              "type":"keyword",
+              "ignore_above":256
+            }
+          }
+        }
+      }
+    }
+    },
+    "priority": 800,
+    "version": 3,
+    "composed_of": ["default_index_allocation"], 
+    "_meta": {
+      "description": "Jaeger service Template"
+    }
+  }
+}

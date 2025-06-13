@@ -1,0 +1,19 @@
+meta {
+  name: Get stopWords
+  type: http
+  seq: 55
+}
+
+get {
+  url: {{baseUrl}}/indexes/:indexUid/settings/stop-words
+  body: none
+  auth: bearer
+}
+
+params:path {
+  indexUid: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

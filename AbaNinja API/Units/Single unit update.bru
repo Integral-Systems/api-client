@@ -1,0 +1,40 @@
+meta {
+  name: Single unit update
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{baseUrl}}/accounts/:accountUuid/units/v2/units/:unitUuid
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "isocode": "",
+    "active": "",
+    "translations": {
+      "de": {
+        "unit": "",
+        "description": "",
+        "unitPlural": ""
+      },
+      "en": {
+        "unit": "",
+        "description": "",
+        "unitPlural": ""
+      },
+      "fr": {
+        "unit": "",
+        "description": "",
+        "unitPlural": ""
+      },
+      "it": {
+        "unit": "",
+        "description": "",
+        "unitPlural": ""
+      }
+    }
+  }
+}

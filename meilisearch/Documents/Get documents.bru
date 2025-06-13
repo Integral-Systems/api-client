@@ -1,0 +1,28 @@
+meta {
+  name: Get documents
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/indexes/:indexUid/documents
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~offset: 
+  ~limit: 
+  ~fields: 
+  ~retrieveVectors: 
+  ~ids: 
+  ~filter: 
+}
+
+params:path {
+  indexUid: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,44 @@
+meta {
+  name: Update template
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{baseUrl}}/accounts/:accountUuid/documents/v2/templates/:documentUuid
+  body: json
+  auth: none
+}
+
+params:path {
+  accountUuid: 
+  documentUuid: 
+}
+
+body:json {
+  {
+    "documents": [
+      {
+        "receiver": {},
+        "invoiceDate": "",
+        "dueDate": "",
+        "paymentInstructions": {},
+        "pricesIncludeVat": "",
+        "isVariantInvoice": "",
+        "documentTotal": "",
+        "positions": [
+          {
+            "positionNumber": ""
+          }
+        ],
+        "cashDiscounts": [
+          {
+            "days": "",
+            "percentage": ""
+          }
+        ],
+        "documentDiscount": {}
+      }
+    ]
+  }
+}

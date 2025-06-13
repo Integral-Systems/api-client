@@ -1,0 +1,11 @@
+meta {
+  name: Get a list of person addresses for given account
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/accounts/:accountUuid/addresses/v2/persons
+  body: none
+  auth: none
+}

@@ -1,0 +1,55 @@
+meta {
+  name: Update an existing product
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{baseUrl}}/accounts/:accountUuid/products/v2/products/:productUuid
+  body: json
+  auth: none
+}
+
+params:path {
+  accountUuid: 
+  productUuid: 
+}
+
+body:json {
+  {
+    "productKey": "",
+    "productGroupNumber": "",
+    "isService": "",
+    "tags": [],
+    "translations": {
+      "de": {
+        "productName": "",
+        "productDescription": ""
+      },
+      "en": {
+        "productName": "",
+        "productDescription": ""
+      },
+      "fr": {
+        "productName": "",
+        "productDescription": ""
+      },
+      "it": {
+        "productName": "",
+        "productDescription": ""
+      }
+    },
+    "properties": [
+      {
+        "type": "",
+        "value": "",
+        "isocode": ""
+      }
+    ],
+    "eanCode": "",
+    "unitUuid": "",
+    "cost": "",
+    "taxRate": "",
+    "bookingAccountNumber": ""
+  }
+}

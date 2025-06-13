@@ -1,0 +1,11 @@
+meta {
+  name: Employee holiday
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/accounts/:accountUuid/time/v2/employees/:employeeUuid/holidays
+  body: none
+  auth: none
+}

@@ -1,0 +1,16 @@
+meta {
+  name: Get an existing product
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/accounts/:accountUuid/products/v2/products/:productUuid
+  body: none
+  auth: none
+}
+
+params:path {
+  accountUuid: 
+  productUuid: 
+}

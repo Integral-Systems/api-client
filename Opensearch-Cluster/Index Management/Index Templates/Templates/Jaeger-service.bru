@@ -1,0 +1,66 @@
+meta {
+  name: Jaeger-service
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{host}}/_index_template/jaeger-service
+  body: json
+  auth: basic
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}
+
+body:json {
+  {
+    "index_patterns": ["jaeger-main-jaeger-service-*"],
+    "template": {
+    "mappings":{
+      "dynamic_templates":[
+        {
+          "span_tags_map":{
+            "mapping":{
+              "type":"keyword",
+              "ignore_above":256
+            },
+            "path_match":"tag.*"
+          }
+        },
+        {
+          "process_tags_map":{
+            "mapping":{
+              "type":"keyword",
+              "ignore_above":256
+            },
+            "path_match":"process.tag.*"
+          }
+        }
+      ],
+      "properties":{
+        "serviceName":{
+          "type":"keyword",
+          "ignore_above":256
+        },
+        "operationName":{
+          "type":"keyword",
+          "ignore_above":256
+        }
+      }
+    }
+    },
+    "priority": 800,
+    "version": 3,
+    "composed_of": ["default_index_allocation"], 
+    "_meta": {
+      "description": "Jaeger service Template"
+    }
+  }
+}

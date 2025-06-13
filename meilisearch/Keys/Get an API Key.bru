@@ -1,0 +1,19 @@
+meta {
+  name: Get an API Key
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/keys/:uidOrKey
+  body: none
+  auth: bearer
+}
+
+params:path {
+  uidOrKey: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

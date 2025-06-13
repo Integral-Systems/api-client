@@ -1,0 +1,19 @@
+meta {
+  name: Get pagination
+  type: http
+  seq: 31
+}
+
+get {
+  url: {{baseUrl}}/indexes/:indexUid/settings/pagination
+  body: none
+  auth: bearer
+}
+
+params:path {
+  indexUid: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

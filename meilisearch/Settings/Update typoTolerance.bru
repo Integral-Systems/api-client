@@ -1,0 +1,28 @@
+meta {
+  name: Update typoTolerance
+  type: http
+  seq: 63
+}
+
+patch {
+  url: {{baseUrl}}/indexes/:indexUid/settings/typo-tolerance
+  body: json
+  auth: bearer
+}
+
+params:path {
+  indexUid: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "enabled": "",
+    "minWordSizeForTypos": "",
+    "disableOnWords": "",
+    "disableOnAttributes": ""
+  }
+}

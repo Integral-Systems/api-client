@@ -1,0 +1,19 @@
+meta {
+  name: Delete a key
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{baseUrl}}/keys/:uidOrKey
+  body: none
+  auth: bearer
+}
+
+params:path {
+  uidOrKey: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

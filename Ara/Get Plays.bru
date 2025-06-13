@@ -1,0 +1,38 @@
+meta {
+  name: Get Plays
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://ara.int.integral-systems.ch/api/v1/playbooks?created_before&created_after&updated_before&updated_after&started_before&started_after&ended_before&ended_after&ansible_version&client_version&server_version&python_version&user&controller&name&path&status=completed&label&order=-ended
+  body: none
+  auth: basic
+}
+
+params:query {
+  created_before: 
+  created_after: 
+  updated_before: 
+  updated_after: 
+  started_before: 
+  started_after: 
+  ended_before: 
+  ended_after: 
+  ansible_version: 
+  client_version: 
+  server_version: 
+  python_version: 
+  user: 
+  controller: 
+  name: 
+  path: 
+  status: completed
+  label: 
+  order: -ended
+}
+
+auth:basic {
+  username: {{user}}
+  password: {{pass}}
+}

@@ -1,0 +1,44 @@
+meta {
+  name: Update settings
+  type: http
+  seq: 3
+}
+
+patch {
+  url: {{baseUrl}}/indexes/:indexUid/settings
+  body: json
+  auth: bearer
+}
+
+params:path {
+  indexUid: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "displayedAttributes": "",
+    "searchableAttributes": "",
+    "filterableAttributes": "",
+    "sortableAttributes": "",
+    "rankingRules": "",
+    "stopWords": "",
+    "nonSeparatorTokens": "",
+    "separatorTokens": "",
+    "dictionary": "",
+    "synonyms": "",
+    "distinctAttribute": "",
+    "proximityPrecision": "",
+    "typoTolerance": "",
+    "faceting": "",
+    "pagination": "",
+    "embedders": "",
+    "searchCutoffMs": "",
+    "localizedAttributes": "",
+    "facetSearch": "",
+    "prefixSearch": ""
+  }
+}

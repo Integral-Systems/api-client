@@ -1,0 +1,26 @@
+meta {
+  name: Reset faceting
+  type: http
+  seq: 20
+}
+
+delete {
+  url: {{baseUrl}}/indexes/:indexUid/settings/faceting
+  body: json
+  auth: bearer
+}
+
+params:path {
+  indexUid: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "maxValuesPerFacet": "",
+    "sortFacetValuesBy": ""
+  }
+}

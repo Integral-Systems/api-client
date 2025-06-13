@@ -1,0 +1,19 @@
+meta {
+  name: Get index
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/indexes/:indexUid
+  body: none
+  auth: bearer
+}
+
+params:path {
+  indexUid: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,11 @@
+meta {
+  name: Remove employee
+  type: http
+  seq: 6
+}
+
+delete {
+  url: {{baseUrl}}/accounts/:accountUuid/time/v2/employees/:employeeUuid
+  body: none
+  auth: none
+}

@@ -1,0 +1,74 @@
+meta {
+  name: test OTel
+  type: http
+  seq: 5
+}
+
+post {
+  url: https://otel.integral-systems.ch/v1/traces
+  body: json
+  auth: basic
+}
+
+auth:basic {
+  username: otel
+  password: Creme2-Afflicted1-Enamel2
+}
+
+body:json {
+  // trace_payload_adjusted_time.json
+  {
+    "resource_spans": [
+      {
+        "resource": {
+          "attributes": [
+            { "key": "service.name", "value": { "stringValue": "fake-manual-service" } },
+            { "key": "telemetry.sdk.language", "value": { "stringValue": "manual" } }
+          ]
+        },
+        "scope_spans": [
+          {
+            "scope": {
+              "name": "my.manual.sender",
+              "version": "1.0.0"
+            },
+            "spans": [
+              {
+                "trace_id": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6", // Keep consistent trace ID for testing
+                "span_id": "a1b2c3d4e5f6a7b8", // Keep consistent span ID
+                "name": "manual HTTP request - adjusted time",
+                "kind": "SPAN_KIND_SERVER",
+                // Adjusted Start Time: Approx April 29, 2025 21:21:44 UTC
+                "start_time_unix_nano": "1745942504000000000",
+                // Adjusted End Time: +500ms
+                "end_time_unix_nano": "1745942504500000000",
+                "attributes": [
+                  { "key": "http.method", "value": { "stringValue": "GET" } },
+                  { "key": "net.peer.ip", "value": { "stringValue": "192.0.2.1" } },
+                  { "key": "manual.flag", "value": { "boolValue": true } },
+                  { "key": "request.id", "value": { "intValue": "123" } }
+                ],
+                "status": { "code": "STATUS_CODE_OK" }
+              },
+              {
+                "trace_id": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6", // MUST be same Trace ID
+                "span_id": "f1e2d3c4b5a69876", // Different span ID
+                "parent_span_id": "a1b2c3d4e5f6a7b8", // Parent span ID
+                "name": "child processing step - adjusted time",
+                "kind": "SPAN_KIND_INTERNAL",
+                // Adjusted Child Start Time: Parent Start + 100ms
+                "start_time_unix_nano": "1745942504100000000",
+                // Adjusted Child End Time: Parent End - 100ms
+                "end_time_unix_nano": "1745942504400000000",
+                "attributes": [
+                  { "key": "app.step.id", "value": { "stringValue": "step-abc" } }
+                ],
+                "status": { "code": "STATUS_CODE_OK" }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

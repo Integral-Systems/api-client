@@ -1,0 +1,37 @@
+meta {
+  name: Update a quote
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{baseUrl}}/accounts/:accountUuid/documents/v2/quotes/:documentUuid
+  body: json
+  auth: none
+}
+
+params:path {
+  accountUuid: 
+  documentUuid: 
+}
+
+body:json {
+  {
+    "documents": [
+      {
+        "isTemplate": "",
+        "receiver": {},
+        "quoteDate": "",
+        "validUntilDate": "",
+        "pricesIncludeVat": "",
+        "documentTotal": "",
+        "positions": [
+          {
+            "positionNumber": ""
+          }
+        ],
+        "documentDiscount": {}
+      }
+    ]
+  }
+}

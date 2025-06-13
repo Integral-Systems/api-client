@@ -1,0 +1,15 @@
+meta {
+  name: Stop retrieving logs
+  type: http
+  seq: 3
+}
+
+delete {
+  url: {{baseUrl}}/logs/stream
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

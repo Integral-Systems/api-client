@@ -1,0 +1,21 @@
+meta {
+  name: Create time correction for employee
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{baseUrl}}/accounts/:accountUuid/time/v2/employees/:employeeUuid/time-corrections
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "type": "",
+    "bookingDate": "",
+    "bookingQty": "",
+    "bookingUnit": "",
+    "bookingText": ""
+  }
+}

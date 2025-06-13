@@ -1,0 +1,32 @@
+meta {
+  name: Update contract from employee
+  type: http
+  seq: 6
+}
+
+patch {
+  url: {{baseUrl}}/accounts/:accountUuid/time/v2/employees/:employeeUuid/contracts/:contractUuid
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "monday": "",
+    "tuesday": "",
+    "wednesday": "",
+    "thursday": "",
+    "friday": "",
+    "saturday": "",
+    "sunday": "",
+    "validFromDate": "",
+    "validToDate": "",
+    "employeeWorkModelUuid": "",
+    "employmentFactor": "",
+    "shortTimeWorkFactor": "",
+    "workingCountryCode": "",
+    "workingStateCode": "",
+    "hoursPerWeek": "",
+    "holidaysPerYear": ""
+  }
+}

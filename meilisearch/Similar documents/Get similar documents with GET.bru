@@ -1,0 +1,32 @@
+meta {
+  name: Get similar documents with GET
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/indexes/:indexUid/similar
+  body: none
+  auth: bearer
+}
+
+params:query {
+  id: 
+  offset: 
+  limit: 
+  attributes_to_retrieve: 
+  retrieve_vectors: 
+  show_ranking_score: 
+  show_ranking_score_details: 
+  embedder: 
+  ~filter: 
+  ~ranking_score_threshold: 
+}
+
+params:path {
+  indexUid: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

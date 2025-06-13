@@ -1,0 +1,16 @@
+meta {
+  name: Existing contract note
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/accounts/:accountUuid/documents/v2/contract-notes/:documentUuid
+  body: none
+  auth: none
+}
+
+params:path {
+  accountUuid: 
+  documentUuid: 
+}

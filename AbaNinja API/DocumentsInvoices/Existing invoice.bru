@@ -1,0 +1,16 @@
+meta {
+  name: Existing invoice
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/accounts/:accountUuid/documents/v2/invoices/:documentUuid
+  body: none
+  auth: none
+}
+
+params:path {
+  accountUuid: 
+  documentUuid: 
+}

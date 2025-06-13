@@ -1,0 +1,25 @@
+meta {
+  name: Reset stopWords
+  type: http
+  seq: 57
+}
+
+delete {
+  url: {{baseUrl}}/indexes/:indexUid/settings/stop-words
+  body: json
+  auth: bearer
+}
+
+params:path {
+  indexUid: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  [
+    {}
+  ]
+}

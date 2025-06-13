@@ -1,0 +1,34 @@
+meta {
+  name: Update employee group
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{baseUrl}}/accounts/:accountUuid/time/v2/employee-groups/:employeeGroupUuid
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "translations": {
+      "de": {
+        "name": "",
+        "description": ""
+      },
+      "en": {
+        "name": "",
+        "description": ""
+      },
+      "fr": {
+        "name": "",
+        "description": ""
+      },
+      "it": {
+        "name": "",
+        "description": ""
+      }
+    }
+  }
+}

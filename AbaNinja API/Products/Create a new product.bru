@@ -1,0 +1,54 @@
+meta {
+  name: Create a new product
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/accounts/:accountUuid/products/v2/products
+  body: json
+  auth: none
+}
+
+params:path {
+  accountUuid: 
+}
+
+body:json {
+  {
+    "productKey": "",
+    "productGroupNumber": "",
+    "isService": "",
+    "tags": [],
+    "translations": {
+      "de": {
+        "productName": "",
+        "productDescription": ""
+      },
+      "en": {
+        "productName": "",
+        "productDescription": ""
+      },
+      "fr": {
+        "productName": "",
+        "productDescription": ""
+      },
+      "it": {
+        "productName": "",
+        "productDescription": ""
+      }
+    },
+    "properties": [
+      {
+        "type": "",
+        "value": "",
+        "isocode": ""
+      }
+    ],
+    "eanCode": "",
+    "unitUuid": "",
+    "cost": "",
+    "taxRate": "",
+    "bookingAccountNumber": ""
+  }
+}

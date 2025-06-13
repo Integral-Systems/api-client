@@ -1,0 +1,19 @@
+meta {
+  name: Update facetSearch
+  type: http
+  seq: 17
+}
+
+put {
+  url: {{baseUrl}}/indexes/:indexUid/settings/facet-search
+  body: text
+  auth: bearer
+}
+
+params:path {
+  indexUid: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

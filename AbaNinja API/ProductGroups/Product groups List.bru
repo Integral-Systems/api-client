@@ -1,0 +1,19 @@
+meta {
+  name: Product groups List
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/accounts/:accountUuid/products/v2/product-groups
+  body: none
+  auth: none
+}
+
+params:query {
+  ~onlyArchived: 
+}
+
+params:path {
+  accountUuid: 
+}

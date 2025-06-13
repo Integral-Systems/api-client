@@ -1,0 +1,11 @@
+meta {
+  name: Daily Closed
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{baseUrl}}/accounts/:accountUuid/time/v2/employees/:employeeUuid/daily/:date/closed
+  body: none
+  auth: none
+}

@@ -1,0 +1,21 @@
+meta {
+  name: Create In-Out Entry
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/accounts/:accountUuid/time/v2/employees/:employeeUuid/in-out
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "date": "",
+    "startTime": "",
+    "endTime": "",
+    "comment": "",
+    "device": ""
+  }
+}

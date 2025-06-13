@@ -1,0 +1,20 @@
+meta {
+  name: Get API Keys
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/keys
+  body: none
+  auth: bearer
+}
+
+params:query {
+  offset: 
+  limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

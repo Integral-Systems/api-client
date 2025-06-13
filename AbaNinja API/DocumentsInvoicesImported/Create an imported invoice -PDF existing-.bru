@@ -1,0 +1,43 @@
+meta {
+  name: Create an imported invoice -PDF existing-
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/accounts/:accountUuid/documents/v2/invoices/import
+  body: json
+  auth: none
+}
+
+params:path {
+  accountUuid: 
+}
+
+body:json {
+  {
+    "documents": [
+      {
+        "documentUrl": "",
+        "documentData": {
+          "currencyCode": "",
+          "receiver": {},
+          "invoiceNumber": "",
+          "invoiceDate": "",
+          "dueDate": "",
+          "deliveryDate": "",
+          "paymentInstructions": {},
+          "documentTotal": "",
+          "taxPositions": [
+            {
+              "accountNumber": "",
+              "isTaxIncluded": "",
+              "amount": "",
+              "taxRate": ""
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

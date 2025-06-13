@@ -1,0 +1,35 @@
+meta {
+  name: Perform a facet search
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/indexes/:indexUid/facet-search
+  body: json
+  auth: bearer
+}
+
+params:path {
+  indexUid: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "facet_query": "",
+    "facet_name": "",
+    "q": "",
+    "vector": "",
+    "hybrid": "",
+    "filter": "",
+    "matching_strategy": "",
+    "attributes_to_search_on": "",
+    "ranking_score_threshold": "",
+    "locales": "",
+    "exhaustive_facet_count": ""
+  }
+}

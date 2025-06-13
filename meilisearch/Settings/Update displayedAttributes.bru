@@ -1,0 +1,25 @@
+meta {
+  name: Update displayedAttributes
+  type: http
+  seq: 8
+}
+
+put {
+  url: {{baseUrl}}/indexes/:indexUid/settings/displayed-attributes
+  body: json
+  auth: bearer
+}
+
+params:path {
+  indexUid: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  [
+    {}
+  ]
+}

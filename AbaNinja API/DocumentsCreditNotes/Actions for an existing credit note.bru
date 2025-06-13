@@ -1,0 +1,16 @@
+meta {
+  name: Actions for an existing credit note
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/accounts/:accountUuid/documents/v2/credit-notes/:documentUuid/actions
+  body: none
+  auth: none
+}
+
+params:path {
+  accountUuid: 
+  documentUuid: 
+}

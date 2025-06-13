@@ -1,0 +1,25 @@
+meta {
+  name: Update index
+  type: http
+  seq: 5
+}
+
+patch {
+  url: {{baseUrl}}/indexes/:indexUid
+  body: json
+  auth: bearer
+}
+
+params:path {
+  indexUid: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "primaryKey": ""
+  }
+}

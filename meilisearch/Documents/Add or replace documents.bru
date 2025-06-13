@@ -1,0 +1,24 @@
+meta {
+  name: Add or replace documents
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/indexes/:indexUid/documents
+  body: json
+  auth: bearer
+}
+
+params:query {
+  csvDelimiter: 
+  ~primaryKey: 
+}
+
+params:path {
+  indexUid: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,47 @@
+meta {
+  name: Single person update
+  type: http
+  seq: 8
+}
+
+patch {
+  url: {{baseUrl}}/accounts/:accountUuid/addresses/v2/persons/:personUuid
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "type": "",
+    "uuid": "",
+    "first_name": "",
+    "last_name": "",
+    "salutation": "",
+    "currency_code": "",
+    "language": "",
+    "contacts": [
+      {
+        "type": "",
+        "value": "",
+        "is_primary": ""
+      }
+    ],
+    "tags": [],
+    "addresses": [
+      {
+        "uuid": "",
+        "address": "",
+        "street_number": "",
+        "extension": "",
+        "additional_field": "",
+        "city": "",
+        "zip_code": "",
+        "country_code": "",
+        "state": ""
+      }
+    ],
+    "private_notes": "",
+    "automatic_dunning": "",
+    "payment_terms": ""
+  }
+}

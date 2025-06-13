@@ -1,0 +1,21 @@
+meta {
+  name: Recurring Invoices List
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/accounts/:accountUuid/documents/v2/recurring-invoices
+  body: none
+  auth: none
+}
+
+params:query {
+  ~updatedSince: 
+  ~limit: 
+  ~page: 
+}
+
+params:path {
+  accountUuid: 
+}

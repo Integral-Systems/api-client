@@ -1,0 +1,16 @@
+meta {
+  name: Archive product group
+  type: http
+  seq: 7
+}
+
+patch {
+  url: {{baseUrl}}/accounts/:accountUuid/products/v2/product-groups/:groupUuid/actions/archive
+  body: none
+  auth: none
+}
+
+params:path {
+  accountUuid: 
+  groupUuid: 
+}

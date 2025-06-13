@@ -1,0 +1,39 @@
+meta {
+  name: Create activity type
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{baseUrl}}/accounts/:accountUuid/time/v2/settings/activity-types
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "activityNumber": "",
+    "unit": "",
+    "isCount": "",
+    "isBillable": "",
+    "isHoliday": "",
+    "activityGroup": "",
+    "isTimeCredit": "",
+    "isShortTimeWork": "",
+    "isFavorite": "",
+    "translations": {
+      "de": {
+        "description": ""
+      },
+      "en": {
+        "description": ""
+      },
+      "fr": {
+        "description": ""
+      },
+      "it": {
+        "description": ""
+      }
+    }
+  }
+}

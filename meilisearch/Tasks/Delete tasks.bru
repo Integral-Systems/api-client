@@ -1,0 +1,30 @@
+meta {
+  name: Delete tasks
+  type: http
+  seq: 2
+}
+
+delete {
+  url: {{baseUrl}}/tasks
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~uids: 
+  ~batchUids: 
+  ~canceledBy: 
+  ~types: 
+  ~statuses: 
+  ~indexUids: 
+  ~afterEnqueuedAt: 
+  ~beforeEnqueuedAt: 
+  ~afterStartedAt: 
+  ~beforeStartedAt: 
+  ~afterFinishedAt: 
+  ~beforeFinishedAt: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

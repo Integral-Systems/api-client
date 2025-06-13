@@ -1,0 +1,30 @@
+meta {
+  name: Cancel tasks
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/tasks/cancel
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~uids: 
+  ~batchUids: 
+  ~canceledBy: 
+  ~types: 
+  ~statuses: 
+  ~indexUids: 
+  ~afterEnqueuedAt: 
+  ~beforeEnqueuedAt: 
+  ~afterStartedAt: 
+  ~beforeStartedAt: 
+  ~afterFinishedAt: 
+  ~beforeFinishedAt: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

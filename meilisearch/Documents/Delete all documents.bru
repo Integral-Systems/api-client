@@ -1,0 +1,19 @@
+meta {
+  name: Delete all documents
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{baseUrl}}/indexes/:indexUid/documents
+  body: none
+  auth: bearer
+}
+
+params:path {
+  indexUid: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,11 @@
+meta {
+  name: Employee flex time
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/accounts/:accountUuid/time/v2/employees/:employeeUuid/flex-time
+  body: none
+  auth: none
+}

@@ -1,0 +1,26 @@
+meta {
+  name: Update a Key
+  type: http
+  seq: 5
+}
+
+patch {
+  url: {{baseUrl}}/keys/:uidOrKey
+  body: json
+  auth: bearer
+}
+
+params:path {
+  uidOrKey: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "description": "",
+    "name": ""
+  }
+}

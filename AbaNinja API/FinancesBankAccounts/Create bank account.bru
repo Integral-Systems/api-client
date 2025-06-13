@@ -1,0 +1,30 @@
+meta {
+  name: Create bank account
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/accounts/:accountUuid/finances/v2/bank-accounts
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "",
+    "bankName": "",
+    "bankAddress": "",
+    "bankCity": "",
+    "iban": "",
+    "bic": "",
+    "currencyCode": "",
+    "qrBill": {
+      "active": "",
+      "qrIban": "",
+      "besrId": ""
+    },
+    "isActive": "",
+    "isDefault": ""
+  }
+}

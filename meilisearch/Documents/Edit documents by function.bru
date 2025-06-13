@@ -1,0 +1,27 @@
+meta {
+  name: Edit documents by function.
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{baseUrl}}/indexes/:indexUid/documents/edit
+  body: json
+  auth: bearer
+}
+
+params:path {
+  indexUid: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "filter": "",
+    "context": "",
+    "function": ""
+  }
+}

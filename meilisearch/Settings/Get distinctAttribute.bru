@@ -1,0 +1,19 @@
+meta {
+  name: Get distinctAttribute
+  type: http
+  seq: 10
+}
+
+get {
+  url: {{baseUrl}}/indexes/:indexUid/settings/distinct-attribute
+  body: none
+  auth: bearer
+}
+
+params:path {
+  indexUid: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

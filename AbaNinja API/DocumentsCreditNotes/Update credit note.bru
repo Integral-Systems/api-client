@@ -1,0 +1,43 @@
+meta {
+  name: Update credit note
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{baseUrl}}/accounts/:accountUuid/documents/v2/credit-notes/:documentUuid
+  body: json
+  auth: none
+}
+
+params:path {
+  accountUuid: 
+  documentUuid: 
+}
+
+body:json {
+  {
+    "documents": [
+      {
+        "isTemplate": "",
+        "receiver": {},
+        "creditNoteDate": "",
+        "dueDate": "",
+        "pricesIncludeVat": "",
+        "documentTotal": "",
+        "positions": [
+          {
+            "positionNumber": ""
+          }
+        ],
+        "cashDiscounts": [
+          {
+            "days": "",
+            "percentage": ""
+          }
+        ],
+        "documentDiscount": {}
+      }
+    ]
+  }
+}

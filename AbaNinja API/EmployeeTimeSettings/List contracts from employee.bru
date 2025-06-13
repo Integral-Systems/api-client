@@ -1,0 +1,11 @@
+meta {
+  name: List contracts from employee
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/accounts/:accountUuid/time/v2/employees/:employeeUuid/contracts
+  body: none
+  auth: none
+}

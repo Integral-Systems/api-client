@@ -1,0 +1,19 @@
+meta {
+  name: Reset facetSearch
+  type: http
+  seq: 18
+}
+
+delete {
+  url: {{baseUrl}}/indexes/:indexUid/settings/facet-search
+  body: text
+  auth: bearer
+}
+
+params:path {
+  indexUid: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

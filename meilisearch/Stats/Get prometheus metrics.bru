@@ -1,0 +1,15 @@
+meta {
+  name: Get prometheus metrics
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/metrics
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

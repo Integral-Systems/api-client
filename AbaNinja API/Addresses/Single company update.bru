@@ -1,0 +1,63 @@
+meta {
+  name: Single company update
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{baseUrl}}/accounts/:accountUuid/addresses/v2/companies/:companyUuid
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "type": "",
+    "uuid": "",
+    "customer_number": "",
+    "name": "",
+    "id_number": "",
+    "vat_number": "",
+    "currency_code": "",
+    "language": "",
+    "contact_persons": [
+      {
+        "uuid": "",
+        "first_name": "",
+        "last_name": "",
+        "salutation": "",
+        "contacts": [
+          {
+            "type": "",
+            "value": "",
+            "is_primary": ""
+          }
+        ]
+      }
+    ],
+    "tags": [],
+    "contacts": [
+      {
+        "type": "",
+        "value": "",
+        "is_primary": ""
+      }
+    ],
+    "addresses": [
+      {
+        "uuid": "",
+        "address": "",
+        "street_number": "",
+        "extension": "",
+        "additional_field": "",
+        "city": "",
+        "zip_code": "",
+        "country_code": "",
+        "state": ""
+      }
+    ],
+    "private_notes": "",
+    "automatic_dunning": "",
+    "payment_terms": ""
+  }
+}

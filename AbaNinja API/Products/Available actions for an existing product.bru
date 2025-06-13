@@ -1,0 +1,16 @@
+meta {
+  name: Available actions for an existing product
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/accounts/:accountUuid/products/v2/:productUuid/actions
+  body: none
+  auth: none
+}
+
+params:path {
+  accountUuid: 
+  productUuid: 
+}

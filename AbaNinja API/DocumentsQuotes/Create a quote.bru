@@ -1,0 +1,36 @@
+meta {
+  name: Create a quote
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/accounts/:accountUuid/documents/v2/quotes
+  body: json
+  auth: none
+}
+
+params:path {
+  accountUuid: 
+}
+
+body:json {
+  {
+    "documents": [
+      {
+        "isTemplate": "",
+        "receiver": {},
+        "quoteDate": "",
+        "validUntilDate": "",
+        "pricesIncludeVat": "",
+        "documentTotal": "",
+        "positions": [
+          {
+            "positionNumber": ""
+          }
+        ],
+        "documentDiscount": {}
+      }
+    ]
+  }
+}

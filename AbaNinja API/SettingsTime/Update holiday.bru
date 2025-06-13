@@ -1,0 +1,34 @@
+meta {
+  name: Update holiday
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{baseUrl}}/accounts/:accountUuid/holidays/v2/holidays/:holidayUuid
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "date": "",
+    "countryCode": "",
+    "state": "",
+    "halfDay": "",
+    "translations": {
+      "de": {
+        "name": ""
+      },
+      "en": {
+        "name": ""
+      },
+      "fr": {
+        "name": ""
+      },
+      "it": {
+        "name": ""
+      }
+    }
+  }
+}

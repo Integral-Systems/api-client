@@ -1,0 +1,37 @@
+meta {
+  name: Update product group
+  type: http
+  seq: 5
+}
+
+patch {
+  url: {{baseUrl}}/accounts/:accountUuid/products/v2/product-groups/:groupUuid
+  body: json
+  auth: none
+}
+
+params:path {
+  accountUuid: 
+  groupUuid: 
+}
+
+body:json {
+  {
+    "groupNumber": "",
+    "bookingAccountNumber": "",
+    "translations": {
+      "de": {
+        "description": ""
+      },
+      "en": {
+        "description": ""
+      },
+      "fr": {
+        "description": ""
+      },
+      "it": {
+        "description": ""
+      }
+    }
+  }
+}

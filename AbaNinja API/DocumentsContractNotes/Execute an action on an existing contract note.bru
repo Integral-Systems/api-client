@@ -1,0 +1,17 @@
+meta {
+  name: Execute an action on an existing contract note
+  type: http
+  seq: 6
+}
+
+patch {
+  url: {{baseUrl}}/accounts/:accountUuid/documents/v2/contract-notes/:documentUuid/actions/:action
+  body: none
+  auth: none
+}
+
+params:path {
+  accountUuid: 
+  documentUuid: 
+  action: 
+}

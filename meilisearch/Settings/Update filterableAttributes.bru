@@ -1,0 +1,25 @@
+meta {
+  name: Update filterableAttributes
+  type: http
+  seq: 23
+}
+
+put {
+  url: {{baseUrl}}/indexes/:indexUid/settings/filterable-attributes
+  body: json
+  auth: bearer
+}
+
+params:path {
+  indexUid: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  [
+    {}
+  ]
+}

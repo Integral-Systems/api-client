@@ -1,0 +1,11 @@
+meta {
+  name: List time corrections for employee
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{baseUrl}}/accounts/:accountUuid/time/v2/employees/:employeeUuid/time-corrections
+  body: none
+  auth: none
+}

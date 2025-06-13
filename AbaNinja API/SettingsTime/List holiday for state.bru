@@ -1,0 +1,23 @@
+meta {
+  name: List holiday for state
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/accounts/:accountUuid/holidays/v2/holidays
+  body: none
+  auth: none
+}
+
+params:query {
+  countryCode: 
+  ~year: 
+  ~date: 
+  ~state: 
+  ~type: 
+}
+
+params:path {
+  accountUuid: 
+}

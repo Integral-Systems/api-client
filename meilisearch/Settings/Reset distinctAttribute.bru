@@ -1,0 +1,19 @@
+meta {
+  name: Reset distinctAttribute
+  type: http
+  seq: 12
+}
+
+delete {
+  url: {{baseUrl}}/indexes/:indexUid/settings/distinct-attribute
+  body: text
+  auth: bearer
+}
+
+params:path {
+  indexUid: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

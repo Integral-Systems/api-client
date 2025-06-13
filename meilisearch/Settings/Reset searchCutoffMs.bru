@@ -1,0 +1,19 @@
+meta {
+  name: Reset searchCutoffMs
+  type: http
+  seq: 45
+}
+
+delete {
+  url: {{baseUrl}}/indexes/:indexUid/settings/search-cutoff-ms
+  body: text
+  auth: bearer
+}
+
+params:path {
+  indexUid: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

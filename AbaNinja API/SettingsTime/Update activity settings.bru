@@ -1,0 +1,30 @@
+meta {
+  name: Update activity settings
+  type: http
+  seq: 17
+}
+
+patch {
+  url: {{baseUrl}}/accounts/:accountUuid/time/v2/settings/activity
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "translations": {
+      "de": {
+        "description": ""
+      },
+      "en": {
+        "description": ""
+      },
+      "fr": {
+        "description": ""
+      },
+      "it": {
+        "description": ""
+      }
+    }
+  }
+}

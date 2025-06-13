@@ -1,0 +1,15 @@
+meta {
+  name: Create a snapshot
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/snapshots
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

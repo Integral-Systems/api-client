@@ -1,0 +1,19 @@
+meta {
+  name: Reset proximityPrecision
+  type: http
+  seq: 39
+}
+
+delete {
+  url: {{baseUrl}}/indexes/:indexUid/settings/proximity-precision
+  body: json
+  auth: bearer
+}
+
+params:path {
+  indexUid: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

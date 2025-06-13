@@ -1,0 +1,11 @@
+meta {
+  name: Allowed contract days
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/accounts/:accountUuid/time/v2/employees/:employeeUuid/contracts/allowed-days
+  body: none
+  auth: none
+}

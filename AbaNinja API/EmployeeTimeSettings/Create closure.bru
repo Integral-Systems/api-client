@@ -1,0 +1,17 @@
+meta {
+  name: Create closure
+  type: http
+  seq: 14
+}
+
+post {
+  url: {{baseUrl}}/accounts/:accountUuid/time/v2/employees/:employeeUuid/closures
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "closureDate": ""
+  }
+}

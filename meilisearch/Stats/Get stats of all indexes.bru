@@ -1,0 +1,15 @@
+meta {
+  name: Get stats of all indexes.
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/stats
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

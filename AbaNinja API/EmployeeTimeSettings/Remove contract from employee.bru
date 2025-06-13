@@ -1,0 +1,11 @@
+meta {
+  name: Remove contract from employee
+  type: http
+  seq: 7
+}
+
+delete {
+  url: {{baseUrl}}/accounts/:accountUuid/time/v2/employees/:employeeUuid/contracts/:contractUuid
+  body: none
+  auth: none
+}

@@ -1,0 +1,16 @@
+meta {
+  name: Restore product group
+  type: http
+  seq: 8
+}
+
+patch {
+  url: {{baseUrl}}/accounts/:accountUuid/products/v2/product-groups/:groupUuid/actions/restore
+  body: none
+  auth: none
+}
+
+params:path {
+  accountUuid: 
+  groupUuid: 
+}

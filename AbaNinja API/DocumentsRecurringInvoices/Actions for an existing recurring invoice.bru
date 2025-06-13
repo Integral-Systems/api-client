@@ -1,0 +1,16 @@
+meta {
+  name: Actions for an existing recurring invoice
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/accounts/:accountUuid/documents/v2/recurring-invoices/:documentUuid/actions
+  body: none
+  auth: none
+}
+
+params:path {
+  accountUuid: 
+  documentUuid: 
+}

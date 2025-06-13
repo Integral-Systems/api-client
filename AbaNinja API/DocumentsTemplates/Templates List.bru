@@ -1,0 +1,21 @@
+meta {
+  name: Templates List
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/accounts/:accountUuid/documents/v2/templates
+  body: none
+  auth: none
+}
+
+params:query {
+  ~updatedSince: 
+  ~limit: 
+  ~page: 
+}
+
+params:path {
+  accountUuid: 
+}

@@ -1,0 +1,16 @@
+meta {
+  name: Existing queue
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/accounts/:accountUuid/documents/v2/queue/:queueUuid
+  body: none
+  auth: none
+}
+
+params:path {
+  accountUuid: 
+  queueUuid: 
+}

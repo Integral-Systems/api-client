@@ -1,0 +1,15 @@
+meta {
+  name: Get Health
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://mail.integral-systems.ch/api/v1/get/status/containers
+  body: none
+  auth: inherit
+}
+
+headers {
+  X-API-Key: 521C42-C72D55-E4F56D-F6A6AF-9ADE2F
+}

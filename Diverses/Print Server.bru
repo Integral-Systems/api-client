@@ -1,0 +1,15 @@
+meta {
+  name: Print Server
+  type: http
+  seq: 4
+}
+
+post {
+  url: https://192.168.1.152:3031
+  body: file
+  auth: inherit
+}
+
+body:file {
+  file: @file(/Users/gradlon/Library/CloudStorage/GoogleDrive-gradlon@integral-systems.ch/Meine Ablage/Microsoft-code.pdf) @contentType(application/pdf)
+}

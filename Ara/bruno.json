@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Ara",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

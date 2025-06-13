@@ -1,0 +1,43 @@
+meta {
+  name: Create work model
+  type: http
+  seq: 12
+}
+
+post {
+  url: {{baseUrl}}/accounts/:accountUuid/time/v2/settings/work-models
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "hoursPerWeek": "",
+    "holidaysPerYear": "",
+    "monday": "",
+    "tuesday": "",
+    "wednesday": "",
+    "thursday": "",
+    "friday": "",
+    "saturday": "",
+    "sunday": "",
+    "translations": {
+      "de": {
+        "name": "",
+        "description": ""
+      },
+      "en": {
+        "name": "",
+        "description": ""
+      },
+      "fr": {
+        "name": "",
+        "description": ""
+      },
+      "it": {
+        "name": "",
+        "description": ""
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+meta {
+  name: Delete documents by filter
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/indexes/:indexUid/documents/delete
+  body: json
+  auth: bearer
+}
+
+params:path {
+  indexUid: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "filter": ""
+  }
+}

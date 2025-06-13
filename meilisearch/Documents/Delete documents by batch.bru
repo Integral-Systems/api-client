@@ -1,0 +1,25 @@
+meta {
+  name: Delete documents by batch
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/indexes/:indexUid/delete-batch
+  body: json
+  auth: bearer
+}
+
+params:path {
+  indexUid: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  [
+    {}
+  ]
+}

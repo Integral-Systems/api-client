@@ -5,7 +5,7 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/accounts/:account/entitlements
+  url: {{baseUrl}}/accounts/{{account}}/entitlements
   body: none
   auth: bearer
 }
@@ -13,10 +13,6 @@ get {
 params:query {
   ~page: 
   ~limit: 
-}
-
-params:path {
-  account: 
 }
 
 auth:bearer {

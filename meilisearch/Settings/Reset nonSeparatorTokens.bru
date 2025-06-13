@@ -1,0 +1,25 @@
+meta {
+  name: Reset nonSeparatorTokens
+  type: http
+  seq: 30
+}
+
+delete {
+  url: {{baseUrl}}/indexes/:indexUid/settings/non-separator-tokens
+  body: json
+  auth: bearer
+}
+
+params:path {
+  indexUid: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  [
+    {}
+  ]
+}

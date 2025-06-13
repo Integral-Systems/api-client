@@ -1,0 +1,11 @@
+meta {
+  name: Remove work model
+  type: http
+  seq: 15
+}
+
+delete {
+  url: {{baseUrl}}/accounts/:accountUuid/time/v2/settings/work-models/:workModelUuid
+  body: none
+  auth: none
+}

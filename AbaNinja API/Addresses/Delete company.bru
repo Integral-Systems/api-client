@@ -1,0 +1,11 @@
+meta {
+  name: Delete company
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{baseUrl}}/accounts/:accountUuid/addresses/v2/companies/:companyUuid
+  body: none
+  auth: none
+}

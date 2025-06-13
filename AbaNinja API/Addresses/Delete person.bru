@@ -1,0 +1,11 @@
+meta {
+  name: Delete person
+  type: http
+  seq: 9
+}
+
+delete {
+  url: {{baseUrl}}/accounts/:accountUuid/addresses/v2/persons/:personUuid
+  body: none
+  auth: none
+}

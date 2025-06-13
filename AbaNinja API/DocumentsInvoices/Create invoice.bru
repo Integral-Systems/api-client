@@ -1,0 +1,45 @@
+meta {
+  name: Create invoice
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/accounts/:accountUuid/documents/v2/invoices
+  body: json
+  auth: none
+}
+
+params:path {
+  accountUuid: 
+}
+
+body:json {
+  {
+    "documents": [
+      {
+        "isTemplate": "",
+        "receiver": {},
+        "invoiceDate": "",
+        "dueDate": "",
+        "deliveryDate": "",
+        "paymentInstructions": {},
+        "pricesIncludeVat": "",
+        "isVariantInvoice": "",
+        "documentTotal": "",
+        "positions": [
+          {
+            "positionNumber": ""
+          }
+        ],
+        "cashDiscounts": [
+          {
+            "days": "",
+            "percentage": ""
+          }
+        ],
+        "documentDiscount": {}
+      }
+    ]
+  }
+}

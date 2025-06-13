@@ -1,0 +1,20 @@
+meta {
+  name: Delete Template
+  type: http
+  seq: 6
+}
+
+delete {
+  url: {{host}}/_template/jaeger-main-jaeger-service
+  body: json
+  auth: basic
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}

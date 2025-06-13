@@ -1,0 +1,32 @@
+meta {
+  name: Create contract for employee
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/accounts/:accountUuid/time/v2/employees/:employeeUuid/contracts
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "monday": "",
+    "tuesday": "",
+    "wednesday": "",
+    "thursday": "",
+    "friday": "",
+    "saturday": "",
+    "sunday": "",
+    "validFromDate": "",
+    "validToDate": "",
+    "employeeWorkModelUuid": "",
+    "employmentFactor": "",
+    "shortTimeWorkFactor": "",
+    "workingCountryCode": "",
+    "workingStateCode": "",
+    "hoursPerWeek": "",
+    "holidaysPerYear": ""
+  }
+}

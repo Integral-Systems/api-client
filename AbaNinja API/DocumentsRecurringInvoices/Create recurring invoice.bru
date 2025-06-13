@@ -1,0 +1,45 @@
+meta {
+  name: Create recurring invoice
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/accounts/:accountUuid/documents/v2/recurring-invoices
+  body: json
+  auth: none
+}
+
+params:path {
+  accountUuid: 
+}
+
+body:json {
+  {
+    "documents": [
+      {
+        "receiver": {},
+        "startDate": "",
+        "endDate": "",
+        "frequency": "",
+        "isRecurringActive": "",
+        "isLastOfMonth": "",
+        "paymentInstructions": {},
+        "pricesIncludeVat": "",
+        "documentTotal": "",
+        "positions": [
+          {
+            "positionNumber": ""
+          }
+        ],
+        "cashDiscounts": [
+          {
+            "days": "",
+            "percentage": ""
+          }
+        ],
+        "documentDiscount": {}
+      }
+    ]
+  }
+}

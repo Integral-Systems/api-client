@@ -1,0 +1,16 @@
+meta {
+  name: Get Danleing
+  type: http
+  seq: 12
+}
+
+get {
+  url: {{host}}/_dangling
+  body: none
+  auth: basic
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}

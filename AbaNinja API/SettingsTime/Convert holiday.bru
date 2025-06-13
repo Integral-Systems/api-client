@@ -1,0 +1,19 @@
+meta {
+  name: Convert holiday
+  type: http
+  seq: 20
+}
+
+post {
+  url: {{baseUrl}}/accounts/:accountUuid/holidays/v2/settings/convert
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "year": "",
+    "countryCode": "",
+    "state": ""
+  }
+}
