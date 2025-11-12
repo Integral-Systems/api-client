@@ -1,0 +1,17 @@
+meta {
+  name: Describes `getChatMemberCount` method
+  type: http
+  seq: 27
+}
+
+post {
+  url: {{baseUrl}}/getChatMemberCount
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "chat_id": ""
+  }
+}

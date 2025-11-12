@@ -1,0 +1,23 @@
+meta {
+  name: gameCenterMatchmakingRules_matchmakingRuleErrors_getMetrics
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/v1/gameCenterMatchmakingRules/:id/metrics/matchmakingRuleErrors
+  body: none
+  auth: bearer
+}
+
+params:query {
+  granularity: 
+  ~groupBy: 
+  ~filter[gameCenterMatchmakingQueue]: 
+  ~sort: 
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

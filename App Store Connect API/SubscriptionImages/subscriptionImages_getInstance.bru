@@ -1,0 +1,20 @@
+meta {
+  name: subscriptionImages_getInstance
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/subscriptionImages/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[subscriptionImages]: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

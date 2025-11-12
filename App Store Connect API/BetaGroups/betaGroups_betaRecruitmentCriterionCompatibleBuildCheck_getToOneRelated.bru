@@ -1,0 +1,19 @@
+meta {
+  name: betaGroups_betaRecruitmentCriterionCompatibleBuildCheck_getToOneRelated
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{baseUrl}}/v1/betaGroups/:id/betaRecruitmentCriterionCompatibleBuildCheck
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[betaRecruitmentCriterionCompatibleBuildChecks]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

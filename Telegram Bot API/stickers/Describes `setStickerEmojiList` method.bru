@@ -1,0 +1,18 @@
+meta {
+  name: Describes `setStickerEmojiList` method
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{baseUrl}}/setStickerEmojiList
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "emoji_list": [],
+    "sticker": ""
+  }
+}

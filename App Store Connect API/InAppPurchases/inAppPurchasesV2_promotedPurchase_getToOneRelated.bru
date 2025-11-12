@@ -1,0 +1,22 @@
+meta {
+  name: inAppPurchasesV2_promotedPurchase_getToOneRelated
+  type: http
+  seq: 21
+}
+
+get {
+  url: {{baseUrl}}/v2/inAppPurchases/:id/promotedPurchase
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[promotedPurchases]: 
+  ~fields[inAppPurchases]: 
+  ~fields[subscriptions]: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

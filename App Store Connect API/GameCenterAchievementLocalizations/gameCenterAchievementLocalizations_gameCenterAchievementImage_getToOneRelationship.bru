@@ -1,0 +1,15 @@
+meta {
+  name: gameCenterAchievementLocalizations_gameCenterAchievementImage_getToOneRelationship
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{baseUrl}}/v1/gameCenterAchievementLocalizations/:id/relationships/gameCenterAchievementImage
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,15 @@
+meta {
+  name: betaRecruitmentCriteria_deleteInstance
+  type: http
+  seq: 3
+}
+
+delete {
+  url: {{baseUrl}}/v1/betaRecruitmentCriteria/:id
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,56 @@
+meta {
+  name: subscriptionIntroductoryOffers_createInstance
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v1/subscriptionIntroductoryOffers
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "attributes": {
+        "startDate": "",
+        "endDate": "",
+        "duration": "",
+        "offerMode": "",
+        "numberOfPeriods": 0
+      },
+      "relationships": {
+        "subscription": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        },
+        "territory": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        },
+        "subscriptionPricePoint": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        }
+      }
+    },
+    "included": [
+      {
+        "type": "",
+        "id": ""
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+meta {
+  name: merchantIds_deleteInstance
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{baseUrl}}/v1/merchantIds/:id
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

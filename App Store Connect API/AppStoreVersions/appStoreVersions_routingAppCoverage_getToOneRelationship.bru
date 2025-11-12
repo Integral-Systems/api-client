@@ -1,0 +1,15 @@
+meta {
+  name: appStoreVersions_routingAppCoverage_getToOneRelationship
+  type: http
+  seq: 31
+}
+
+get {
+  url: {{baseUrl}}/v1/appStoreVersions/:id/relationships/routingAppCoverage
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

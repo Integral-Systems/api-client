@@ -1,0 +1,20 @@
+meta {
+  name: builds_individualTesters_getToManyRelated
+  type: http
+  seq: 26
+}
+
+get {
+  url: {{baseUrl}}/v1/builds/:id/individualTesters
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[betaTesters]: 
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

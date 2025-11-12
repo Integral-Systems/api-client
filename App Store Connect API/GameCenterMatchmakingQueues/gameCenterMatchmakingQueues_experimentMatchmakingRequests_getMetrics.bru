@@ -1,0 +1,24 @@
+meta {
+  name: gameCenterMatchmakingQueues_experimentMatchmakingRequests_getMetrics
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{baseUrl}}/v1/gameCenterMatchmakingQueues/:id/metrics/experimentMatchmakingRequests
+  body: none
+  auth: bearer
+}
+
+params:query {
+  granularity: 
+  ~groupBy: 
+  ~filter[result]: 
+  ~filter[gameCenterDetail]: 
+  ~sort: 
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

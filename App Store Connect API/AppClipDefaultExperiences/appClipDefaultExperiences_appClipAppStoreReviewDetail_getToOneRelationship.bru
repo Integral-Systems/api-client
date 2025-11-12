@@ -1,0 +1,15 @@
+meta {
+  name: appClipDefaultExperiences_appClipAppStoreReviewDetail_getToOneRelationship
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/v1/appClipDefaultExperiences/:id/relationships/appClipAppStoreReviewDetail
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

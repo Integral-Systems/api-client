@@ -1,0 +1,26 @@
+meta {
+  name: gameCenterDetails_gameCenterLeaderboardSets_replaceToManyRelationship
+  type: http
+  seq: 23
+}
+
+patch {
+  url: {{baseUrl}}/v1/gameCenterDetails/:id/relationships/gameCenterLeaderboardSets
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": [
+      {
+        "type": "",
+        "id": ""
+      }
+    ]
+  }
+}

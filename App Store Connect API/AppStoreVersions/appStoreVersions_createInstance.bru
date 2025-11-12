@@ -1,0 +1,54 @@
+meta {
+  name: appStoreVersions_createInstance
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v1/appStoreVersions
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "attributes": {
+        "platform": "",
+        "versionString": "",
+        "copyright": "",
+        "reviewType": "",
+        "releaseType": "",
+        "earliestReleaseDate": "",
+        "usesIdfa": false
+      },
+      "relationships": {
+        "app": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        },
+        "appStoreVersionLocalizations": {
+          "data": [
+            {
+              "type": "",
+              "id": ""
+            }
+          ]
+        },
+        "build": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+meta {
+  name: backgroundAssets_versions_getToManyRelated
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/v1/backgroundAssets/:id/versions
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[state]: 
+  ~filter[version]: 
+  ~filter[internalBetaRelease.state]: 
+  ~sort: 
+  ~fields[backgroundAssetVersions]: 
+  ~fields[backgroundAssetVersionInternalBetaReleases]: 
+  ~fields[backgroundAssetUploadFiles]: 
+  ~limit: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

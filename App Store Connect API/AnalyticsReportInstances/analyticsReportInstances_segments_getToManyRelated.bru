@@ -1,0 +1,20 @@
+meta {
+  name: analyticsReportInstances_segments_getToManyRelated
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/v1/analyticsReportInstances/:id/segments
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[analyticsReportSegments]: 
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

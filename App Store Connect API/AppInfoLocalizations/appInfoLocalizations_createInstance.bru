@@ -1,0 +1,39 @@
+meta {
+  name: appInfoLocalizations_createInstance
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v1/appInfoLocalizations
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "attributes": {
+        "locale": "",
+        "name": "",
+        "subtitle": "",
+        "privacyPolicyUrl": "",
+        "privacyChoicesUrl": "",
+        "privacyPolicyText": ""
+      },
+      "relationships": {
+        "appInfo": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        }
+      }
+    }
+  }
+}

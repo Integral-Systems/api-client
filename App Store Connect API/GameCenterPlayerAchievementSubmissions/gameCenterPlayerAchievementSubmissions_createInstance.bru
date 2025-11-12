@@ -1,0 +1,31 @@
+meta {
+  name: gameCenterPlayerAchievementSubmissions_createInstance
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v1/gameCenterPlayerAchievementSubmissions
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "attributes": {
+        "bundleId": "",
+        "challengeIds": [],
+        "percentageAchieved": 0,
+        "scopedPlayerId": "",
+        "submittedDate": "",
+        "vendorIdentifier": ""
+      }
+    }
+  }
+}

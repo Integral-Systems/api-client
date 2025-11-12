@@ -1,0 +1,15 @@
+meta {
+  name: appInfos_ageRatingDeclaration_getToOneRelationship
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/v1/appInfos/:id/relationships/ageRatingDeclaration
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

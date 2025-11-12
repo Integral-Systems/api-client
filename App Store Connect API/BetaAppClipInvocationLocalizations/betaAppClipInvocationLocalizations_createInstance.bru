@@ -1,0 +1,35 @@
+meta {
+  name: betaAppClipInvocationLocalizations_createInstance
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v1/betaAppClipInvocationLocalizations
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "attributes": {
+        "title": "",
+        "locale": ""
+      },
+      "relationships": {
+        "betaAppClipInvocation": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+meta {
+  name: alternativeDistributionDomains_getCollection
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v1/alternativeDistributionDomains
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[alternativeDistributionDomains]: 
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

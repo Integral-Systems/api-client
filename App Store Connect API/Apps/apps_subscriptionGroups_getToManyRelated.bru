@@ -1,0 +1,28 @@
+meta {
+  name: apps_subscriptionGroups_getToManyRelated
+  type: http
+  seq: 75
+}
+
+get {
+  url: {{baseUrl}}/v1/apps/:id/subscriptionGroups
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[referenceName]: 
+  ~filter[subscriptions.state]: 
+  ~sort: 
+  ~fields[subscriptionGroups]: 
+  ~fields[subscriptions]: 
+  ~fields[subscriptionGroupLocalizations]: 
+  ~limit: 
+  ~include: 
+  ~limit[subscriptions]: 
+  ~limit[subscriptionGroupLocalizations]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

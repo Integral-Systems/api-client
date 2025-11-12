@@ -1,0 +1,19 @@
+meta {
+  name: appClips_appClipAdvancedExperiences_getToManyRelationship
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/appClips/:id/relationships/appClipAdvancedExperiences
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

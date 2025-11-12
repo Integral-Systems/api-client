@@ -1,0 +1,19 @@
+meta {
+  name: ciBuildActions_issues_getToManyRelationship
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/v1/ciBuildActions/:id/relationships/issues
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

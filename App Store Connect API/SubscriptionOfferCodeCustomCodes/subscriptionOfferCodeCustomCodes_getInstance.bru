@@ -1,0 +1,20 @@
+meta {
+  name: subscriptionOfferCodeCustomCodes_getInstance
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/subscriptionOfferCodeCustomCodes/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[subscriptionOfferCodeCustomCodes]: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

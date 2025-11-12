@@ -1,0 +1,67 @@
+meta {
+  name: subscriptionOfferCodes_createInstance
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v1/subscriptionOfferCodes
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "attributes": {
+        "name": "",
+        "customerEligibilities": [],
+        "offerEligibility": "",
+        "duration": "",
+        "offerMode": "",
+        "numberOfPeriods": 0
+      },
+      "relationships": {
+        "subscription": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        },
+        "prices": {
+          "data": [
+            {
+              "type": "",
+              "id": ""
+            }
+          ]
+        }
+      }
+    },
+    "included": [
+      {
+        "type": "",
+        "id": "",
+        "relationships": {
+          "territory": {
+            "data": {
+              "type": "",
+              "id": ""
+            }
+          },
+          "subscriptionPricePoint": {
+            "data": {
+              "type": "",
+              "id": ""
+            }
+          }
+        }
+      }
+    ]
+  }
+}

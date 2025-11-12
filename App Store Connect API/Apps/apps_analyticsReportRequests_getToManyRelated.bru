@@ -1,0 +1,24 @@
+meta {
+  name: apps_analyticsReportRequests_getToManyRelated
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{baseUrl}}/v1/apps/:id/analyticsReportRequests
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[accessType]: 
+  ~fields[analyticsReportRequests]: 
+  ~fields[analyticsReports]: 
+  ~limit: 
+  ~include: 
+  ~limit[reports]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

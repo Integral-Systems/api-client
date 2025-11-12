@@ -1,0 +1,37 @@
+meta {
+  name: gameCenterAchievementLocalizations_createInstance
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v1/gameCenterAchievementLocalizations
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "attributes": {
+        "locale": "",
+        "name": "",
+        "beforeEarnedDescription": "",
+        "afterEarnedDescription": ""
+      },
+      "relationships": {
+        "gameCenterAchievement": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        }
+      }
+    }
+  }
+}

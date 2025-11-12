@@ -1,0 +1,19 @@
+meta {
+  name: gameCenterActivityVersions_localizations_getToManyRelationship
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/v1/gameCenterActivityVersions/:id/relationships/localizations
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

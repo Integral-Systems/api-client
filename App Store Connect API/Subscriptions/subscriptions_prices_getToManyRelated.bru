@@ -1,0 +1,25 @@
+meta {
+  name: subscriptions_prices_getToManyRelated
+  type: http
+  seq: 18
+}
+
+get {
+  url: {{baseUrl}}/v1/subscriptions/:id/prices
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[subscriptionPricePoint]: 
+  ~filter[territory]: 
+  ~fields[subscriptionPrices]: 
+  ~fields[territories]: 
+  ~fields[subscriptionPricePoints]: 
+  ~limit: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

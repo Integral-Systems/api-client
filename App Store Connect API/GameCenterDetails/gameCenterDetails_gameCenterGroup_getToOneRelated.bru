@@ -1,0 +1,32 @@
+meta {
+  name: gameCenterDetails_gameCenterGroup_getToOneRelated
+  type: http
+  seq: 21
+}
+
+get {
+  url: {{baseUrl}}/v1/gameCenterDetails/:id/gameCenterGroup
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[gameCenterGroups]: 
+  ~fields[gameCenterDetails]: 
+  ~fields[gameCenterLeaderboards]: 
+  ~fields[gameCenterLeaderboardSets]: 
+  ~fields[gameCenterAchievements]: 
+  ~fields[gameCenterActivities]: 
+  ~fields[gameCenterChallenges]: 
+  ~include: 
+  ~limit[gameCenterDetails]: 
+  ~limit[gameCenterLeaderboards]: 
+  ~limit[gameCenterLeaderboardSets]: 
+  ~limit[gameCenterAchievements]: 
+  ~limit[gameCenterActivities]: 
+  ~limit[gameCenterChallenges]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

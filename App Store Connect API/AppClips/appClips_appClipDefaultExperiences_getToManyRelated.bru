@@ -1,0 +1,27 @@
+meta {
+  name: appClips_appClipDefaultExperiences_getToManyRelated
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/v1/appClips/:id/appClipDefaultExperiences
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~exists[releaseWithAppStoreVersion]: 
+  ~fields[appClipDefaultExperiences]: 
+  ~fields[appClips]: 
+  ~fields[appStoreVersions]: 
+  ~fields[appClipDefaultExperienceLocalizations]: 
+  ~fields[appClipAppStoreReviewDetails]: 
+  ~limit: 
+  ~include: 
+  ~limit[appClipDefaultExperienceLocalizations]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

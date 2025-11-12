@@ -1,0 +1,21 @@
+meta {
+  name: certificates_getInstance
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/v1/certificates/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[certificates]: 
+  ~fields[passTypeIds]: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

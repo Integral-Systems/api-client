@@ -1,0 +1,26 @@
+meta {
+  name: ciProducts_getCollection
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v1/ciProducts
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[productType]: 
+  ~filter[app]: 
+  ~fields[ciProducts]: 
+  ~fields[apps]: 
+  ~fields[scmRepositories]: 
+  ~limit: 
+  ~include: 
+  ~limit[primaryRepositories]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

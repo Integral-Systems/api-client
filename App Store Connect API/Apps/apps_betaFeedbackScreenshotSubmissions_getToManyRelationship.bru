@@ -1,0 +1,19 @@
+meta {
+  name: apps_betaFeedbackScreenshotSubmissions_getToManyRelationship
+  type: http
+  seq: 38
+}
+
+get {
+  url: {{baseUrl}}/v1/apps/:id/relationships/betaFeedbackScreenshotSubmissions
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

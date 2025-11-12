@@ -1,0 +1,26 @@
+meta {
+  name: apps_promotedPurchases_replaceToManyRelationship
+  type: http
+  seq: 68
+}
+
+patch {
+  url: {{baseUrl}}/v1/apps/:id/relationships/promotedPurchases
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": [
+      {
+        "type": "",
+        "id": ""
+      }
+    ]
+  }
+}

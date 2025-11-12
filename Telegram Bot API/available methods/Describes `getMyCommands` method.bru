@@ -1,0 +1,18 @@
+meta {
+  name: Describes `getMyCommands` method
+  type: http
+  seq: 32
+}
+
+post {
+  url: {{baseUrl}}/getMyCommands
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "language_code": "",
+    "scope": {}
+  }
+}

@@ -1,0 +1,19 @@
+meta {
+  name: ciIssues_getInstance
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v1/ciIssues/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[ciIssues]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,17 @@
+meta {
+  name: Describes `uploadStickerFile` method
+  type: http
+  seq: 16
+}
+
+post {
+  url: {{baseUrl}}/uploadStickerFile
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  sticker: 
+  sticker_format: 
+  user_id: 
+}

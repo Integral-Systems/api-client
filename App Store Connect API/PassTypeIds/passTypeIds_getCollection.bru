@@ -1,0 +1,27 @@
+meta {
+  name: passTypeIds_getCollection
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v1/passTypeIds
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[name]: 
+  ~filter[identifier]: 
+  ~filter[id]: 
+  ~sort: 
+  ~fields[passTypeIds]: 
+  ~fields[certificates]: 
+  ~limit: 
+  ~include: 
+  ~limit[certificates]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

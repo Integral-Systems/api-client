@@ -1,0 +1,19 @@
+meta {
+  name: reviewSubmissions_items_getToManyRelationship
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/v1/reviewSubmissions/:id/relationships/items
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

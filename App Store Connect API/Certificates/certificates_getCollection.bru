@@ -1,0 +1,27 @@
+meta {
+  name: certificates_getCollection
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v1/certificates
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[displayName]: 
+  ~filter[certificateType]: 
+  ~filter[serialNumber]: 
+  ~filter[id]: 
+  ~sort: 
+  ~fields[certificates]: 
+  ~fields[passTypeIds]: 
+  ~limit: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

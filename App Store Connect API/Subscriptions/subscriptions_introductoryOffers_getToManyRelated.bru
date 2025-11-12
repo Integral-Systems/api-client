@@ -1,0 +1,25 @@
+meta {
+  name: subscriptions_introductoryOffers_getToManyRelated
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{baseUrl}}/v1/subscriptions/:id/introductoryOffers
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[territory]: 
+  ~fields[subscriptionIntroductoryOffers]: 
+  ~fields[subscriptions]: 
+  ~fields[territories]: 
+  ~fields[subscriptionPricePoints]: 
+  ~limit: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

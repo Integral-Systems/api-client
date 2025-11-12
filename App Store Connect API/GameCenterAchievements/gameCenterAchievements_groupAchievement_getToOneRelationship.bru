@@ -1,0 +1,15 @@
+meta {
+  name: gameCenterAchievements_groupAchievement_getToOneRelationship
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/v1/gameCenterAchievements/:id/relationships/groupAchievement
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

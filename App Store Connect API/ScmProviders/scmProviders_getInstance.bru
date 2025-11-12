@@ -1,0 +1,19 @@
+meta {
+  name: scmProviders_getInstance
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/scmProviders/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[scmProviders]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

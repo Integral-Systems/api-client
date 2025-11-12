@@ -1,0 +1,50 @@
+meta {
+  name: gameCenterChallenges_createInstance
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v1/gameCenterChallenges
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "attributes": {
+        "referenceName": "",
+        "vendorIdentifier": "",
+        "allowedDurations": [],
+        "challengeType": "",
+        "repeatable": false
+      },
+      "relationships": {
+        "gameCenterDetail": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        },
+        "gameCenterGroup": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        },
+        "leaderboard": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        }
+      }
+    }
+  }
+}

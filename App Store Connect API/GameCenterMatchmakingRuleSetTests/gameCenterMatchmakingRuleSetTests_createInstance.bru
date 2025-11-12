@@ -1,0 +1,40 @@
+meta {
+  name: gameCenterMatchmakingRuleSetTests_createInstance
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v1/gameCenterMatchmakingRuleSetTests
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "relationships": {
+        "matchmakingRuleSet": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        },
+        "matchmakingRequests": {
+          "data": [
+            {
+              "type": "",
+              "id": ""
+            }
+          ]
+        }
+      }
+    },
+    "included": []
+  }
+}

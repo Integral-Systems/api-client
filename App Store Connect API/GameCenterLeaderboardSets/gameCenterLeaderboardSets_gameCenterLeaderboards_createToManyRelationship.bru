@@ -1,0 +1,26 @@
+meta {
+  name: gameCenterLeaderboardSets_gameCenterLeaderboards_createToManyRelationship
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/v1/gameCenterLeaderboardSets/:id/relationships/gameCenterLeaderboards
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": [
+      {
+        "type": "",
+        "id": ""
+      }
+    ]
+  }
+}

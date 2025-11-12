@@ -1,0 +1,30 @@
+meta {
+  name: Describes `answerInlineQuery` method
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/answerInlineQuery
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "button": {
+      "start_parameter": "",
+      "text": "",
+      "web_app": {
+        "url": ""
+      }
+    },
+    "cache_time": 0,
+    "inline_query_id": "",
+    "is_personal": false,
+    "next_offset": "",
+    "results": [
+      {}
+    ]
+  }
+}

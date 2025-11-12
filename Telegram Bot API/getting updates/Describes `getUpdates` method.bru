@@ -1,0 +1,20 @@
+meta {
+  name: Describes `getUpdates` method
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/getUpdates
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "allowed_updates": [],
+    "limit": 0,
+    "offset": 0,
+    "timeout": 0
+  }
+}

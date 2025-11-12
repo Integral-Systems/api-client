@@ -1,0 +1,31 @@
+meta {
+  name: profiles_getCollection
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v1/profiles
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[name]: 
+  ~filter[profileType]: 
+  ~filter[profileState]: 
+  ~filter[id]: 
+  ~sort: 
+  ~fields[profiles]: 
+  ~fields[bundleIds]: 
+  ~fields[devices]: 
+  ~fields[certificates]: 
+  ~limit: 
+  ~include: 
+  ~limit[certificates]: 
+  ~limit[devices]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

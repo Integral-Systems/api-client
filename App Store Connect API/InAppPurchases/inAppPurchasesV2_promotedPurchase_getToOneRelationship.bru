@@ -1,0 +1,15 @@
+meta {
+  name: inAppPurchasesV2_promotedPurchase_getToOneRelationship
+  type: http
+  seq: 20
+}
+
+get {
+  url: {{baseUrl}}/v2/inAppPurchases/:id/relationships/promotedPurchase
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

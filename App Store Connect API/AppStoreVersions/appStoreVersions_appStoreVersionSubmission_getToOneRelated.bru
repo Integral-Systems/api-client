@@ -1,0 +1,21 @@
+meta {
+  name: appStoreVersions_appStoreVersionSubmission_getToOneRelated
+  type: http
+  seq: 23
+}
+
+get {
+  url: {{baseUrl}}/v1/appStoreVersions/:id/appStoreVersionSubmission
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[appStoreVersionSubmissions]: 
+  ~fields[appStoreVersions]: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

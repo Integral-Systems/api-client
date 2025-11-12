@@ -1,0 +1,20 @@
+meta {
+  name: Describes `getGameHighScores` method
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/getGameHighScores
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "chat_id": 0,
+    "inline_message_id": "",
+    "message_id": 0,
+    "user_id": 0
+  }
+}

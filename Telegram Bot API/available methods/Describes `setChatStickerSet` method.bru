@@ -1,0 +1,18 @@
+meta {
+  name: Describes `setChatStickerSet` method
+  type: http
+  seq: 68
+}
+
+post {
+  url: {{baseUrl}}/setChatStickerSet
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "chat_id": "",
+    "sticker_set_name": ""
+  }
+}

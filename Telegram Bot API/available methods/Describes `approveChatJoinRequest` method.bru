@@ -1,0 +1,18 @@
+meta {
+  name: Describes `approveChatJoinRequest` method
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/approveChatJoinRequest
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "chat_id": "",
+    "user_id": 0
+  }
+}

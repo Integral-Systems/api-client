@@ -1,0 +1,22 @@
+meta {
+  name: ciBuildRuns_getInstance
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/ciBuildRuns/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[ciBuildRuns]: 
+  ~fields[builds]: 
+  ~include: 
+  ~limit[builds]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

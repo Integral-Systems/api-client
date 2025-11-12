@@ -1,0 +1,19 @@
+meta {
+  name: builds_betaAppReviewSubmission_getToOneRelated
+  type: http
+  seq: 12
+}
+
+get {
+  url: {{baseUrl}}/v1/builds/:id/betaAppReviewSubmission
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[betaAppReviewSubmissions]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

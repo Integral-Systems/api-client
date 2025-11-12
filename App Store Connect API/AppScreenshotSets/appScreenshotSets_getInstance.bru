@@ -1,0 +1,22 @@
+meta {
+  name: appScreenshotSets_getInstance
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/appScreenshotSets/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[appScreenshotSets]: 
+  ~fields[appScreenshots]: 
+  ~include: 
+  ~limit[appScreenshots]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

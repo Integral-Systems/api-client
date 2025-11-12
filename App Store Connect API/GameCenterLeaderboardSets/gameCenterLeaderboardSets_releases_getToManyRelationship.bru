@@ -1,0 +1,19 @@
+meta {
+  name: gameCenterLeaderboardSets_releases_getToManyRelationship
+  type: http
+  seq: 15
+}
+
+get {
+  url: {{baseUrl}}/v1/gameCenterLeaderboardSets/:id/relationships/releases
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

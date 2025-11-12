@@ -1,0 +1,58 @@
+meta {
+  name: subscriptions_updateInstance
+  type: http
+  seq: 3
+}
+
+patch {
+  url: {{baseUrl}}/v1/subscriptions/:id
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "id": "",
+      "attributes": {
+        "name": "",
+        "familySharable": false,
+        "subscriptionPeriod": "",
+        "reviewNote": "",
+        "groupLevel": 0
+      },
+      "relationships": {
+        "introductoryOffers": {
+          "data": [
+            {
+              "type": "",
+              "id": ""
+            }
+          ]
+        },
+        "promotionalOffers": {
+          "data": [
+            {
+              "type": "",
+              "id": ""
+            }
+          ]
+        },
+        "prices": {
+          "data": [
+            {
+              "type": "",
+              "id": ""
+            }
+          ]
+        }
+      }
+    },
+    "included": []
+  }
+}

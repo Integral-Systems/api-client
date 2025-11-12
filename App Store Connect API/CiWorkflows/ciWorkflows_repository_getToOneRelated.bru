@@ -1,0 +1,22 @@
+meta {
+  name: ciWorkflows_repository_getToOneRelated
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{baseUrl}}/v1/ciWorkflows/:id/repository
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[scmRepositories]: 
+  ~fields[scmProviders]: 
+  ~fields[scmGitReferences]: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

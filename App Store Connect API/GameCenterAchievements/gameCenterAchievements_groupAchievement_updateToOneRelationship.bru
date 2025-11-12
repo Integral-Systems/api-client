@@ -1,0 +1,24 @@
+meta {
+  name: gameCenterAchievements_groupAchievement_updateToOneRelationship
+  type: http
+  seq: 7
+}
+
+patch {
+  url: {{baseUrl}}/v1/gameCenterAchievements/:id/relationships/groupAchievement
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "id": ""
+    }
+  }
+}

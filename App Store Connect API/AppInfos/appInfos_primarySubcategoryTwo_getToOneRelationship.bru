@@ -1,0 +1,15 @@
+meta {
+  name: appInfos_primarySubcategoryTwo_getToOneRelationship
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{baseUrl}}/v1/appInfos/:id/relationships/primarySubcategoryTwo
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

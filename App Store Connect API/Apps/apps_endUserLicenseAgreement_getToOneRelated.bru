@@ -1,0 +1,19 @@
+meta {
+  name: apps_endUserLicenseAgreement_getToOneRelated
+  type: http
+  seq: 53
+}
+
+get {
+  url: {{baseUrl}}/v1/apps/:id/endUserLicenseAgreement
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[endUserLicenseAgreements]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,15 @@
+meta {
+  name: gameCenterActivityVersions_defaultImage_getToOneRelationship
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/v1/gameCenterActivityVersions/:id/relationships/defaultImage
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

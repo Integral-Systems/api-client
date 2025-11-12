@@ -1,0 +1,24 @@
+meta {
+  name: subscriptionGroups_getInstance
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/subscriptionGroups/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[subscriptionGroups]: 
+  ~fields[subscriptions]: 
+  ~fields[subscriptionGroupLocalizations]: 
+  ~include: 
+  ~limit[subscriptionGroupLocalizations]: 
+  ~limit[subscriptions]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

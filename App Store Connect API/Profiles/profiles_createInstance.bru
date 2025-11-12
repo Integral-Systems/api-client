@@ -1,0 +1,51 @@
+meta {
+  name: profiles_createInstance
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/v1/profiles
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "attributes": {
+        "name": "",
+        "profileType": ""
+      },
+      "relationships": {
+        "bundleId": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        },
+        "devices": {
+          "data": [
+            {
+              "type": "",
+              "id": ""
+            }
+          ]
+        },
+        "certificates": {
+          "data": [
+            {
+              "type": "",
+              "id": ""
+            }
+          ]
+        }
+      }
+    }
+  }
+}

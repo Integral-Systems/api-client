@@ -1,0 +1,22 @@
+meta {
+  name: inAppPurchaseAvailabilities_getInstance
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/inAppPurchaseAvailabilities/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[inAppPurchaseAvailabilities]: 
+  ~fields[territories]: 
+  ~include: 
+  ~limit[availableTerritories]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,15 @@
+meta {
+  name: subscriptions_promotedPurchase_getToOneRelationship
+  type: http
+  seq: 19
+}
+
+get {
+  url: {{baseUrl}}/v1/subscriptions/:id/relationships/promotedPurchase
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

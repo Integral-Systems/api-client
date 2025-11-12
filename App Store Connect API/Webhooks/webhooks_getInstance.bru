@@ -1,0 +1,20 @@
+meta {
+  name: webhooks_getInstance
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/webhooks/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[webhooks]: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

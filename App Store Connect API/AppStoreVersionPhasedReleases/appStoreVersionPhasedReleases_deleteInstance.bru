@@ -1,0 +1,15 @@
+meta {
+  name: appStoreVersionPhasedReleases_deleteInstance
+  type: http
+  seq: 3
+}
+
+delete {
+  url: {{baseUrl}}/v1/appStoreVersionPhasedReleases/:id
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

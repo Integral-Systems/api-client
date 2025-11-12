@@ -1,0 +1,21 @@
+meta {
+  name: alternativeDistributionKeys_getCollection
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v1/alternativeDistributionKeys
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~exists[app]: 
+  ~fields[alternativeDistributionKeys]: 
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,17 @@
+meta {
+  name: Describes `unpinAllChatMessages` method
+  type: http
+  seq: 79
+}
+
+post {
+  url: {{baseUrl}}/unpinAllChatMessages
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "chat_id": ""
+  }
+}

@@ -1,0 +1,26 @@
+meta {
+  name: apps_inAppPurchases_getToManyRelated
+  type: http
+  seq: 59
+}
+
+get {
+  url: {{baseUrl}}/v1/apps/:id/inAppPurchases
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[inAppPurchaseType]: 
+  ~filter[canBeSubmitted]: 
+  ~sort: 
+  ~fields[inAppPurchases]: 
+  ~fields[apps]: 
+  ~limit: 
+  ~include: 
+  ~limit[apps]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

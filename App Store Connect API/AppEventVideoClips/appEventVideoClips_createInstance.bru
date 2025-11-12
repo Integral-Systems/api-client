@@ -1,0 +1,37 @@
+meta {
+  name: appEventVideoClips_createInstance
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v1/appEventVideoClips
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "attributes": {
+        "fileSize": 0,
+        "fileName": "",
+        "previewFrameTimeCode": "",
+        "appEventAssetType": ""
+      },
+      "relationships": {
+        "appEventLocalization": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        }
+      }
+    }
+  }
+}

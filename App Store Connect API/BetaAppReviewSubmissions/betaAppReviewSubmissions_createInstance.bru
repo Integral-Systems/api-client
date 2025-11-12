@@ -1,0 +1,31 @@
+meta {
+  name: betaAppReviewSubmissions_createInstance
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/v1/betaAppReviewSubmissions
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "relationships": {
+        "build": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        }
+      }
+    }
+  }
+}

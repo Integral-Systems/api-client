@@ -1,0 +1,20 @@
+meta {
+  name: appPricePointsV3_getInstance
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v3/appPricePoints/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[appPricePoints]: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

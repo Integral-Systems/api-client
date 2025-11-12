@@ -1,0 +1,35 @@
+meta {
+  name: subscriptionImages_createInstance
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v1/subscriptionImages
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "attributes": {
+        "fileSize": 0,
+        "fileName": ""
+      },
+      "relationships": {
+        "subscription": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        }
+      }
+    }
+  }
+}

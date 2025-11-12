@@ -1,0 +1,15 @@
+meta {
+  name: gameCenterActivityLocalizations_image_getToOneRelationship
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/v1/gameCenterActivityLocalizations/:id/relationships/image
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,15 @@
+meta {
+  name: appEventVideoClips_deleteInstance
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{baseUrl}}/v1/appEventVideoClips/:id
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

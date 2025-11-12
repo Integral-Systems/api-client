@@ -1,0 +1,35 @@
+meta {
+  name: appClipDefaultExperienceLocalizations_createInstance
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v1/appClipDefaultExperienceLocalizations
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "attributes": {
+        "locale": "",
+        "subtitle": ""
+      },
+      "relationships": {
+        "appClipDefaultExperience": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        }
+      }
+    }
+  }
+}

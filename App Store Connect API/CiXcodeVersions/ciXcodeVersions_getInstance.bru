@@ -1,0 +1,22 @@
+meta {
+  name: ciXcodeVersions_getInstance
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/ciXcodeVersions/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[ciXcodeVersions]: 
+  ~fields[ciMacOsVersions]: 
+  ~include: 
+  ~limit[macOsVersions]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

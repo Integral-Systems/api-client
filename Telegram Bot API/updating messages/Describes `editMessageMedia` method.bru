@@ -1,0 +1,23 @@
+meta {
+  name: Describes `editMessageMedia` method
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{baseUrl}}/editMessageMedia
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "chat_id": "",
+    "inline_message_id": "",
+    "media": {},
+    "message_id": 0,
+    "reply_markup": {
+      "inline_keyboard": []
+    }
+  }
+}

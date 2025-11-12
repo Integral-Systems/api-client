@@ -1,0 +1,24 @@
+meta {
+  name: apps_appPricePoints_getToManyRelated
+  type: http
+  seq: 23
+}
+
+get {
+  url: {{baseUrl}}/v1/apps/:id/appPricePoints
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[territory]: 
+  ~fields[appPricePoints]: 
+  ~fields[apps]: 
+  ~fields[territories]: 
+  ~limit: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

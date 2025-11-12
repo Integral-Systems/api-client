@@ -1,0 +1,19 @@
+meta {
+  name: analyticsReports_instances_getToManyRelationship
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/analyticsReports/:id/relationships/instances
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

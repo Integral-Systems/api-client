@@ -1,0 +1,36 @@
+meta {
+  name: subscriptionGroupLocalizations_createInstance
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v1/subscriptionGroupLocalizations
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "attributes": {
+        "name": "",
+        "customAppName": "",
+        "locale": ""
+      },
+      "relationships": {
+        "subscriptionGroup": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        }
+      }
+    }
+  }
+}

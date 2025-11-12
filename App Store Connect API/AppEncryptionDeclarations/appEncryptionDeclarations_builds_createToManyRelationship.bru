@@ -1,0 +1,26 @@
+meta {
+  name: appEncryptionDeclarations_builds_createToManyRelationship
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{baseUrl}}/v1/appEncryptionDeclarations/:id/relationships/builds
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": [
+      {
+        "type": "",
+        "id": ""
+      }
+    ]
+  }
+}

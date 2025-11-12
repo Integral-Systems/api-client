@@ -1,0 +1,37 @@
+meta {
+  name: subscriptions_getInstance
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/subscriptions/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[subscriptions]: 
+  ~fields[subscriptionLocalizations]: 
+  ~fields[subscriptionAppStoreReviewScreenshots]: 
+  ~fields[subscriptionIntroductoryOffers]: 
+  ~fields[subscriptionPromotionalOffers]: 
+  ~fields[subscriptionOfferCodes]: 
+  ~fields[subscriptionPrices]: 
+  ~fields[promotedPurchases]: 
+  ~fields[subscriptionAvailabilities]: 
+  ~fields[winBackOffers]: 
+  ~fields[subscriptionImages]: 
+  ~include: 
+  ~limit[images]: 
+  ~limit[introductoryOffers]: 
+  ~limit[offerCodes]: 
+  ~limit[prices]: 
+  ~limit[promotionalOffers]: 
+  ~limit[subscriptionLocalizations]: 
+  ~limit[winBackOffers]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

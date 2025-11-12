@@ -1,0 +1,17 @@
+meta {
+  name: Describes `getStickerSet` method
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/getStickerSet
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": ""
+  }
+}

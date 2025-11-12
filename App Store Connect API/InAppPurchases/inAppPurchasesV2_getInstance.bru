@@ -1,0 +1,31 @@
+meta {
+  name: inAppPurchasesV2_getInstance
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/v2/inAppPurchases/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[inAppPurchases]: 
+  ~fields[inAppPurchaseLocalizations]: 
+  ~fields[inAppPurchasePricePoints]: 
+  ~fields[inAppPurchaseContents]: 
+  ~fields[inAppPurchaseAppStoreReviewScreenshots]: 
+  ~fields[promotedPurchases]: 
+  ~fields[inAppPurchasePriceSchedules]: 
+  ~fields[inAppPurchaseAvailabilities]: 
+  ~fields[inAppPurchaseImages]: 
+  ~include: 
+  ~limit[images]: 
+  ~limit[inAppPurchaseLocalizations]: 
+  ~limit[pricePoints]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

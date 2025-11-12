@@ -1,0 +1,30 @@
+meta {
+  name: gameCenterLeaderboardLocalizations_updateInstance
+  type: http
+  seq: 3
+}
+
+patch {
+  url: {{baseUrl}}/v1/gameCenterLeaderboardLocalizations/:id
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "id": "",
+      "attributes": {
+        "name": "",
+        "formatterOverride": "",
+        "formatterSuffix": "",
+        "formatterSuffixSingular": ""
+      }
+    }
+  }
+}

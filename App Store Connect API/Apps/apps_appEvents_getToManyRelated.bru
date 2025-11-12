@@ -1,0 +1,25 @@
+meta {
+  name: apps_appEvents_getToManyRelated
+  type: http
+  seq: 19
+}
+
+get {
+  url: {{baseUrl}}/v1/apps/:id/appEvents
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[eventState]: 
+  ~filter[id]: 
+  ~fields[appEvents]: 
+  ~fields[appEventLocalizations]: 
+  ~limit: 
+  ~include: 
+  ~limit[localizations]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

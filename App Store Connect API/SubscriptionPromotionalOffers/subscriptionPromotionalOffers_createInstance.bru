@@ -1,0 +1,66 @@
+meta {
+  name: subscriptionPromotionalOffers_createInstance
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v1/subscriptionPromotionalOffers
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "attributes": {
+        "duration": "",
+        "name": "",
+        "numberOfPeriods": 0,
+        "offerCode": "",
+        "offerMode": ""
+      },
+      "relationships": {
+        "subscription": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        },
+        "prices": {
+          "data": [
+            {
+              "type": "",
+              "id": ""
+            }
+          ]
+        }
+      }
+    },
+    "included": [
+      {
+        "type": "",
+        "id": "",
+        "relationships": {
+          "territory": {
+            "data": {
+              "type": "",
+              "id": ""
+            }
+          },
+          "subscriptionPricePoint": {
+            "data": {
+              "type": "",
+              "id": ""
+            }
+          }
+        }
+      }
+    ]
+  }
+}

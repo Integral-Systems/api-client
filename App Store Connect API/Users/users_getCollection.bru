@@ -1,0 +1,27 @@
+meta {
+  name: users_getCollection
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v1/users
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[username]: 
+  ~filter[roles]: 
+  ~filter[visibleApps]: 
+  ~sort: 
+  ~fields[users]: 
+  ~fields[apps]: 
+  ~limit: 
+  ~include: 
+  ~limit[visibleApps]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

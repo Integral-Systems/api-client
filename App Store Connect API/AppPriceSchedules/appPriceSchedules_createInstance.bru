@@ -1,0 +1,46 @@
+meta {
+  name: appPriceSchedules_createInstance
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v1/appPriceSchedules
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "relationships": {
+        "app": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        },
+        "baseTerritory": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        },
+        "manualPrices": {
+          "data": [
+            {
+              "type": "",
+              "id": ""
+            }
+          ]
+        }
+      }
+    },
+    "included": []
+  }
+}

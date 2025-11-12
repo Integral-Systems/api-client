@@ -1,0 +1,19 @@
+meta {
+  name: bundleIds_app_getToOneRelated
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{baseUrl}}/v1/bundleIds/:id/app
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[apps]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

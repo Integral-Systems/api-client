@@ -1,0 +1,15 @@
+meta {
+  name: inAppPurchasesV2_inAppPurchaseAvailability_getToOneRelationship
+  type: http
+  seq: 14
+}
+
+get {
+  url: {{baseUrl}}/v2/inAppPurchases/:id/relationships/inAppPurchaseAvailability
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

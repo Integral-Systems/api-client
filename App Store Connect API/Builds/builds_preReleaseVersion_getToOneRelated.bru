@@ -1,0 +1,19 @@
+meta {
+  name: builds_preReleaseVersion_getToOneRelated
+  type: http
+  seq: 29
+}
+
+get {
+  url: {{baseUrl}}/v1/builds/:id/preReleaseVersion
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[preReleaseVersions]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

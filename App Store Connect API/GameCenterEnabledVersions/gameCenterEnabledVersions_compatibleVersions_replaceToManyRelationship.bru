@@ -1,0 +1,26 @@
+meta {
+  name: gameCenterEnabledVersions_compatibleVersions_replaceToManyRelationship
+  type: http
+  seq: 3
+}
+
+patch {
+  url: {{baseUrl}}/v1/gameCenterEnabledVersions/:id/relationships/compatibleVersions
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": [
+      {
+        "type": "",
+        "id": ""
+      }
+    ]
+  }
+}

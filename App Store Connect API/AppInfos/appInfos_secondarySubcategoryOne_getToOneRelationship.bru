@@ -1,0 +1,15 @@
+meta {
+  name: appInfos_secondarySubcategoryOne_getToOneRelationship
+  type: http
+  seq: 15
+}
+
+get {
+  url: {{baseUrl}}/v1/appInfos/:id/relationships/secondarySubcategoryOne
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

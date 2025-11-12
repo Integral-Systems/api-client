@@ -1,0 +1,19 @@
+meta {
+  name: backgroundAssetVersions_backgroundAssetUploadFiles_getToManyRelationship
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/v1/backgroundAssetVersions/:id/relationships/backgroundAssetUploadFiles
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

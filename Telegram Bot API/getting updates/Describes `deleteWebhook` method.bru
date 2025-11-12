@@ -1,0 +1,17 @@
+meta {
+  name: Describes `deleteWebhook` method
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/deleteWebhook
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "drop_pending_updates": false
+  }
+}

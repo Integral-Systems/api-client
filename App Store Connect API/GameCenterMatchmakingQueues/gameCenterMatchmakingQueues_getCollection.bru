@@ -1,0 +1,21 @@
+meta {
+  name: gameCenterMatchmakingQueues_getCollection
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v1/gameCenterMatchmakingQueues
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[gameCenterMatchmakingQueues]: 
+  ~limit: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

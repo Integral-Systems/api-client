@@ -1,0 +1,29 @@
+meta {
+  name: appCustomProductPageLocalizations_appPreviewSets_getToManyRelated
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/v1/appCustomProductPageLocalizations/:id/appPreviewSets
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[previewType]: 
+  ~filter[appStoreVersionLocalization]: 
+  ~filter[appStoreVersionExperimentTreatmentLocalization]: 
+  ~fields[appPreviewSets]: 
+  ~fields[appStoreVersionLocalizations]: 
+  ~fields[appCustomProductPageLocalizations]: 
+  ~fields[appStoreVersionExperimentTreatmentLocalizations]: 
+  ~fields[appPreviews]: 
+  ~limit: 
+  ~include: 
+  ~limit[appPreviews]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

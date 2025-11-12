@@ -1,0 +1,15 @@
+meta {
+  name: apps_alternativeDistributionKey_getToOneRelationship
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/v1/apps/:id/relationships/alternativeDistributionKey
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

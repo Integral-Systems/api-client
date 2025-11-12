@@ -1,0 +1,20 @@
+meta {
+  name: profiles_devices_getToManyRelated
+  type: http
+  seq: 10
+}
+
+get {
+  url: {{baseUrl}}/v1/profiles/:id/devices
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[devices]: 
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

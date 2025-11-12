@@ -1,0 +1,28 @@
+meta {
+  name: nominations_getCollection
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v1/nominations
+  body: none
+  auth: bearer
+}
+
+params:query {
+  filter[state]: 
+  ~filter[type]: 
+  ~filter[relatedApps]: 
+  ~sort: 
+  ~fields[nominations]: 
+  ~limit: 
+  ~include: 
+  ~limit[inAppEvents]: 
+  ~limit[relatedApps]: 
+  ~limit[supportedTerritories]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

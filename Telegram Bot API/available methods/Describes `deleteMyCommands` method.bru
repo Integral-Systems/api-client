@@ -1,0 +1,18 @@
+meta {
+  name: Describes `deleteMyCommands` method
+  type: http
+  seq: 16
+}
+
+post {
+  url: {{baseUrl}}/deleteMyCommands
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "language_code": "",
+    "scope": {}
+  }
+}

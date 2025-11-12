@@ -1,0 +1,20 @@
+meta {
+  name: Describes `setPassportDataErrors` method
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/setPassportDataErrors
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "errors": [
+      {}
+    ],
+    "user_id": 0
+  }
+}

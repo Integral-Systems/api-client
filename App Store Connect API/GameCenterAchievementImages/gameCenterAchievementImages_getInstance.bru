@@ -1,0 +1,20 @@
+meta {
+  name: gameCenterAchievementImages_getInstance
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/gameCenterAchievementImages/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[gameCenterAchievementImages]: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

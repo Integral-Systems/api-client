@@ -1,0 +1,19 @@
+meta {
+  name: analyticsReports_getInstance
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v1/analyticsReports/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[analyticsReports]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

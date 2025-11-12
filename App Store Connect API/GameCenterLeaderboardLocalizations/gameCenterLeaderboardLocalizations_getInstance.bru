@@ -1,0 +1,21 @@
+meta {
+  name: gameCenterLeaderboardLocalizations_getInstance
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/gameCenterLeaderboardLocalizations/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[gameCenterLeaderboardLocalizations]: 
+  ~fields[gameCenterLeaderboardImages]: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

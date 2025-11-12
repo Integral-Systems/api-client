@@ -1,0 +1,19 @@
+meta {
+  name: backgroundAssets_versions_getToManyRelationship
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/v1/backgroundAssets/:id/relationships/versions
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

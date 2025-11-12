@@ -1,0 +1,17 @@
+meta {
+  name: Describes `getCustomEmojiStickers` method
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{baseUrl}}/getCustomEmojiStickers
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "custom_emoji_ids": []
+  }
+}

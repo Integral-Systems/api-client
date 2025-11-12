@@ -1,0 +1,15 @@
+meta {
+  name: betaTesters_deleteInstance
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{baseUrl}}/v1/betaTesters/:id
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

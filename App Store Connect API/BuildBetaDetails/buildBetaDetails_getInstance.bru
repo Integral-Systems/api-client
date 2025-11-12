@@ -1,0 +1,21 @@
+meta {
+  name: buildBetaDetails_getInstance
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/buildBetaDetails/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[buildBetaDetails]: 
+  ~fields[builds]: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

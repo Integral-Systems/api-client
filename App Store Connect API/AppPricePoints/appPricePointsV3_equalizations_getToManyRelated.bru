@@ -1,0 +1,24 @@
+meta {
+  name: appPricePointsV3_equalizations_getToManyRelated
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/v3/appPricePoints/:id/equalizations
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[territory]: 
+  ~fields[appPricePoints]: 
+  ~fields[apps]: 
+  ~fields[territories]: 
+  ~limit: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

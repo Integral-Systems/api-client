@@ -1,0 +1,24 @@
+meta {
+  name: inAppPurchasesV2_iapPriceSchedule_getToOneRelated
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{baseUrl}}/v2/inAppPurchases/:id/iapPriceSchedule
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[inAppPurchasePriceSchedules]: 
+  ~fields[territories]: 
+  ~fields[inAppPurchasePrices]: 
+  ~include: 
+  ~limit[manualPrices]: 
+  ~limit[automaticPrices]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

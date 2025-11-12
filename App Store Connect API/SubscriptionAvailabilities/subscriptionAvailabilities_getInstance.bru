@@ -1,0 +1,22 @@
+meta {
+  name: subscriptionAvailabilities_getInstance
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/subscriptionAvailabilities/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[subscriptionAvailabilities]: 
+  ~fields[territories]: 
+  ~include: 
+  ~limit[availableTerritories]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

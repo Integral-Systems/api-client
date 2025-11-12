@@ -1,0 +1,20 @@
+meta {
+  name: betaGroups_builds_getToManyRelated
+  type: http
+  seq: 19
+}
+
+get {
+  url: {{baseUrl}}/v1/betaGroups/:id/builds
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[builds]: 
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,26 @@
+meta {
+  name: gameCenterDetails_challengesMinimumPlatformVersions_replaceToManyRelationship
+  type: http
+  seq: 10
+}
+
+patch {
+  url: {{baseUrl}}/v1/gameCenterDetails/:id/relationships/challengesMinimumPlatformVersions
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": [
+      {
+        "type": "",
+        "id": ""
+      }
+    ]
+  }
+}

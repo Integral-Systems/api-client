@@ -1,0 +1,15 @@
+meta {
+  name: inAppPurchasePriceSchedules_baseTerritory_getToOneRelationship
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/v1/inAppPurchasePriceSchedules/:id/relationships/baseTerritory
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

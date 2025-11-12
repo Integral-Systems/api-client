@@ -1,0 +1,29 @@
+meta {
+  name: ciWorkflows_buildRuns_getToManyRelated
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/v1/ciWorkflows/:id/buildRuns
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[builds]: 
+  ~sort: 
+  ~fields[ciBuildRuns]: 
+  ~fields[builds]: 
+  ~fields[ciWorkflows]: 
+  ~fields[ciProducts]: 
+  ~fields[scmGitReferences]: 
+  ~fields[scmPullRequests]: 
+  ~limit: 
+  ~include: 
+  ~limit[builds]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,30 @@
+meta {
+  name: gameCenterLeaderboards_groupLeaderboard_getToOneRelated
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{baseUrl}}/v1/gameCenterLeaderboards/:id/groupLeaderboard
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[gameCenterLeaderboards]: 
+  ~fields[gameCenterDetails]: 
+  ~fields[gameCenterGroups]: 
+  ~fields[gameCenterLeaderboardSets]: 
+  ~fields[gameCenterLeaderboardLocalizations]: 
+  ~fields[gameCenterLeaderboardReleases]: 
+  ~fields[gameCenterActivities]: 
+  ~fields[gameCenterChallenges]: 
+  ~include: 
+  ~limit[gameCenterLeaderboardSets]: 
+  ~limit[localizations]: 
+  ~limit[releases]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

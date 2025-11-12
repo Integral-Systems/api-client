@@ -1,0 +1,42 @@
+meta {
+  name: endUserLicenseAgreements_createInstance
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v1/endUserLicenseAgreements
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "attributes": {
+        "agreementText": ""
+      },
+      "relationships": {
+        "app": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        },
+        "territories": {
+          "data": [
+            {
+              "type": "",
+              "id": ""
+            }
+          ]
+        }
+      }
+    }
+  }
+}

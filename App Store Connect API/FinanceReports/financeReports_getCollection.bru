@@ -1,0 +1,22 @@
+meta {
+  name: financeReports_getCollection
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v1/financeReports
+  body: none
+  auth: bearer
+}
+
+params:query {
+  filter[vendorNumber]: 
+  filter[reportType]: 
+  filter[regionCode]: 
+  filter[reportDate]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

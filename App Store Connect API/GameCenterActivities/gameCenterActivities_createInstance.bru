@@ -1,0 +1,46 @@
+meta {
+  name: gameCenterActivities_createInstance
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v1/gameCenterActivities
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "attributes": {
+        "referenceName": "",
+        "vendorIdentifier": "",
+        "playStyle": "",
+        "minimumPlayersCount": 0,
+        "maximumPlayersCount": 0,
+        "supportsPartyCode": false,
+        "properties": {}
+      },
+      "relationships": {
+        "gameCenterDetail": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        },
+        "gameCenterGroup": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        }
+      }
+    }
+  }
+}

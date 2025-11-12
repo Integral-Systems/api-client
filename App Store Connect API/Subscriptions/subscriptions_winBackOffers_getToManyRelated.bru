@@ -1,0 +1,23 @@
+meta {
+  name: subscriptions_winBackOffers_getToManyRelated
+  type: http
+  seq: 28
+}
+
+get {
+  url: {{baseUrl}}/v1/subscriptions/:id/winBackOffers
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[winBackOffers]: 
+  ~fields[winBackOfferPrices]: 
+  ~limit: 
+  ~include: 
+  ~limit[prices]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

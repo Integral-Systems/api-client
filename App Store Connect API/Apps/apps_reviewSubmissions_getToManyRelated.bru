@@ -1,0 +1,28 @@
+meta {
+  name: apps_reviewSubmissions_getToManyRelated
+  type: http
+  seq: 71
+}
+
+get {
+  url: {{baseUrl}}/v1/apps/:id/reviewSubmissions
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[platform]: 
+  ~filter[state]: 
+  ~fields[reviewSubmissions]: 
+  ~fields[apps]: 
+  ~fields[reviewSubmissionItems]: 
+  ~fields[appStoreVersions]: 
+  ~fields[actors]: 
+  ~limit: 
+  ~include: 
+  ~limit[items]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

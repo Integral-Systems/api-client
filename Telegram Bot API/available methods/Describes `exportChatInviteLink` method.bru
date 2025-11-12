@@ -1,0 +1,17 @@
+meta {
+  name: Describes `exportChatInviteLink` method
+  type: http
+  seq: 20
+}
+
+post {
+  url: {{baseUrl}}/exportChatInviteLink
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "chat_id": ""
+  }
+}

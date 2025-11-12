@@ -1,0 +1,19 @@
+meta {
+  name: subscriptionOfferCodes_prices_getToManyRelationship
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{baseUrl}}/v1/subscriptionOfferCodes/:id/relationships/prices
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

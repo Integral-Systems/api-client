@@ -1,0 +1,22 @@
+meta {
+  name: appClips_getInstance
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v1/appClips/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[appClips]: 
+  ~fields[appClipDefaultExperiences]: 
+  ~include: 
+  ~limit[appClipDefaultExperiences]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

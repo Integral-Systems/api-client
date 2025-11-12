@@ -1,0 +1,19 @@
+meta {
+  name: gameCenterActivityLocalizations_image_getToOneRelated
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/v1/gameCenterActivityLocalizations/:id/image
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[gameCenterActivityImages]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

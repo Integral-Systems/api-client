@@ -1,0 +1,20 @@
+meta {
+  name: subscriptionGroupLocalizations_getInstance
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/subscriptionGroupLocalizations/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[subscriptionGroupLocalizations]: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

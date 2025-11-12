@@ -1,0 +1,31 @@
+meta {
+  name: apps_betaFeedbackScreenshotSubmissions_getToManyRelated
+  type: http
+  seq: 39
+}
+
+get {
+  url: {{baseUrl}}/v1/apps/:id/betaFeedbackScreenshotSubmissions
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[deviceModel]: 
+  ~filter[osVersion]: 
+  ~filter[appPlatform]: 
+  ~filter[devicePlatform]: 
+  ~filter[build]: 
+  ~filter[build.preReleaseVersion]: 
+  ~filter[tester]: 
+  ~sort: 
+  ~fields[betaFeedbackScreenshotSubmissions]: 
+  ~fields[builds]: 
+  ~fields[betaTesters]: 
+  ~limit: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

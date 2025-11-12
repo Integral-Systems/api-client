@@ -1,0 +1,27 @@
+meta {
+  name: alternativeDistributionPackages_versions_getToManyRelated
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/v1/alternativeDistributionPackages/:id/versions
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[state]: 
+  ~fields[alternativeDistributionPackageVersions]: 
+  ~fields[alternativeDistributionPackageVariants]: 
+  ~fields[alternativeDistributionPackageDeltas]: 
+  ~fields[alternativeDistributionPackages]: 
+  ~limit: 
+  ~include: 
+  ~limit[variants]: 
+  ~limit[deltas]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

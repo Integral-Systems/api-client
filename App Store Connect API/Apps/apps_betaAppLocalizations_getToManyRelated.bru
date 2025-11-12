@@ -1,0 +1,20 @@
+meta {
+  name: apps_betaAppLocalizations_getToManyRelated
+  type: http
+  seq: 33
+}
+
+get {
+  url: {{baseUrl}}/v1/apps/:id/betaAppLocalizations
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[betaAppLocalizations]: 
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

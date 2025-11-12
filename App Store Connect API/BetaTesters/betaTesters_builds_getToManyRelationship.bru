@@ -1,0 +1,19 @@
+meta {
+  name: betaTesters_builds_getToManyRelationship
+  type: http
+  seq: 12
+}
+
+get {
+  url: {{baseUrl}}/v1/betaTesters/:id/relationships/builds
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

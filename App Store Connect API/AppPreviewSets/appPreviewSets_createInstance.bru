@@ -1,0 +1,46 @@
+meta {
+  name: appPreviewSets_createInstance
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v1/appPreviewSets
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "attributes": {
+        "previewType": ""
+      },
+      "relationships": {
+        "appStoreVersionLocalization": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        },
+        "appCustomProductPageLocalization": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        },
+        "appStoreVersionExperimentTreatmentLocalization": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        }
+      }
+    }
+  }
+}

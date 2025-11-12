@@ -1,0 +1,18 @@
+meta {
+  name: Describes `setStickerKeywords` method
+  type: http
+  seq: 11
+}
+
+post {
+  url: {{baseUrl}}/setStickerKeywords
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "keywords": [],
+    "sticker": ""
+  }
+}

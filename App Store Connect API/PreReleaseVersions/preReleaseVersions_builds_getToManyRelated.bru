@@ -1,0 +1,20 @@
+meta {
+  name: preReleaseVersions_builds_getToManyRelated
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/v1/preReleaseVersions/:id/builds
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[builds]: 
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

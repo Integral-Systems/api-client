@@ -1,0 +1,17 @@
+meta {
+  name: Describes `getChat` method
+  type: http
+  seq: 24
+}
+
+post {
+  url: {{baseUrl}}/getChat
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "chat_id": "-933647200"
+  }
+}

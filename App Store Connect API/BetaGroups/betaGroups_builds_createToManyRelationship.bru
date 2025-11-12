@@ -1,0 +1,26 @@
+meta {
+  name: betaGroups_builds_createToManyRelationship
+  type: http
+  seq: 17
+}
+
+post {
+  url: {{baseUrl}}/v1/betaGroups/:id/relationships/builds
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": [
+      {
+        "type": "",
+        "id": ""
+      }
+    ]
+  }
+}

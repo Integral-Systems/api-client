@@ -1,0 +1,47 @@
+meta {
+  name: appStoreVersions_updateInstance
+  type: http
+  seq: 3
+}
+
+patch {
+  url: {{baseUrl}}/v1/appStoreVersions/:id
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "id": "",
+      "attributes": {
+        "versionString": "",
+        "copyright": "",
+        "reviewType": "",
+        "releaseType": "",
+        "earliestReleaseDate": "",
+        "usesIdfa": false,
+        "downloadable": false
+      },
+      "relationships": {
+        "build": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        },
+        "appClipDefaultExperience": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        }
+      }
+    }
+  }
+}

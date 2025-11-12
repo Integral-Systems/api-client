@@ -1,0 +1,23 @@
+meta {
+  name: betaAppReviewDetails_getCollection
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v1/betaAppReviewDetails
+  body: none
+  auth: bearer
+}
+
+params:query {
+  filter[app]: 
+  ~fields[betaAppReviewDetails]: 
+  ~fields[apps]: 
+  ~limit: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

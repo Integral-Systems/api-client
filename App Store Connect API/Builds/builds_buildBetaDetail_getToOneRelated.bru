@@ -1,0 +1,21 @@
+meta {
+  name: builds_buildBetaDetail_getToOneRelated
+  type: http
+  seq: 18
+}
+
+get {
+  url: {{baseUrl}}/v1/builds/:id/buildBetaDetail
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[buildBetaDetails]: 
+  ~fields[builds]: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

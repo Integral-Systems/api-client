@@ -1,0 +1,22 @@
+meta {
+  name: ciBuildRuns_actions_getToManyRelated
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/v1/ciBuildRuns/:id/actions
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[ciBuildActions]: 
+  ~fields[ciBuildRuns]: 
+  ~limit: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

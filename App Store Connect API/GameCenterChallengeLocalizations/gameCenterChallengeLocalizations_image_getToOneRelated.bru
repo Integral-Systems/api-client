@@ -1,0 +1,19 @@
+meta {
+  name: gameCenterChallengeLocalizations_image_getToOneRelated
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/v1/gameCenterChallengeLocalizations/:id/image
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[gameCenterChallengeImages]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,41 @@
+meta {
+  name: appStoreReviewDetails_createInstance
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v1/appStoreReviewDetails
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "attributes": {
+        "contactFirstName": "",
+        "contactLastName": "",
+        "contactPhone": "",
+        "contactEmail": "",
+        "demoAccountName": "",
+        "demoAccountPassword": "",
+        "demoAccountRequired": false,
+        "notes": ""
+      },
+      "relationships": {
+        "appStoreVersion": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        }
+      }
+    }
+  }
+}

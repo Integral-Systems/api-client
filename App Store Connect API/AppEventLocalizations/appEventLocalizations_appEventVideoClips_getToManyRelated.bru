@@ -1,0 +1,22 @@
+meta {
+  name: appEventLocalizations_appEventVideoClips_getToManyRelated
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{baseUrl}}/v1/appEventLocalizations/:id/appEventVideoClips
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[appEventVideoClips]: 
+  ~fields[appEventLocalizations]: 
+  ~limit: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

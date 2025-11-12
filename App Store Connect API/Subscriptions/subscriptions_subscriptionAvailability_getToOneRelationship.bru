@@ -1,0 +1,15 @@
+meta {
+  name: subscriptions_subscriptionAvailability_getToOneRelationship
+  type: http
+  seq: 23
+}
+
+get {
+  url: {{baseUrl}}/v1/subscriptions/:id/relationships/subscriptionAvailability
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

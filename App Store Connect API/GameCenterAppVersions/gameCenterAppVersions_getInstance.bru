@@ -1,0 +1,22 @@
+meta {
+  name: gameCenterAppVersions_getInstance
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/gameCenterAppVersions/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[gameCenterAppVersions]: 
+  ~fields[appStoreVersions]: 
+  ~include: 
+  ~limit[compatibilityVersions]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

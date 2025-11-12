@@ -1,0 +1,38 @@
+meta {
+  name: gameCenterMatchmakingRules_createInstance
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v1/gameCenterMatchmakingRules
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "attributes": {
+        "referenceName": "",
+        "description": "",
+        "type": "",
+        "expression": "",
+        "weight": ""
+      },
+      "relationships": {
+        "ruleSet": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        }
+      }
+    }
+  }
+}

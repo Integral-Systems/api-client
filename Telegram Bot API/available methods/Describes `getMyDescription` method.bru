@@ -1,0 +1,17 @@
+meta {
+  name: Describes `getMyDescription` method
+  type: http
+  seq: 34
+}
+
+post {
+  url: {{baseUrl}}/getMyDescription
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "language_code": ""
+  }
+}

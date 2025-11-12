@@ -1,0 +1,22 @@
+meta {
+  name: appCustomProductPageVersions_getInstance
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/appCustomProductPageVersions/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[appCustomProductPageVersions]: 
+  ~fields[appCustomProductPageLocalizations]: 
+  ~include: 
+  ~limit[appCustomProductPageLocalizations]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

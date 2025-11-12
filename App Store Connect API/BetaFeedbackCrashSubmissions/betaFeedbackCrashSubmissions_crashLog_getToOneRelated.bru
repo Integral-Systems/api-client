@@ -1,0 +1,19 @@
+meta {
+  name: betaFeedbackCrashSubmissions_crashLog_getToOneRelated
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/v1/betaFeedbackCrashSubmissions/:id/crashLog
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[betaCrashLogs]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

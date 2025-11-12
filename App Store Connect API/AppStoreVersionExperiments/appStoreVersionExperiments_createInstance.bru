@@ -1,0 +1,35 @@
+meta {
+  name: appStoreVersionExperiments_createInstance
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{baseUrl}}/v1/appStoreVersionExperiments
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "attributes": {
+        "name": "",
+        "trafficProportion": 0
+      },
+      "relationships": {
+        "appStoreVersion": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        }
+      }
+    }
+  }
+}

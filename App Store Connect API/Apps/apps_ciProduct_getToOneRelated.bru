@@ -1,0 +1,24 @@
+meta {
+  name: apps_ciProduct_getToOneRelated
+  type: http
+  seq: 48
+}
+
+get {
+  url: {{baseUrl}}/v1/apps/:id/ciProduct
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[ciProducts]: 
+  ~fields[apps]: 
+  ~fields[bundleIds]: 
+  ~fields[scmRepositories]: 
+  ~include: 
+  ~limit[primaryRepositories]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

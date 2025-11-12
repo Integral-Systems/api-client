@@ -1,0 +1,18 @@
+meta {
+  name: Describes `setChatTitle` method
+  type: http
+  seq: 69
+}
+
+post {
+  url: {{baseUrl}}/setChatTitle
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "chat_id": "",
+    "title": ""
+  }
+}

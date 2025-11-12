@@ -1,0 +1,33 @@
+meta {
+  name: preReleaseVersions_getCollection
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v1/preReleaseVersions
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[builds.buildAudienceType]: 
+  ~filter[builds.expired]: 
+  ~filter[builds.processingState]: 
+  ~filter[builds.version]: 
+  ~filter[platform]: 
+  ~filter[version]: 
+  ~filter[app]: 
+  ~filter[builds]: 
+  ~sort: 
+  ~fields[preReleaseVersions]: 
+  ~fields[builds]: 
+  ~fields[apps]: 
+  ~limit: 
+  ~include: 
+  ~limit[builds]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

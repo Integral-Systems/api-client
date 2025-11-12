@@ -1,0 +1,26 @@
+meta {
+  name: devices_getCollection
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v1/devices
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[name]: 
+  ~filter[platform]: 
+  ~filter[udid]: 
+  ~filter[status]: 
+  ~filter[id]: 
+  ~sort: 
+  ~fields[devices]: 
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

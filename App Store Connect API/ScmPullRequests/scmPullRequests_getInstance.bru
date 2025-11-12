@@ -1,0 +1,20 @@
+meta {
+  name: scmPullRequests_getInstance
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v1/scmPullRequests/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[scmPullRequests]: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

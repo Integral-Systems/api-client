@@ -1,0 +1,22 @@
+meta {
+  name: Describes `forwardMessages` method
+  type: http
+  seq: 22
+}
+
+post {
+  url: {{baseUrl}}/forwardMessages
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "chat_id": "",
+    "disable_notification": false,
+    "from_chat_id": "",
+    "message_ids": [],
+    "message_thread_id": 0,
+    "protect_content": false
+  }
+}

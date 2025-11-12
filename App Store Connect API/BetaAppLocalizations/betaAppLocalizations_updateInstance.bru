@@ -1,0 +1,31 @@
+meta {
+  name: betaAppLocalizations_updateInstance
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{baseUrl}}/v1/betaAppLocalizations/:id
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "id": "",
+      "attributes": {
+        "feedbackEmail": "",
+        "marketingUrl": "",
+        "privacyPolicyUrl": "",
+        "tvOsPrivacyPolicy": "",
+        "description": ""
+      }
+    }
+  }
+}

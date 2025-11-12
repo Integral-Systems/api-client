@@ -1,0 +1,25 @@
+meta {
+  name: appStoreVersions_appStoreVersionExperiments_getToManyRelated
+  type: http
+  seq: 15
+}
+
+get {
+  url: {{baseUrl}}/v1/appStoreVersions/:id/appStoreVersionExperiments
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[state]: 
+  ~fields[appStoreVersionExperiments]: 
+  ~fields[appStoreVersions]: 
+  ~fields[appStoreVersionExperimentTreatments]: 
+  ~limit: 
+  ~include: 
+  ~limit[appStoreVersionExperimentTreatments]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

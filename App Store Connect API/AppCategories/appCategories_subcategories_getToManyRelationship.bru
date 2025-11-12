@@ -1,0 +1,19 @@
+meta {
+  name: appCategories_subcategories_getToManyRelationship
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/v1/appCategories/:id/relationships/subcategories
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

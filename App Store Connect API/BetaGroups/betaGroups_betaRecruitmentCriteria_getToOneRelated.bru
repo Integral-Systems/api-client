@@ -1,0 +1,19 @@
+meta {
+  name: betaGroups_betaRecruitmentCriteria_getToOneRelated
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{baseUrl}}/v1/betaGroups/:id/betaRecruitmentCriteria
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[betaRecruitmentCriteria]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

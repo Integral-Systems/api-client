@@ -1,0 +1,23 @@
+meta {
+  name: gameCenterActivityVersions_localizations_getToManyRelated
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{baseUrl}}/v1/gameCenterActivityVersions/:id/localizations
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[gameCenterActivityLocalizations]: 
+  ~fields[gameCenterActivityVersions]: 
+  ~fields[gameCenterActivityImages]: 
+  ~limit: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

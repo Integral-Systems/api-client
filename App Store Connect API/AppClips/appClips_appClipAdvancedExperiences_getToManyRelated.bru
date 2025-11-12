@@ -1,0 +1,28 @@
+meta {
+  name: appClips_appClipAdvancedExperiences_getToManyRelated
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/v1/appClips/:id/appClipAdvancedExperiences
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[status]: 
+  ~filter[placeStatus]: 
+  ~filter[action]: 
+  ~fields[appClipAdvancedExperiences]: 
+  ~fields[appClips]: 
+  ~fields[appClipAdvancedExperienceImages]: 
+  ~fields[appClipAdvancedExperienceLocalizations]: 
+  ~limit: 
+  ~include: 
+  ~limit[localizations]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

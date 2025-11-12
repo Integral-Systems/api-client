@@ -1,0 +1,22 @@
+meta {
+  name: alternativeDistributionPackages_getInstance
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/alternativeDistributionPackages/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[alternativeDistributionPackages]: 
+  ~fields[alternativeDistributionPackageVersions]: 
+  ~include: 
+  ~limit[versions]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

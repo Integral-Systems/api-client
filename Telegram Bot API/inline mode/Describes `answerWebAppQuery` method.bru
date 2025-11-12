@@ -1,0 +1,18 @@
+meta {
+  name: Describes `answerWebAppQuery` method
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/answerWebAppQuery
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "result": {},
+    "web_app_query_id": ""
+  }
+}

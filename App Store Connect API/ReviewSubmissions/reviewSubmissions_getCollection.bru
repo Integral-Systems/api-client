@@ -1,0 +1,26 @@
+meta {
+  name: reviewSubmissions_getCollection
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v1/reviewSubmissions
+  body: none
+  auth: bearer
+}
+
+params:query {
+  filter[app]: 
+  ~filter[platform]: 
+  ~filter[state]: 
+  ~fields[reviewSubmissions]: 
+  ~fields[reviewSubmissionItems]: 
+  ~limit: 
+  ~include: 
+  ~limit[items]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

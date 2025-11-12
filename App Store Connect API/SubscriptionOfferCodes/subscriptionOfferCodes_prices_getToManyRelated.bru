@@ -1,0 +1,24 @@
+meta {
+  name: subscriptionOfferCodes_prices_getToManyRelated
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{baseUrl}}/v1/subscriptionOfferCodes/:id/prices
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[territory]: 
+  ~fields[subscriptionOfferCodePrices]: 
+  ~fields[territories]: 
+  ~fields[subscriptionPricePoints]: 
+  ~limit: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,82 @@
+meta {
+  name: Describes `sendInvoice` method
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{baseUrl}}/sendInvoice
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "chat_id": "",
+    "currency": "",
+    "description": "",
+    "disable_notification": false,
+    "is_flexible": false,
+    "max_tip_amount": 0,
+    "message_effect_id": "",
+    "message_thread_id": 0,
+    "need_email": false,
+    "need_name": false,
+    "need_phone_number": false,
+    "need_shipping_address": false,
+    "payload": "",
+    "photo_height": 0,
+    "photo_size": 0,
+    "photo_url": "",
+    "photo_width": 0,
+    "prices": [
+      {
+        "amount": 0,
+        "label": ""
+      }
+    ],
+    "protect_content": false,
+    "provider_data": "",
+    "provider_token": "",
+    "reply_markup": {
+      "inline_keyboard": []
+    },
+    "reply_parameters": {
+      "allow_sending_without_reply": false,
+      "chat_id": "",
+      "message_id": 0,
+      "quote": "",
+      "quote_entities": [
+        {
+          "custom_emoji_id": "",
+          "language": "",
+          "length": 0,
+          "offset": 0,
+          "type": "",
+          "url": "",
+          "user": {
+            "added_to_attachment_menu": false,
+            "can_connect_to_business": false,
+            "can_join_groups": false,
+            "can_read_all_group_messages": false,
+            "first_name": "",
+            "id": 0,
+            "is_bot": false,
+            "is_premium": false,
+            "language_code": "",
+            "last_name": "",
+            "supports_inline_queries": false,
+            "username": ""
+          }
+        }
+      ],
+      "quote_parse_mode": "",
+      "quote_position": 0
+    },
+    "send_email_to_provider": false,
+    "send_phone_number_to_provider": false,
+    "start_parameter": "",
+    "suggested_tip_amounts": [],
+    "title": ""
+  }
+}

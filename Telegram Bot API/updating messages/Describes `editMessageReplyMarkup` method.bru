@@ -1,0 +1,22 @@
+meta {
+  name: Describes `editMessageReplyMarkup` method
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/editMessageReplyMarkup
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "chat_id": "",
+    "inline_message_id": "",
+    "message_id": 0,
+    "reply_markup": {
+      "inline_keyboard": []
+    }
+  }
+}

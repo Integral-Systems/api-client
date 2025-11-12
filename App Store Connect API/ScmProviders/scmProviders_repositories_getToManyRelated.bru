@@ -1,0 +1,24 @@
+meta {
+  name: scmProviders_repositories_getToManyRelated
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/v1/scmProviders/:id/repositories
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[id]: 
+  ~fields[scmRepositories]: 
+  ~fields[scmProviders]: 
+  ~fields[scmGitReferences]: 
+  ~limit: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,29 @@
+meta {
+  name: gameCenterDetails_gameCenterChallenges_getToManyRelated
+  type: http
+  seq: 19
+}
+
+get {
+  url: {{baseUrl}}/v1/gameCenterDetails/:id/gameCenterChallenges
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[referenceName]: 
+  ~filter[archived]: 
+  ~filter[id]: 
+  ~fields[gameCenterChallenges]: 
+  ~fields[gameCenterDetails]: 
+  ~fields[gameCenterGroups]: 
+  ~fields[gameCenterChallengeVersions]: 
+  ~fields[gameCenterLeaderboards]: 
+  ~limit: 
+  ~include: 
+  ~limit[versions]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

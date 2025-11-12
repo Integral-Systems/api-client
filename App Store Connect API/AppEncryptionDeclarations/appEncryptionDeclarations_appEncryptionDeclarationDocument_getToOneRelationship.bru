@@ -1,0 +1,15 @@
+meta {
+  name: appEncryptionDeclarations_appEncryptionDeclarationDocument_getToOneRelationship
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/v1/appEncryptionDeclarations/:id/relationships/appEncryptionDeclarationDocument
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

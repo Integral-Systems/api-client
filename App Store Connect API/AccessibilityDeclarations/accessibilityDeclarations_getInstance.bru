@@ -1,0 +1,19 @@
+meta {
+  name: accessibilityDeclarations_getInstance
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/accessibilityDeclarations/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[accessibilityDeclarations]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

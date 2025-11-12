@@ -1,0 +1,22 @@
+meta {
+  name: appEventLocalizations_appEventScreenshots_getToManyRelated
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/v1/appEventLocalizations/:id/appEventScreenshots
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[appEventScreenshots]: 
+  ~fields[appEventLocalizations]: 
+  ~limit: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,26 @@
+meta {
+  name: gameCenterActivities_achievements_createToManyRelationship
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{baseUrl}}/v1/gameCenterActivities/:id/relationships/achievements
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": [
+      {
+        "type": "",
+        "id": ""
+      }
+    ]
+  }
+}

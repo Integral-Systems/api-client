@@ -1,0 +1,20 @@
+meta {
+  name: bundleIds_profiles_getToManyRelated
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{baseUrl}}/v1/bundleIds/:id/profiles
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[profiles]: 
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

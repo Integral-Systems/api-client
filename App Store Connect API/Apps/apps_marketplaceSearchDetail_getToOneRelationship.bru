@@ -1,0 +1,15 @@
+meta {
+  name: apps_marketplaceSearchDetail_getToOneRelationship
+  type: http
+  seq: 62
+}
+
+get {
+  url: {{baseUrl}}/v1/apps/:id/relationships/marketplaceSearchDetail
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

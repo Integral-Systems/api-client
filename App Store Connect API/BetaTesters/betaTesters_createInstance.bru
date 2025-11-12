@@ -1,0 +1,46 @@
+meta {
+  name: betaTesters_createInstance
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/v1/betaTesters
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "attributes": {
+        "firstName": "",
+        "lastName": "",
+        "email": ""
+      },
+      "relationships": {
+        "betaGroups": {
+          "data": [
+            {
+              "type": "",
+              "id": ""
+            }
+          ]
+        },
+        "builds": {
+          "data": [
+            {
+              "type": "",
+              "id": ""
+            }
+          ]
+        }
+      }
+    }
+  }
+}

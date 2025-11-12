@@ -1,0 +1,20 @@
+meta {
+  name: betaGroups_betaTesters_getToManyRelated
+  type: http
+  seq: 15
+}
+
+get {
+  url: {{baseUrl}}/v1/betaGroups/:id/betaTesters
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[betaTesters]: 
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,20 @@
+meta {
+  name: appCategories_subcategories_getToManyRelated
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/v1/appCategories/:id/subcategories
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[appCategories]: 
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

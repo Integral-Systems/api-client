@@ -1,0 +1,56 @@
+meta {
+  name: betaGroups_createInstance
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/v1/betaGroups
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "attributes": {
+        "name": "",
+        "isInternalGroup": false,
+        "hasAccessToAllBuilds": false,
+        "publicLinkEnabled": false,
+        "publicLinkLimitEnabled": false,
+        "publicLinkLimit": 0,
+        "feedbackEnabled": false
+      },
+      "relationships": {
+        "app": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        },
+        "builds": {
+          "data": [
+            {
+              "type": "",
+              "id": ""
+            }
+          ]
+        },
+        "betaTesters": {
+          "data": [
+            {
+              "type": "",
+              "id": ""
+            }
+          ]
+        }
+      }
+    }
+  }
+}

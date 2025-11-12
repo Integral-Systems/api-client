@@ -1,0 +1,39 @@
+meta {
+  name: betaAppLocalizations_createInstance
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/v1/betaAppLocalizations
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "attributes": {
+        "feedbackEmail": "",
+        "marketingUrl": "",
+        "privacyPolicyUrl": "",
+        "tvOsPrivacyPolicy": "",
+        "description": "",
+        "locale": ""
+      },
+      "relationships": {
+        "app": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        }
+      }
+    }
+  }
+}

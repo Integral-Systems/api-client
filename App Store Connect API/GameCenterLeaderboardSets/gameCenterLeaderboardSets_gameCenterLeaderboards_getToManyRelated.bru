@@ -1,0 +1,34 @@
+meta {
+  name: gameCenterLeaderboardSets_gameCenterLeaderboards_getToManyRelated
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{baseUrl}}/v1/gameCenterLeaderboardSets/:id/gameCenterLeaderboards
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[referenceName]: 
+  ~filter[archived]: 
+  ~filter[id]: 
+  ~fields[gameCenterLeaderboards]: 
+  ~fields[gameCenterDetails]: 
+  ~fields[gameCenterGroups]: 
+  ~fields[gameCenterLeaderboardSets]: 
+  ~fields[gameCenterLeaderboardLocalizations]: 
+  ~fields[gameCenterLeaderboardReleases]: 
+  ~fields[gameCenterActivities]: 
+  ~fields[gameCenterChallenges]: 
+  ~limit: 
+  ~include: 
+  ~limit[gameCenterLeaderboardSets]: 
+  ~limit[localizations]: 
+  ~limit[releases]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

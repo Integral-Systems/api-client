@@ -1,0 +1,19 @@
+meta {
+  name: Describes `getUserProfilePhotos` method
+  type: http
+  seq: 38
+}
+
+post {
+  url: {{baseUrl}}/getUserProfilePhotos
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "limit": 0,
+    "offset": 0,
+    "user_id": 0
+  }
+}

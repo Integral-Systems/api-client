@@ -1,0 +1,27 @@
+meta {
+  name: apps_appEncryptionDeclarations_getToManyRelated
+  type: http
+  seq: 17
+}
+
+get {
+  url: {{baseUrl}}/v1/apps/:id/appEncryptionDeclarations
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[platform]: 
+  ~filter[builds]: 
+  ~fields[appEncryptionDeclarations]: 
+  ~fields[apps]: 
+  ~fields[builds]: 
+  ~fields[appEncryptionDeclarationDocuments]: 
+  ~limit: 
+  ~include: 
+  ~limit[builds]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,19 @@
+meta {
+  name: analyticsReportSegments_getInstance
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v1/analyticsReportSegments/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[analyticsReportSegments]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,16 @@
+meta {
+  name: Describes `setChatPhoto` method
+  type: http
+  seq: 67
+}
+
+post {
+  url: {{baseUrl}}/setChatPhoto
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  chat_id: 
+  photo: 
+}

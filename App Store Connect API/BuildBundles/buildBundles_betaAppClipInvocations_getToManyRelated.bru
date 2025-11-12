@@ -1,0 +1,23 @@
+meta {
+  name: buildBundles_betaAppClipInvocations_getToManyRelated
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/v1/buildBundles/:id/betaAppClipInvocations
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[betaAppClipInvocations]: 
+  ~fields[betaAppClipInvocationLocalizations]: 
+  ~limit: 
+  ~include: 
+  ~limit[betaAppClipInvocationLocalizations]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

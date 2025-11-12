@@ -1,0 +1,15 @@
+meta {
+  name: customerReviews_response_getToOneRelationship
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/customerReviews/:id/relationships/response
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

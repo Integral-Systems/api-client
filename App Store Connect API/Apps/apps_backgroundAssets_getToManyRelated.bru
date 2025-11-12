@@ -1,0 +1,23 @@
+meta {
+  name: apps_backgroundAssets_getToManyRelated
+  type: http
+  seq: 31
+}
+
+get {
+  url: {{baseUrl}}/v1/apps/:id/backgroundAssets
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[assetPackIdentifier]: 
+  ~fields[backgroundAssets]: 
+  ~fields[backgroundAssetVersions]: 
+  ~limit: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,18 @@
+meta {
+  name: Describes `banChatSenderChat` method
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/banChatSenderChat
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "chat_id": "",
+    "sender_chat_id": 0
+  }
+}

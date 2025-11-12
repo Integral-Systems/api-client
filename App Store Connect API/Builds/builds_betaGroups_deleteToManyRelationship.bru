@@ -1,0 +1,26 @@
+meta {
+  name: builds_betaGroups_deleteToManyRelationship
+  type: http
+  seq: 16
+}
+
+delete {
+  url: {{baseUrl}}/v1/builds/:id/relationships/betaGroups
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": [
+      {
+        "type": "",
+        "id": ""
+      }
+    ]
+  }
+}

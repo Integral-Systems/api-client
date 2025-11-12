@@ -1,0 +1,22 @@
+meta {
+  name: scmRepositories_getCollection
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v1/scmRepositories
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[id]: 
+  ~fields[scmRepositories]: 
+  ~limit: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

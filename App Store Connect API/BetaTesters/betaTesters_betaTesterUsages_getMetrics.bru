@@ -1,0 +1,21 @@
+meta {
+  name: betaTesters_betaTesterUsages_getMetrics
+  type: http
+  seq: 16
+}
+
+get {
+  url: {{baseUrl}}/v1/betaTesters/:id/metrics/betaTesterUsages
+  body: none
+  auth: bearer
+}
+
+params:query {
+  filter[apps]: 
+  ~period: 
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

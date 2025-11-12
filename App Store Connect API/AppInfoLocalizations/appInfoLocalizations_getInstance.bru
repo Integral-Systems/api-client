@@ -1,0 +1,20 @@
+meta {
+  name: appInfoLocalizations_getInstance
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/appInfoLocalizations/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[appInfoLocalizations]: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

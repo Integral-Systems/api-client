@@ -1,0 +1,20 @@
+meta {
+  name: apps_builds_getToManyRelated
+  type: http
+  seq: 46
+}
+
+get {
+  url: {{baseUrl}}/v1/apps/:id/builds
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[builds]: 
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

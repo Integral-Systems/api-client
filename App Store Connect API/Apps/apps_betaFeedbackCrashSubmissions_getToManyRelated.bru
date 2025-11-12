@@ -1,0 +1,31 @@
+meta {
+  name: apps_betaFeedbackCrashSubmissions_getToManyRelated
+  type: http
+  seq: 37
+}
+
+get {
+  url: {{baseUrl}}/v1/apps/:id/betaFeedbackCrashSubmissions
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[deviceModel]: 
+  ~filter[osVersion]: 
+  ~filter[appPlatform]: 
+  ~filter[devicePlatform]: 
+  ~filter[build]: 
+  ~filter[build.preReleaseVersion]: 
+  ~filter[tester]: 
+  ~sort: 
+  ~fields[betaFeedbackCrashSubmissions]: 
+  ~fields[builds]: 
+  ~fields[betaTesters]: 
+  ~limit: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

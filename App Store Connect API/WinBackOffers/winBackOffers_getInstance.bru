@@ -1,0 +1,22 @@
+meta {
+  name: winBackOffers_getInstance
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/winBackOffers/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[winBackOffers]: 
+  ~fields[winBackOfferPrices]: 
+  ~include: 
+  ~limit[prices]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,31 @@
+meta {
+  name: gameCenterDetails_gameCenterAchievements_getToManyRelated
+  type: http
+  seq: 13
+}
+
+get {
+  url: {{baseUrl}}/v1/gameCenterDetails/:id/gameCenterAchievements
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[referenceName]: 
+  ~filter[archived]: 
+  ~filter[id]: 
+  ~fields[gameCenterAchievements]: 
+  ~fields[gameCenterDetails]: 
+  ~fields[gameCenterGroups]: 
+  ~fields[gameCenterAchievementLocalizations]: 
+  ~fields[gameCenterAchievementReleases]: 
+  ~fields[gameCenterActivities]: 
+  ~limit: 
+  ~include: 
+  ~limit[localizations]: 
+  ~limit[releases]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

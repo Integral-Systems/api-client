@@ -1,0 +1,39 @@
+meta {
+  name: subscriptions_createInstance
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v1/subscriptions
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "attributes": {
+        "name": "",
+        "productId": "",
+        "familySharable": false,
+        "subscriptionPeriod": "",
+        "reviewNote": "",
+        "groupLevel": 0
+      },
+      "relationships": {
+        "group": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+meta {
+  name: Describes `setStickerPositionInSet` method
+  type: http
+  seq: 13
+}
+
+post {
+  url: {{baseUrl}}/setStickerPositionInSet
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "position": 0,
+    "sticker": ""
+  }
+}

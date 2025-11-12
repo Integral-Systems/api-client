@@ -1,0 +1,22 @@
+meta {
+  name: scmRepositories_gitReferences_getToManyRelated
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/v1/scmRepositories/:id/gitReferences
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[scmGitReferences]: 
+  ~fields[scmRepositories]: 
+  ~limit: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

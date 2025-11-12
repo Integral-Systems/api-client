@@ -1,0 +1,29 @@
+meta {
+  name: gameCenterDetails_gameCenterActivities_getToManyRelated
+  type: http
+  seq: 15
+}
+
+get {
+  url: {{baseUrl}}/v1/gameCenterDetails/:id/gameCenterActivities
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[gameCenterActivities]: 
+  ~fields[gameCenterDetails]: 
+  ~fields[gameCenterGroups]: 
+  ~fields[gameCenterAchievements]: 
+  ~fields[gameCenterLeaderboards]: 
+  ~fields[gameCenterActivityVersions]: 
+  ~limit: 
+  ~include: 
+  ~limit[achievements]: 
+  ~limit[leaderboards]: 
+  ~limit[versions]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

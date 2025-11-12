@@ -1,0 +1,22 @@
+meta {
+  name: gameCenterMatchmakingRuleSets_matchmakingQueues_getToManyRelated
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{baseUrl}}/v1/gameCenterMatchmakingRuleSets/:id/matchmakingQueues
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[gameCenterMatchmakingQueues]: 
+  ~fields[gameCenterMatchmakingRuleSets]: 
+  ~limit: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

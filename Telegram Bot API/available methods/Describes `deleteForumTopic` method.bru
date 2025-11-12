@@ -1,0 +1,18 @@
+meta {
+  name: Describes `deleteForumTopic` method
+  type: http
+  seq: 15
+}
+
+post {
+  url: {{baseUrl}}/deleteForumTopic
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "chat_id": "",
+    "message_thread_id": 0
+  }
+}

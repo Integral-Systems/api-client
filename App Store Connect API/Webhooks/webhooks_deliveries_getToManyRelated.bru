@@ -1,0 +1,25 @@
+meta {
+  name: webhooks_deliveries_getToManyRelated
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/v1/webhooks/:id/deliveries
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[deliveryState]: 
+  ~filter[createdDateGreaterThanOrEqualTo]: 
+  ~filter[createdDateLessThan]: 
+  ~fields[webhookDeliveries]: 
+  ~fields[webhookEvents]: 
+  ~limit: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

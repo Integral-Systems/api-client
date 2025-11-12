@@ -1,0 +1,35 @@
+meta {
+  name: routingAppCoverages_createInstance
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v1/routingAppCoverages
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "attributes": {
+        "fileSize": 0,
+        "fileName": ""
+      },
+      "relationships": {
+        "appStoreVersion": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        }
+      }
+    }
+  }
+}

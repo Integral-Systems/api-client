@@ -1,0 +1,45 @@
+meta {
+  name: Create Mapping - .kibana
+  type: http
+  seq: 13
+}
+
+put {
+  url: {{host}}/jaeger-main-jaeger-service-*/_mapping
+  body: json
+  auth: basic
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}
+
+body:json {
+  {
+        "properties": {
+          "operationName": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "serviceName": {
+            "type": "keyword",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+        }
+      }
+  }
+}

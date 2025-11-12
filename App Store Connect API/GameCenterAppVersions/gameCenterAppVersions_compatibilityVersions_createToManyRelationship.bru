@@ -1,0 +1,26 @@
+meta {
+  name: gameCenterAppVersions_compatibilityVersions_createToManyRelationship
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{baseUrl}}/v1/gameCenterAppVersions/:id/relationships/compatibilityVersions
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": [
+      {
+        "type": "",
+        "id": ""
+      }
+    ]
+  }
+}

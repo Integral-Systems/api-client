@@ -1,0 +1,43 @@
+meta {
+  name: accessibilityDeclarations_createInstance
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v1/accessibilityDeclarations
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "attributes": {
+        "deviceFamily": "",
+        "supportsAudioDescriptions": false,
+        "supportsCaptions": false,
+        "supportsDarkInterface": false,
+        "supportsDifferentiateWithoutColorAlone": false,
+        "supportsLargerText": false,
+        "supportsReducedMotion": false,
+        "supportsSufficientContrast": false,
+        "supportsVoiceControl": false,
+        "supportsVoiceover": false
+      },
+      "relationships": {
+        "app": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        }
+      }
+    }
+  }
+}

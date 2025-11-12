@@ -1,0 +1,26 @@
+meta {
+  name: gameCenterGroups_gameCenterAchievements_replaceToManyRelationship
+  type: http
+  seq: 7
+}
+
+patch {
+  url: {{baseUrl}}/v1/gameCenterGroups/:id/relationships/gameCenterAchievements
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": [
+      {
+        "type": "",
+        "id": ""
+      }
+    ]
+  }
+}

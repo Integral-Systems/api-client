@@ -1,0 +1,21 @@
+meta {
+  name: appInfos_secondaryCategory_getToOneRelated
+  type: http
+  seq: 14
+}
+
+get {
+  url: {{baseUrl}}/v1/appInfos/:id/secondaryCategory
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[appCategories]: 
+  ~include: 
+  ~limit[subcategories]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

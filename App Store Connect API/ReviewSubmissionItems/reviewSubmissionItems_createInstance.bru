@@ -1,0 +1,61 @@
+meta {
+  name: reviewSubmissionItems_createInstance
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v1/reviewSubmissionItems
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "relationships": {
+        "reviewSubmission": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        },
+        "appStoreVersion": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        },
+        "appCustomProductPageVersion": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        },
+        "appStoreVersionExperiment": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        },
+        "appStoreVersionExperimentV2": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        },
+        "appEvent": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+meta {
+  name: appInfos_appInfoLocalizations_getToManyRelated
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/v1/appInfos/:id/appInfoLocalizations
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[locale]: 
+  ~fields[appInfoLocalizations]: 
+  ~fields[appInfos]: 
+  ~limit: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

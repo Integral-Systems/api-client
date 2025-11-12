@@ -1,0 +1,15 @@
+meta {
+  name: ciWorkflows_repository_getToOneRelationship
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{baseUrl}}/v1/ciWorkflows/:id/relationships/repository
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

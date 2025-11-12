@@ -1,0 +1,25 @@
+meta {
+  name: gameCenterLeaderboards_releases_getToManyRelated
+  type: http
+  seq: 13
+}
+
+get {
+  url: {{baseUrl}}/v1/gameCenterLeaderboards/:id/releases
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[live]: 
+  ~filter[gameCenterDetail]: 
+  ~fields[gameCenterLeaderboardReleases]: 
+  ~fields[gameCenterDetails]: 
+  ~fields[gameCenterLeaderboards]: 
+  ~limit: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

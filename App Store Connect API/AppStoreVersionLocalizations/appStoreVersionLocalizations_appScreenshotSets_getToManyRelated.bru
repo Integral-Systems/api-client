@@ -1,0 +1,29 @@
+meta {
+  name: appStoreVersionLocalizations_appScreenshotSets_getToManyRelated
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{baseUrl}}/v1/appStoreVersionLocalizations/:id/appScreenshotSets
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[screenshotDisplayType]: 
+  ~filter[appCustomProductPageLocalization]: 
+  ~filter[appStoreVersionExperimentTreatmentLocalization]: 
+  ~fields[appScreenshotSets]: 
+  ~fields[appStoreVersionLocalizations]: 
+  ~fields[appCustomProductPageLocalizations]: 
+  ~fields[appStoreVersionExperimentTreatmentLocalizations]: 
+  ~fields[appScreenshots]: 
+  ~limit: 
+  ~include: 
+  ~limit[appScreenshots]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

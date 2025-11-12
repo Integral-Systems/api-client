@@ -1,0 +1,19 @@
+meta {
+  name: appStoreVersionExperimentTreatmentLocalizations_appScreenshotSets_getToManyRelationship
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/v1/appStoreVersionExperimentTreatmentLocalizations/:id/relationships/appScreenshotSets
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

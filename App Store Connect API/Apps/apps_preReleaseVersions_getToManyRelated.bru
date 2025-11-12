@@ -1,0 +1,20 @@
+meta {
+  name: apps_preReleaseVersions_getToManyRelated
+  type: http
+  seq: 66
+}
+
+get {
+  url: {{baseUrl}}/v1/apps/:id/preReleaseVersions
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[preReleaseVersions]: 
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

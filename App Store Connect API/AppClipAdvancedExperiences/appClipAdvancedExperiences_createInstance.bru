@@ -1,0 +1,95 @@
+meta {
+  name: appClipAdvancedExperiences_createInstance
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v1/appClipAdvancedExperiences
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "attributes": {
+        "link": "",
+        "action": "",
+        "isPoweredBy": false,
+        "place": {
+          "placeId": "",
+          "names": [],
+          "mainAddress": {
+            "fullAddress": "",
+            "structuredAddress": {
+              "streetAddress": [],
+              "floor": "",
+              "neighborhood": "",
+              "locality": "",
+              "stateProvince": "",
+              "postalCode": "",
+              "countryCode": ""
+            }
+          },
+          "displayPoint": {
+            "coordinates": {
+              "latitude": "",
+              "longitude": ""
+            },
+            "source": ""
+          },
+          "mapAction": "",
+          "relationship": "",
+          "phoneNumber": {
+            "number": "",
+            "type": "",
+            "intent": ""
+          },
+          "homePage": "",
+          "categories": []
+        },
+        "businessCategory": "",
+        "defaultLanguage": ""
+      },
+      "relationships": {
+        "appClip": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        },
+        "headerImage": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        },
+        "localizations": {
+          "data": [
+            {
+              "type": "",
+              "id": ""
+            }
+          ]
+        }
+      }
+    },
+    "included": [
+      {
+        "type": "",
+        "id": "",
+        "attributes": {
+          "language": "",
+          "title": "",
+          "subtitle": ""
+        }
+      }
+    ]
+  }
+}

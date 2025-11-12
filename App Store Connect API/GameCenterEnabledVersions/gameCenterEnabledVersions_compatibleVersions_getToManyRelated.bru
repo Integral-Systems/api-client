@@ -1,0 +1,28 @@
+meta {
+  name: gameCenterEnabledVersions_compatibleVersions_getToManyRelated
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/v1/gameCenterEnabledVersions/:id/compatibleVersions
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[platform]: 
+  ~filter[versionString]: 
+  ~filter[app]: 
+  ~filter[id]: 
+  ~sort: 
+  ~fields[gameCenterEnabledVersions]: 
+  ~fields[apps]: 
+  ~limit: 
+  ~include: 
+  ~limit[compatibleVersions]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

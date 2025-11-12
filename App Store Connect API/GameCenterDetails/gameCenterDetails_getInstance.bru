@@ -1,0 +1,44 @@
+meta {
+  name: gameCenterDetails_getInstance
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/gameCenterDetails/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[gameCenterDetails]: 
+  ~fields[gameCenterAppVersions]: 
+  ~fields[gameCenterGroups]: 
+  ~fields[gameCenterLeaderboards]: 
+  ~fields[gameCenterLeaderboardSets]: 
+  ~fields[gameCenterAchievements]: 
+  ~fields[gameCenterActivities]: 
+  ~fields[gameCenterChallenges]: 
+  ~fields[gameCenterAchievementReleases]: 
+  ~fields[gameCenterActivityVersionReleases]: 
+  ~fields[gameCenterChallengeVersionReleases]: 
+  ~fields[gameCenterLeaderboardReleases]: 
+  ~fields[gameCenterLeaderboardSetReleases]: 
+  ~include: 
+  ~limit[achievementReleases]: 
+  ~limit[activityReleases]: 
+  ~limit[challengeReleases]: 
+  ~limit[challengesMinimumPlatformVersions]: 
+  ~limit[gameCenterAchievements]: 
+  ~limit[gameCenterActivities]: 
+  ~limit[gameCenterAppVersions]: 
+  ~limit[gameCenterChallenges]: 
+  ~limit[gameCenterLeaderboardSets]: 
+  ~limit[gameCenterLeaderboards]: 
+  ~limit[leaderboardReleases]: 
+  ~limit[leaderboardSetReleases]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,19 @@
+meta {
+  name: appClipAdvancedExperienceImages_getInstance
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/appClipAdvancedExperienceImages/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[appClipAdvancedExperienceImages]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

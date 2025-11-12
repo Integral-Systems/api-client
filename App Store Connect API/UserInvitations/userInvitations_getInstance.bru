@@ -1,0 +1,22 @@
+meta {
+  name: userInvitations_getInstance
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/v1/userInvitations/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[userInvitations]: 
+  ~fields[apps]: 
+  ~include: 
+  ~limit[visibleApps]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

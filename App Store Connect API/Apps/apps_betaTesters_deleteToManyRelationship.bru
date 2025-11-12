@@ -1,0 +1,26 @@
+meta {
+  name: apps_betaTesters_deleteToManyRelationship
+  type: http
+  seq: 44
+}
+
+delete {
+  url: {{baseUrl}}/v1/apps/:id/relationships/betaTesters
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": [
+      {
+        "type": "",
+        "id": ""
+      }
+    ]
+  }
+}

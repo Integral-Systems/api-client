@@ -1,0 +1,25 @@
+meta {
+  name: gameCenterAchievements_releases_getToManyRelated
+  type: http
+  seq: 12
+}
+
+get {
+  url: {{baseUrl}}/v1/gameCenterAchievements/:id/releases
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[live]: 
+  ~filter[gameCenterDetail]: 
+  ~fields[gameCenterAchievementReleases]: 
+  ~fields[gameCenterDetails]: 
+  ~fields[gameCenterAchievements]: 
+  ~limit: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

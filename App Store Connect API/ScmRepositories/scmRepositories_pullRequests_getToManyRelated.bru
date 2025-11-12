@@ -1,0 +1,22 @@
+meta {
+  name: scmRepositories_pullRequests_getToManyRelated
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/v1/scmRepositories/:id/pullRequests
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[scmPullRequests]: 
+  ~fields[scmRepositories]: 
+  ~limit: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

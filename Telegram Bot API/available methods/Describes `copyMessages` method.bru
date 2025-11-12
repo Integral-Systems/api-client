@@ -1,0 +1,23 @@
+meta {
+  name: Describes `copyMessages` method
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{baseUrl}}/copyMessages
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "chat_id": "",
+    "disable_notification": false,
+    "from_chat_id": "",
+    "message_ids": [],
+    "message_thread_id": 0,
+    "protect_content": false,
+    "remove_caption": false
+  }
+}

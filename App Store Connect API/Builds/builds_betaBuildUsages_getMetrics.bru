@@ -1,0 +1,19 @@
+meta {
+  name: builds_betaBuildUsages_getMetrics
+  type: http
+  seq: 30
+}
+
+get {
+  url: {{baseUrl}}/v1/builds/:id/metrics/betaBuildUsages
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

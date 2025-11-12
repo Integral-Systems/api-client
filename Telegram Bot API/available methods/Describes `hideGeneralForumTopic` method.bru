@@ -1,0 +1,17 @@
+meta {
+  name: Describes `hideGeneralForumTopic` method
+  type: http
+  seq: 39
+}
+
+post {
+  url: {{baseUrl}}/hideGeneralForumTopic
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "chat_id": ""
+  }
+}

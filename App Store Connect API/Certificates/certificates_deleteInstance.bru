@@ -1,0 +1,15 @@
+meta {
+  name: certificates_deleteInstance
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{baseUrl}}/v1/certificates/:id
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

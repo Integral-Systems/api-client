@@ -1,0 +1,19 @@
+meta {
+  name: appStoreVersions_appStoreVersionPhasedRelease_getToOneRelated
+  type: http
+  seq: 21
+}
+
+get {
+  url: {{baseUrl}}/v1/appStoreVersions/:id/appStoreVersionPhasedRelease
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[appStoreVersionPhasedReleases]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

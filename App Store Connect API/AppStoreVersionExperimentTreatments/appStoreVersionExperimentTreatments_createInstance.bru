@@ -1,0 +1,41 @@
+meta {
+  name: appStoreVersionExperimentTreatments_createInstance
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v1/appStoreVersionExperimentTreatments
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "attributes": {
+        "name": "",
+        "appIconName": ""
+      },
+      "relationships": {
+        "appStoreVersionExperiment": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        },
+        "appStoreVersionExperimentV2": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        }
+      }
+    }
+  }
+}

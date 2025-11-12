@@ -1,0 +1,15 @@
+meta {
+  name: apps_betaAppReviewDetail_getToOneRelationship
+  type: http
+  seq: 34
+}
+
+get {
+  url: {{baseUrl}}/v1/apps/:id/relationships/betaAppReviewDetail
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

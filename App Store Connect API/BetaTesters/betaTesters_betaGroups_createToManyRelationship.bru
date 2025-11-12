@@ -1,0 +1,26 @@
+meta {
+  name: betaTesters_betaGroups_createToManyRelationship
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{baseUrl}}/v1/betaTesters/:id/relationships/betaGroups
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": [
+      {
+        "type": "",
+        "id": ""
+      }
+    ]
+  }
+}

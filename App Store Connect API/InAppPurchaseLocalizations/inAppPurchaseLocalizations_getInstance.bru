@@ -1,0 +1,20 @@
+meta {
+  name: inAppPurchaseLocalizations_getInstance
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/inAppPurchaseLocalizations/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[inAppPurchaseLocalizations]: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

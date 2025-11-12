@@ -1,0 +1,15 @@
+meta {
+  name: appStoreVersions_build_getToOneRelationship
+  type: http
+  seq: 24
+}
+
+get {
+  url: {{baseUrl}}/v1/appStoreVersions/:id/relationships/build
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

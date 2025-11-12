@@ -1,0 +1,49 @@
+meta {
+  name: Describes `editMessageCaption` method
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/editMessageCaption
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "caption": "",
+    "caption_entities": [
+      {
+        "custom_emoji_id": "",
+        "language": "",
+        "length": 0,
+        "offset": 0,
+        "type": "",
+        "url": "",
+        "user": {
+          "added_to_attachment_menu": false,
+          "can_connect_to_business": false,
+          "can_join_groups": false,
+          "can_read_all_group_messages": false,
+          "first_name": "",
+          "id": 0,
+          "is_bot": false,
+          "is_premium": false,
+          "language_code": "",
+          "last_name": "",
+          "supports_inline_queries": false,
+          "username": ""
+        }
+      }
+    ],
+    "chat_id": "",
+    "inline_message_id": "",
+    "message_id": 0,
+    "parse_mode": "",
+    "reply_markup": {
+      "inline_keyboard": []
+    },
+    "show_caption_above_media": false
+  }
+}

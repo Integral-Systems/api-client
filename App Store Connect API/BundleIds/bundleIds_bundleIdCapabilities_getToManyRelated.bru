@@ -1,0 +1,20 @@
+meta {
+  name: bundleIds_bundleIdCapabilities_getToManyRelated
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{baseUrl}}/v1/bundleIds/:id/bundleIdCapabilities
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[bundleIdCapabilities]: 
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

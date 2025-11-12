@@ -1,0 +1,23 @@
+meta {
+  name: preReleaseVersions_getInstance
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/preReleaseVersions/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[preReleaseVersions]: 
+  ~fields[builds]: 
+  ~fields[apps]: 
+  ~include: 
+  ~limit[builds]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,22 @@
+meta {
+  name: appAvailabilitiesV2_territoryAvailabilities_getToManyRelated
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/v2/appAvailabilities/:id/territoryAvailabilities
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[territoryAvailabilities]: 
+  ~fields[territories]: 
+  ~limit: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

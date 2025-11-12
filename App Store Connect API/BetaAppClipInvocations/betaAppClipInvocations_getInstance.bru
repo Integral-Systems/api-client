@@ -1,0 +1,21 @@
+meta {
+  name: betaAppClipInvocations_getInstance
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/betaAppClipInvocations/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[betaAppClipInvocations]: 
+  ~include: 
+  ~limit[betaAppClipInvocationLocalizations]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

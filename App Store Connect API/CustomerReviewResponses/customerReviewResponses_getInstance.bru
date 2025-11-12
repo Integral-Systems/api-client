@@ -1,0 +1,20 @@
+meta {
+  name: customerReviewResponses_getInstance
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/customerReviewResponses/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[customerReviewResponses]: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

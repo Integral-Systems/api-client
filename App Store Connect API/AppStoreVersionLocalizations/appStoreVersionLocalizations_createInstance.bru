@@ -1,0 +1,40 @@
+meta {
+  name: appStoreVersionLocalizations_createInstance
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v1/appStoreVersionLocalizations
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "attributes": {
+        "description": "",
+        "locale": "",
+        "keywords": "",
+        "marketingUrl": "",
+        "promotionalText": "",
+        "supportUrl": "",
+        "whatsNew": ""
+      },
+      "relationships": {
+        "appStoreVersion": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        }
+      }
+    }
+  }
+}

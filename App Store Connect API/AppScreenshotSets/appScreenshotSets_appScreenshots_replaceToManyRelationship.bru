@@ -1,0 +1,26 @@
+meta {
+  name: appScreenshotSets_appScreenshots_replaceToManyRelationship
+  type: http
+  seq: 5
+}
+
+patch {
+  url: {{baseUrl}}/v1/appScreenshotSets/:id/relationships/appScreenshots
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": [
+      {
+        "type": "",
+        "id": ""
+      }
+    ]
+  }
+}

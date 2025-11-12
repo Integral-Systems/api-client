@@ -1,0 +1,27 @@
+meta {
+  name: appCustomProductPageVersions_appCustomProductPageLocalizations_getToManyRelated
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/v1/appCustomProductPageVersions/:id/appCustomProductPageLocalizations
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[locale]: 
+  ~fields[appCustomProductPageLocalizations]: 
+  ~fields[appCustomProductPageVersions]: 
+  ~fields[appScreenshotSets]: 
+  ~fields[appPreviewSets]: 
+  ~limit: 
+  ~include: 
+  ~limit[appScreenshotSets]: 
+  ~limit[appPreviewSets]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

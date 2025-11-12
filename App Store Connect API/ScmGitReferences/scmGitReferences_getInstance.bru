@@ -1,0 +1,20 @@
+meta {
+  name: scmGitReferences_getInstance
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v1/scmGitReferences/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[scmGitReferences]: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

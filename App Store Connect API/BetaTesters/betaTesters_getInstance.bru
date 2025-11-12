@@ -1,0 +1,26 @@
+meta {
+  name: betaTesters_getInstance
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/v1/betaTesters/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[betaTesters]: 
+  ~fields[apps]: 
+  ~fields[betaGroups]: 
+  ~fields[builds]: 
+  ~include: 
+  ~limit[apps]: 
+  ~limit[betaGroups]: 
+  ~limit[builds]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

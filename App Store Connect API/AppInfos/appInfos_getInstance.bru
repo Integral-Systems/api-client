@@ -1,0 +1,24 @@
+meta {
+  name: appInfos_getInstance
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v1/appInfos/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[appInfos]: 
+  ~fields[ageRatingDeclarations]: 
+  ~fields[appInfoLocalizations]: 
+  ~fields[appCategories]: 
+  ~include: 
+  ~limit[appInfoLocalizations]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

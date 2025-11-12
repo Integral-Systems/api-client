@@ -1,0 +1,52 @@
+meta {
+  name: ciBuildRuns_createInstance
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v1/ciBuildRuns
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "attributes": {
+        "clean": false
+      },
+      "relationships": {
+        "buildRun": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        },
+        "workflow": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        },
+        "sourceBranchOrTag": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        },
+        "pullRequest": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+meta {
+  name: gameCenterLeaderboardSets_getInstance
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/gameCenterLeaderboardSets/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[gameCenterLeaderboardSets]: 
+  ~fields[gameCenterLeaderboardSetLocalizations]: 
+  ~fields[gameCenterLeaderboards]: 
+  ~fields[gameCenterLeaderboardSetReleases]: 
+  ~include: 
+  ~limit[gameCenterLeaderboards]: 
+  ~limit[localizations]: 
+  ~limit[releases]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,19 @@
+meta {
+  name: appCustomProductPageVersions_appCustomProductPageLocalizations_getToManyRelationship
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/v1/appCustomProductPageVersions/:id/relationships/appCustomProductPageLocalizations
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

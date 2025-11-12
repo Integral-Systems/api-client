@@ -1,0 +1,46 @@
+meta {
+  name: appClipDefaultExperiences_createInstance
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v1/appClipDefaultExperiences
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "attributes": {
+        "action": ""
+      },
+      "relationships": {
+        "appClip": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        },
+        "releaseWithAppStoreVersion": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        },
+        "appClipDefaultExperienceTemplate": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        }
+      }
+    }
+  }
+}

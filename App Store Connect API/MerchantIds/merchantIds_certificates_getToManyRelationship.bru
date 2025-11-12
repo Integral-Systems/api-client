@@ -1,0 +1,19 @@
+meta {
+  name: merchantIds_certificates_getToManyRelationship
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/v1/merchantIds/:id/relationships/certificates
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

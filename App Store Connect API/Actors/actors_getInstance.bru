@@ -1,0 +1,19 @@
+meta {
+  name: actors_getInstance
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/actors/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[actors]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

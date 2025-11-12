@@ -1,0 +1,20 @@
+meta {
+  name: appClipHeaderImages_getInstance
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/appClipHeaderImages/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[appClipHeaderImages]: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

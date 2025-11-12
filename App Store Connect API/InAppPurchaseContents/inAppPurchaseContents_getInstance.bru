@@ -1,0 +1,20 @@
+meta {
+  name: inAppPurchaseContents_getInstance
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v1/inAppPurchaseContents/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[inAppPurchaseContents]: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,18 @@
+meta {
+  name: Describes `setChatDescription` method
+  type: http
+  seq: 64
+}
+
+post {
+  url: {{baseUrl}}/setChatDescription
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "chat_id": "",
+    "description": ""
+  }
+}

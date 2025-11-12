@@ -1,0 +1,19 @@
+meta {
+  name: preReleaseVersions_builds_getToManyRelationship
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/v1/preReleaseVersions/:id/relationships/builds
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

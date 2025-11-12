@@ -1,0 +1,18 @@
+meta {
+  name: Describes `deleteMessages` method
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/deleteMessages
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "chat_id": "",
+    "message_ids": []
+  }
+}

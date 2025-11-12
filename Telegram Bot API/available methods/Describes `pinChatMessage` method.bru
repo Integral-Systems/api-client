@@ -1,0 +1,19 @@
+meta {
+  name: Describes `pinChatMessage` method
+  type: http
+  seq: 42
+}
+
+post {
+  url: {{baseUrl}}/pinChatMessage
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "chat_id": "",
+    "disable_notification": false,
+    "message_id": 0
+  }
+}

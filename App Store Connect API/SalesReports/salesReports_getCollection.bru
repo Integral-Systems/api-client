@@ -1,0 +1,24 @@
+meta {
+  name: salesReports_getCollection
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v1/salesReports
+  body: none
+  auth: bearer
+}
+
+params:query {
+  filter[vendorNumber]: 
+  filter[reportType]: 
+  filter[reportSubType]: 
+  filter[frequency]: 
+  ~filter[reportDate]: 
+  ~filter[version]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

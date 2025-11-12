@@ -1,0 +1,17 @@
+meta {
+  name: Describes `getChatAdministrators` method
+  type: http
+  seq: 25
+}
+
+post {
+  url: {{baseUrl}}/getChatAdministrators
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "chat_id": "-933647200"
+  }
+}

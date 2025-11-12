@@ -1,0 +1,17 @@
+meta {
+  name: Describes `closeGeneralForumTopic` method
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{baseUrl}}/closeGeneralForumTopic
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "chat_id": ""
+  }
+}

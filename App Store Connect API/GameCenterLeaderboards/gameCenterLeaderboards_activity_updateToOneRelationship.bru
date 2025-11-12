@@ -1,0 +1,24 @@
+meta {
+  name: gameCenterLeaderboards_activity_updateToOneRelationship
+  type: http
+  seq: 5
+}
+
+patch {
+  url: {{baseUrl}}/v1/gameCenterLeaderboards/:id/relationships/activity
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "id": ""
+    }
+  }
+}

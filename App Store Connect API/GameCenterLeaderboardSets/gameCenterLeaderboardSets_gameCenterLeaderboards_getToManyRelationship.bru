@@ -1,0 +1,19 @@
+meta {
+  name: gameCenterLeaderboardSets_gameCenterLeaderboards_getToManyRelationship
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/v1/gameCenterLeaderboardSets/:id/relationships/gameCenterLeaderboards
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,25 @@
+meta {
+  name: ciProducts_workflows_getToManyRelated
+  type: http
+  seq: 13
+}
+
+get {
+  url: {{baseUrl}}/v1/ciProducts/:id/workflows
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[ciWorkflows]: 
+  ~fields[ciProducts]: 
+  ~fields[scmRepositories]: 
+  ~fields[ciXcodeVersions]: 
+  ~fields[ciMacOsVersions]: 
+  ~limit: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

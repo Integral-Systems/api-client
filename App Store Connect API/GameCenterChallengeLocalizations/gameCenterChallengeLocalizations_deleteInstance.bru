@@ -1,0 +1,15 @@
+meta {
+  name: gameCenterChallengeLocalizations_deleteInstance
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{baseUrl}}/v1/gameCenterChallengeLocalizations/:id
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

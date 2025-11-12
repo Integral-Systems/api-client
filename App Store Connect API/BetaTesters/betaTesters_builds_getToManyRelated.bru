@@ -1,0 +1,20 @@
+meta {
+  name: betaTesters_builds_getToManyRelated
+  type: http
+  seq: 15
+}
+
+get {
+  url: {{baseUrl}}/v1/betaTesters/:id/builds
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[builds]: 
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

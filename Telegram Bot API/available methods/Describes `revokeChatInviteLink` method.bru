@@ -1,0 +1,18 @@
+meta {
+  name: Describes `revokeChatInviteLink` method
+  type: http
+  seq: 47
+}
+
+post {
+  url: {{baseUrl}}/revokeChatInviteLink
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "chat_id": "",
+    "invite_link": ""
+  }
+}

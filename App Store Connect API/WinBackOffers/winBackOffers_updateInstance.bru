@@ -1,0 +1,36 @@
+meta {
+  name: winBackOffers_updateInstance
+  type: http
+  seq: 3
+}
+
+patch {
+  url: {{baseUrl}}/v1/winBackOffers/:id
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "id": "",
+      "attributes": {
+        "customerEligibilityPaidSubscriptionDurationInMonths": 0,
+        "customerEligibilityTimeSinceLastSubscribedInMonths": {
+          "minimum": 0,
+          "maximum": 0
+        },
+        "customerEligibilityWaitBetweenOffersInMonths": 0,
+        "startDate": "",
+        "endDate": "",
+        "priority": "",
+        "promotionIntent": ""
+      }
+    }
+  }
+}

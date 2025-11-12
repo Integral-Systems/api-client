@@ -1,0 +1,15 @@
+meta {
+  name: gameCenterLeaderboardReleases_deleteInstance
+  type: http
+  seq: 3
+}
+
+delete {
+  url: {{baseUrl}}/v1/gameCenterLeaderboardReleases/:id
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

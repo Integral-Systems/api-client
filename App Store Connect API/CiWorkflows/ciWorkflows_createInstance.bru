@@ -1,0 +1,142 @@
+meta {
+  name: ciWorkflows_createInstance
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v1/ciWorkflows
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "attributes": {
+        "name": "",
+        "description": "",
+        "branchStartCondition": {
+          "source": {
+            "isAllMatch": false,
+            "patterns": [
+              {
+                "pattern": "",
+                "isPrefix": false
+              }
+            ]
+          },
+          "filesAndFoldersRule": {
+            "mode": "",
+            "matchers": [
+              {
+                "directory": "",
+                "fileExtension": "",
+                "fileName": ""
+              }
+            ]
+          },
+          "autoCancel": false
+        },
+        "tagStartCondition": {
+          "source": {
+            "isAllMatch": false,
+            "patterns": [
+              {
+                "pattern": "",
+                "isPrefix": false
+              }
+            ]
+          },
+          "filesAndFoldersRule": {},
+          "autoCancel": false
+        },
+        "pullRequestStartCondition": {
+          "source": {},
+          "destination": {},
+          "filesAndFoldersRule": {},
+          "autoCancel": false
+        },
+        "scheduledStartCondition": {
+          "source": {},
+          "schedule": {
+            "frequency": "",
+            "days": [],
+            "hour": 0,
+            "minute": 0,
+            "timezone": ""
+          }
+        },
+        "manualBranchStartCondition": {
+          "source": {}
+        },
+        "manualTagStartCondition": {
+          "source": {}
+        },
+        "manualPullRequestStartCondition": {
+          "source": {},
+          "destination": {}
+        },
+        "actions": [
+          {
+            "name": "",
+            "actionType": "",
+            "destination": "",
+            "buildDistributionAudience": "",
+            "testConfiguration": {
+              "kind": "",
+              "testPlanName": "",
+              "testDestinations": [
+                {
+                  "deviceTypeName": "",
+                  "deviceTypeIdentifier": "",
+                  "runtimeName": "",
+                  "runtimeIdentifier": "",
+                  "kind": ""
+                }
+              ]
+            },
+            "scheme": "",
+            "platform": "",
+            "isRequiredToPass": false
+          }
+        ],
+        "isEnabled": false,
+        "isLockedForEditing": false,
+        "clean": false,
+        "containerFilePath": ""
+      },
+      "relationships": {
+        "product": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        },
+        "repository": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        },
+        "xcodeVersion": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        },
+        "macOsVersion": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        }
+      }
+    }
+  }
+}

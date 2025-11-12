@@ -1,0 +1,58 @@
+meta {
+  name: Describes `sendGame` method
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/sendGame
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "business_connection_id": "",
+    "chat_id": 0,
+    "disable_notification": false,
+    "game_short_name": "",
+    "message_effect_id": "",
+    "message_thread_id": 0,
+    "protect_content": false,
+    "reply_markup": {
+      "inline_keyboard": []
+    },
+    "reply_parameters": {
+      "allow_sending_without_reply": false,
+      "chat_id": "",
+      "message_id": 0,
+      "quote": "",
+      "quote_entities": [
+        {
+          "custom_emoji_id": "",
+          "language": "",
+          "length": 0,
+          "offset": 0,
+          "type": "",
+          "url": "",
+          "user": {
+            "added_to_attachment_menu": false,
+            "can_connect_to_business": false,
+            "can_join_groups": false,
+            "can_read_all_group_messages": false,
+            "first_name": "",
+            "id": 0,
+            "is_bot": false,
+            "is_premium": false,
+            "language_code": "",
+            "last_name": "",
+            "supports_inline_queries": false,
+            "username": ""
+          }
+        }
+      ],
+      "quote_parse_mode": "",
+      "quote_position": 0
+    }
+  }
+}

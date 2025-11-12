@@ -1,0 +1,15 @@
+meta {
+  name: appStoreVersions_gameCenterAppVersion_getToOneRelationship
+  type: http
+  seq: 29
+}
+
+get {
+  url: {{baseUrl}}/v1/appStoreVersions/:id/relationships/gameCenterAppVersion
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

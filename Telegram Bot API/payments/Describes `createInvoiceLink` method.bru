@@ -1,0 +1,41 @@
+meta {
+  name: Describes `createInvoiceLink` method
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/createInvoiceLink
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "currency": "",
+    "description": "",
+    "is_flexible": false,
+    "max_tip_amount": 0,
+    "need_email": false,
+    "need_name": false,
+    "need_phone_number": false,
+    "need_shipping_address": false,
+    "payload": "",
+    "photo_height": 0,
+    "photo_size": 0,
+    "photo_url": "",
+    "photo_width": 0,
+    "prices": [
+      {
+        "amount": 0,
+        "label": ""
+      }
+    ],
+    "provider_data": "",
+    "provider_token": "",
+    "send_email_to_provider": false,
+    "send_phone_number_to_provider": false,
+    "suggested_tip_amounts": [],
+    "title": ""
+  }
+}

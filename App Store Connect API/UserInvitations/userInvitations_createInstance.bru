@@ -1,0 +1,41 @@
+meta {
+  name: userInvitations_createInstance
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/v1/userInvitations
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "attributes": {
+        "email": "",
+        "firstName": "",
+        "lastName": "",
+        "roles": [],
+        "allAppsVisible": false,
+        "provisioningAllowed": false
+      },
+      "relationships": {
+        "visibleApps": {
+          "data": [
+            {
+              "type": "",
+              "id": ""
+            }
+          ]
+        }
+      }
+    }
+  }
+}

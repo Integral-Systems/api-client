@@ -1,0 +1,33 @@
+meta {
+  name: Describes `promoteChatMember` method
+  type: http
+  seq: 43
+}
+
+post {
+  url: {{baseUrl}}/promoteChatMember
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "can_change_info": false,
+    "can_delete_messages": false,
+    "can_delete_stories": false,
+    "can_edit_messages": false,
+    "can_edit_stories": false,
+    "can_invite_users": false,
+    "can_manage_chat": false,
+    "can_manage_topics": false,
+    "can_manage_video_chats": false,
+    "can_pin_messages": false,
+    "can_post_messages": false,
+    "can_post_stories": false,
+    "can_promote_members": false,
+    "can_restrict_members": false,
+    "chat_id": "",
+    "is_anonymous": false,
+    "user_id": 0
+  }
+}

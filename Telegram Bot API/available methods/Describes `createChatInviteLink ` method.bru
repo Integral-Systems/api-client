@@ -1,0 +1,18 @@
+meta {
+  name: Describes `createChatInviteLink ` method
+  type: http
+  seq: 83
+}
+
+post {
+  url: {{baseUrl}}/closeForumTopic
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "chat_id": "",
+    "message_thread_id": 0
+  }
+}

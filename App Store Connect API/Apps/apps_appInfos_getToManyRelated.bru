@@ -1,0 +1,26 @@
+meta {
+  name: apps_appInfos_getToManyRelated
+  type: http
+  seq: 21
+}
+
+get {
+  url: {{baseUrl}}/v1/apps/:id/appInfos
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[appInfos]: 
+  ~fields[apps]: 
+  ~fields[ageRatingDeclarations]: 
+  ~fields[appInfoLocalizations]: 
+  ~fields[appCategories]: 
+  ~limit: 
+  ~include: 
+  ~limit[appInfoLocalizations]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

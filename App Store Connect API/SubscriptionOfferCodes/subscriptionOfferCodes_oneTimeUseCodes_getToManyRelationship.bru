@@ -1,0 +1,19 @@
+meta {
+  name: subscriptionOfferCodes_oneTimeUseCodes_getToManyRelationship
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/v1/subscriptionOfferCodes/:id/relationships/oneTimeUseCodes
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

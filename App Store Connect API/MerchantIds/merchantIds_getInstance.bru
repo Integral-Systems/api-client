@@ -1,0 +1,22 @@
+meta {
+  name: merchantIds_getInstance
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/v1/merchantIds/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[merchantIds]: 
+  ~fields[certificates]: 
+  ~include: 
+  ~limit[certificates]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

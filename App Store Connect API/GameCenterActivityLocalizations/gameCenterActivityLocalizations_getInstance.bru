@@ -1,0 +1,21 @@
+meta {
+  name: gameCenterActivityLocalizations_getInstance
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/gameCenterActivityLocalizations/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[gameCenterActivityLocalizations]: 
+  ~fields[gameCenterActivityImages]: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,20 @@
+meta {
+  name: alternativeDistributionPackageVersions_variants_getToManyRelated
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/v1/alternativeDistributionPackageVersions/:id/variants
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[alternativeDistributionPackageVariants]: 
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,23 @@
+meta {
+  name: appStoreVersions_appStoreReviewDetail_getToOneRelated
+  type: http
+  seq: 13
+}
+
+get {
+  url: {{baseUrl}}/v1/appStoreVersions/:id/appStoreReviewDetail
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[appStoreReviewDetails]: 
+  ~fields[appStoreVersions]: 
+  ~fields[appStoreReviewAttachments]: 
+  ~include: 
+  ~limit[appStoreReviewAttachments]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

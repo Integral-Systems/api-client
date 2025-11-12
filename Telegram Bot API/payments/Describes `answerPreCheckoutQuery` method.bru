@@ -1,0 +1,19 @@
+meta {
+  name: Describes `answerPreCheckoutQuery` method
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/answerPreCheckoutQuery
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "error_message": "",
+    "ok": false,
+    "pre_checkout_query_id": ""
+  }
+}

@@ -1,0 +1,24 @@
+meta {
+  name: gameCenterChallenges_leaderboard_updateToOneRelationship
+  type: http
+  seq: 5
+}
+
+patch {
+  url: {{baseUrl}}/v1/gameCenterChallenges/:id/relationships/leaderboard
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "id": ""
+    }
+  }
+}

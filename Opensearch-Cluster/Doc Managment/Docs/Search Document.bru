@@ -1,0 +1,20 @@
+meta {
+  name: Search Document
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{host}}/kibana_72794_isd_1/_doc
+  body: json
+  auth: basic
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:basic {
+  username: {{admin_user}}
+  password: {{admin_pass}}
+}

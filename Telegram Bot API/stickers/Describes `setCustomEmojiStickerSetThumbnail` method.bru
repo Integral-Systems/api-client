@@ -1,0 +1,18 @@
+meta {
+  name: Describes `setCustomEmojiStickerSetThumbnail` method
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{baseUrl}}/setCustomEmojiStickerSetThumbnail
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "custom_emoji_id": "",
+    "name": ""
+  }
+}

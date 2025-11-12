@@ -1,0 +1,23 @@
+meta {
+  name: betaLicenseAgreements_getCollection
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v1/betaLicenseAgreements
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[app]: 
+  ~fields[betaLicenseAgreements]: 
+  ~fields[apps]: 
+  ~limit: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

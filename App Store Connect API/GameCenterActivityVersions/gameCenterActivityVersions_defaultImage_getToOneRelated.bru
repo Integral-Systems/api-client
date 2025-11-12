@@ -1,0 +1,19 @@
+meta {
+  name: gameCenterActivityVersions_defaultImage_getToOneRelated
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/v1/gameCenterActivityVersions/:id/defaultImage
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[gameCenterActivityImages]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

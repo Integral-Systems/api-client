@@ -1,0 +1,17 @@
+meta {
+  name: Describes `unpinAllGeneralForumTopicMessages` method
+  type: http
+  seq: 81
+}
+
+post {
+  url: {{baseUrl}}/unpinAllGeneralForumTopicMessages
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "chat_id": ""
+  }
+}

@@ -1,0 +1,24 @@
+meta {
+  name: inAppPurchasePriceSchedules_manualPrices_getToManyRelated
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{baseUrl}}/v1/inAppPurchasePriceSchedules/:id/manualPrices
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[territory]: 
+  ~fields[inAppPurchasePrices]: 
+  ~fields[inAppPurchasePricePoints]: 
+  ~fields[territories]: 
+  ~limit: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

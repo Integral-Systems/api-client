@@ -1,0 +1,35 @@
+meta {
+  name: gameCenterLeaderboardSetLocalizations_createInstance
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v1/gameCenterLeaderboardSetLocalizations
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "attributes": {
+        "locale": "",
+        "name": ""
+      },
+      "relationships": {
+        "gameCenterLeaderboardSet": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+meta {
+  name: builds_getCollection
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v1/builds
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[version]: 
+  ~filter[expired]: 
+  ~filter[processingState]: 
+  ~filter[betaAppReviewSubmission.betaReviewState]: 
+  ~filter[usesNonExemptEncryption]: 
+  ~filter[preReleaseVersion.version]: 
+  ~filter[preReleaseVersion.platform]: 
+  ~filter[buildAudienceType]: 
+  ~filter[preReleaseVersion]: 
+  ~filter[app]: 
+  ~filter[betaGroups]: 
+  ~filter[appStoreVersion]: 
+  ~filter[id]: 
+  ~exists[usesNonExemptEncryption]: 
+  ~sort: 
+  ~fields[builds]: 
+  ~fields[preReleaseVersions]: 
+  ~fields[betaTesters]: 
+  ~fields[betaBuildLocalizations]: 
+  ~fields[appEncryptionDeclarations]: 
+  ~fields[betaAppReviewSubmissions]: 
+  ~fields[apps]: 
+  ~fields[buildBetaDetails]: 
+  ~fields[appStoreVersions]: 
+  ~fields[buildIcons]: 
+  ~limit: 
+  ~include: 
+  ~limit[betaBuildLocalizations]: 
+  ~limit[betaGroups]: 
+  ~limit[buildBundles]: 
+  ~limit[icons]: 
+  ~limit[individualTesters]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

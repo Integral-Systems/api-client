@@ -1,0 +1,40 @@
+meta {
+  name: betaRecruitmentCriteria_createInstance
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v1/betaRecruitmentCriteria
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "attributes": {
+        "deviceFamilyOsVersionFilters": [
+          {
+            "deviceFamily": "",
+            "minimumOsInclusive": "",
+            "maximumOsInclusive": ""
+          }
+        ]
+      },
+      "relationships": {
+        "betaGroup": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        }
+      }
+    }
+  }
+}

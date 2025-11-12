@@ -1,0 +1,15 @@
+meta {
+  name: betaFeedbackScreenshotSubmissions_deleteInstance
+  type: http
+  seq: 2
+}
+
+delete {
+  url: {{baseUrl}}/v1/betaFeedbackScreenshotSubmissions/:id
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

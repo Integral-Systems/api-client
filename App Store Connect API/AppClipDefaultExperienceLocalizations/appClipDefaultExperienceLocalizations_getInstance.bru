@@ -1,0 +1,21 @@
+meta {
+  name: appClipDefaultExperienceLocalizations_getInstance
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/appClipDefaultExperienceLocalizations/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[appClipDefaultExperienceLocalizations]: 
+  ~fields[appClipHeaderImages]: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

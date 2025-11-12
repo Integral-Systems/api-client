@@ -1,0 +1,64 @@
+meta {
+  name: nominations_createInstance
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/v1/nominations
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "attributes": {
+        "name": "",
+        "type": "",
+        "description": "",
+        "submitted": false,
+        "publishStartDate": "",
+        "publishEndDate": "",
+        "deviceFamilies": [],
+        "locales": [],
+        "supplementalMaterialsUris": [],
+        "hasInAppEvents": false,
+        "launchInSelectMarketsFirst": false,
+        "notes": "",
+        "preOrderEnabled": false
+      },
+      "relationships": {
+        "relatedApps": {
+          "data": [
+            {
+              "type": "",
+              "id": ""
+            }
+          ]
+        },
+        "inAppEvents": {
+          "data": [
+            {
+              "type": "",
+              "id": ""
+            }
+          ]
+        },
+        "supportedTerritories": {
+          "data": [
+            {
+              "type": "",
+              "id": ""
+            }
+          ]
+        }
+      }
+    }
+  }
+}

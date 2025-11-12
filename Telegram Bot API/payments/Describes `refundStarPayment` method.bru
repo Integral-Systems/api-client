@@ -1,0 +1,18 @@
+meta {
+  name: Describes `refundStarPayment` method
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/refundStarPayment
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "telegram_payment_charge_id": "",
+    "user_id": 0
+  }
+}

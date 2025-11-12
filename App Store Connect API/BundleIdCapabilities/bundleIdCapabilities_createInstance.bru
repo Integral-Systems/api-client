@@ -1,0 +1,55 @@
+meta {
+  name: bundleIdCapabilities_createInstance
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v1/bundleIdCapabilities
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "attributes": {
+        "capabilityType": "",
+        "settings": [
+          {
+            "key": "",
+            "name": "",
+            "description": "",
+            "enabledByDefault": false,
+            "visible": false,
+            "allowedInstances": "",
+            "minInstances": 0,
+            "options": [
+              {
+                "key": "",
+                "name": "",
+                "description": "",
+                "enabledByDefault": false,
+                "enabled": false,
+                "supportsWildcard": false
+              }
+            ]
+          }
+        ]
+      },
+      "relationships": {
+        "bundleId": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        }
+      }
+    }
+  }
+}

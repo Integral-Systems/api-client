@@ -1,0 +1,27 @@
+meta {
+  name: betaAppClipInvocationLocalizations_updateInstance
+  type: http
+  seq: 2
+}
+
+patch {
+  url: {{baseUrl}}/v1/betaAppClipInvocationLocalizations/:id
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "id": "",
+      "attributes": {
+        "title": ""
+      }
+    }
+  }
+}

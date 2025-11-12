@@ -1,0 +1,15 @@
+meta {
+  name: builds_buildBetaDetail_getToOneRelationship
+  type: http
+  seq: 17
+}
+
+get {
+  url: {{baseUrl}}/v1/builds/:id/relationships/buildBetaDetail
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

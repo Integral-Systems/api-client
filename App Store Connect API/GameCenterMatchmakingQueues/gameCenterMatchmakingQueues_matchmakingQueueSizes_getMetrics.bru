@@ -1,0 +1,21 @@
+meta {
+  name: gameCenterMatchmakingQueues_matchmakingQueueSizes_getMetrics
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{baseUrl}}/v1/gameCenterMatchmakingQueues/:id/metrics/matchmakingQueueSizes
+  body: none
+  auth: bearer
+}
+
+params:query {
+  granularity: 
+  ~sort: 
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

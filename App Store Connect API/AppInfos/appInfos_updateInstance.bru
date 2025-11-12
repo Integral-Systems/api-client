@@ -1,0 +1,62 @@
+meta {
+  name: appInfos_updateInstance
+  type: http
+  seq: 2
+}
+
+patch {
+  url: {{baseUrl}}/v1/appInfos/:id
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "id": "",
+      "relationships": {
+        "primaryCategory": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        },
+        "primarySubcategoryOne": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        },
+        "primarySubcategoryTwo": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        },
+        "secondaryCategory": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        },
+        "secondarySubcategoryOne": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        },
+        "secondarySubcategoryTwo": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        }
+      }
+    }
+  }
+}

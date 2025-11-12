@@ -1,0 +1,18 @@
+meta {
+  name: Describes `editGeneralForumTopic` method
+  type: http
+  seq: 19
+}
+
+post {
+  url: {{baseUrl}}/editGeneralForumTopic
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "chat_id": "",
+    "name": ""
+  }
+}

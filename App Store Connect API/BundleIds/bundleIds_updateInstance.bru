@@ -1,0 +1,27 @@
+meta {
+  name: bundleIds_updateInstance
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{baseUrl}}/v1/bundleIds/:id
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "id": "",
+      "attributes": {
+        "name": ""
+      }
+    }
+  }
+}

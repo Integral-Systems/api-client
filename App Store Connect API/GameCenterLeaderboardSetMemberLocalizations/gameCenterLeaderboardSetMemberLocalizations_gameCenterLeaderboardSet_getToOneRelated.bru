@@ -1,0 +1,28 @@
+meta {
+  name: gameCenterLeaderboardSetMemberLocalizations_gameCenterLeaderboardSet_getToOneRelated
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{baseUrl}}/v1/gameCenterLeaderboardSetMemberLocalizations/:id/gameCenterLeaderboardSet
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[gameCenterLeaderboardSets]: 
+  ~fields[gameCenterDetails]: 
+  ~fields[gameCenterGroups]: 
+  ~fields[gameCenterLeaderboardSetLocalizations]: 
+  ~fields[gameCenterLeaderboards]: 
+  ~fields[gameCenterLeaderboardSetReleases]: 
+  ~include: 
+  ~limit[localizations]: 
+  ~limit[gameCenterLeaderboards]: 
+  ~limit[releases]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,29 @@
+meta {
+  name: territoryAvailabilities_updateInstance
+  type: http
+  seq: 1
+}
+
+patch {
+  url: {{baseUrl}}/v1/territoryAvailabilities/:id
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "id": "",
+      "attributes": {
+        "available": false,
+        "releaseDate": "",
+        "preOrderEnabled": false
+      }
+    }
+  }
+}

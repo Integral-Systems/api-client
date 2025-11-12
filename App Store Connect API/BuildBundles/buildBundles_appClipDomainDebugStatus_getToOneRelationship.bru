@@ -1,0 +1,15 @@
+meta {
+  name: buildBundles_appClipDomainDebugStatus_getToOneRelationship
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/v1/buildBundles/:id/relationships/appClipDomainDebugStatus
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,23 @@
+meta {
+  name: Describes `setGameScore` method
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/setGameScore
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "chat_id": 0,
+    "disable_edit_message": false,
+    "force": false,
+    "inline_message_id": "",
+    "message_id": 0,
+    "score": 0,
+    "user_id": 0
+  }
+}

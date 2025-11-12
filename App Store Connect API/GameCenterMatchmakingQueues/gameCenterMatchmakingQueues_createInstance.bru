@@ -1,0 +1,41 @@
+meta {
+  name: gameCenterMatchmakingQueues_createInstance
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/v1/gameCenterMatchmakingQueues
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "attributes": {
+        "referenceName": "",
+        "classicMatchmakingBundleIds": []
+      },
+      "relationships": {
+        "ruleSet": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        },
+        "experimentRuleSet": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        }
+      }
+    }
+  }
+}

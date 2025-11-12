@@ -1,0 +1,22 @@
+meta {
+  name: subscriptionOfferCodes_oneTimeUseCodes_getToManyRelated
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{baseUrl}}/v1/subscriptionOfferCodes/:id/oneTimeUseCodes
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[subscriptionOfferCodeOneTimeUseCodes]: 
+  ~fields[subscriptionOfferCodes]: 
+  ~limit: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

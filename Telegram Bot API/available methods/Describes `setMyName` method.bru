@@ -1,0 +1,18 @@
+meta {
+  name: Describes `setMyName` method
+  type: http
+  seq: 74
+}
+
+post {
+  url: {{baseUrl}}/setMyName
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "language_code": "",
+    "name": ""
+  }
+}

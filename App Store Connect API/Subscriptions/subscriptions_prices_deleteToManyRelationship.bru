@@ -1,0 +1,26 @@
+meta {
+  name: subscriptions_prices_deleteToManyRelationship
+  type: http
+  seq: 17
+}
+
+delete {
+  url: {{baseUrl}}/v1/subscriptions/:id/relationships/prices
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": [
+      {
+        "type": "",
+        "id": ""
+      }
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+meta {
+  name: userInvitations_visibleApps_getToManyRelated
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/v1/userInvitations/:id/visibleApps
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[apps]: 
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

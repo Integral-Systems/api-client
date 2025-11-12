@@ -1,0 +1,22 @@
+meta {
+  name: apps_webhooks_getToManyRelated
+  type: http
+  seq: 77
+}
+
+get {
+  url: {{baseUrl}}/v1/apps/:id/webhooks
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[webhooks]: 
+  ~fields[apps]: 
+  ~limit: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

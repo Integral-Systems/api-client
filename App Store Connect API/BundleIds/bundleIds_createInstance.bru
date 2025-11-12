@@ -1,0 +1,29 @@
+meta {
+  name: bundleIds_createInstance
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/v1/bundleIds
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "attributes": {
+        "name": "",
+        "platform": "",
+        "identifier": "",
+        "seedId": ""
+      }
+    }
+  }
+}

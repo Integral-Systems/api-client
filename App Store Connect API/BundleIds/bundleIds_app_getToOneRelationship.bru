@@ -1,0 +1,15 @@
+meta {
+  name: bundleIds_app_getToOneRelationship
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/v1/bundleIds/:id/relationships/app
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

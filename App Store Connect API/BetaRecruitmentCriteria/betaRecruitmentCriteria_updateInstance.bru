@@ -1,0 +1,33 @@
+meta {
+  name: betaRecruitmentCriteria_updateInstance
+  type: http
+  seq: 2
+}
+
+patch {
+  url: {{baseUrl}}/v1/betaRecruitmentCriteria/:id
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "id": "",
+      "attributes": {
+        "deviceFamilyOsVersionFilters": [
+          {
+            "deviceFamily": "",
+            "minimumOsInclusive": "",
+            "maximumOsInclusive": ""
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+meta {
+  name: merchantIds_certificates_getToManyRelated
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{baseUrl}}/v1/merchantIds/:id/certificates
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[displayName]: 
+  ~filter[certificateType]: 
+  ~filter[serialNumber]: 
+  ~filter[id]: 
+  ~sort: 
+  ~fields[certificates]: 
+  ~fields[passTypeIds]: 
+  ~limit: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

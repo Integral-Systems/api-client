@@ -1,0 +1,23 @@
+meta {
+  name: Describes `setStickerMaskPosition` method
+  type: http
+  seq: 12
+}
+
+post {
+  url: {{baseUrl}}/setStickerMaskPosition
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "mask_position": {
+      "point": "",
+      "scale": "",
+      "x_shift": "",
+      "y_shift": ""
+    },
+    "sticker": ""
+  }
+}

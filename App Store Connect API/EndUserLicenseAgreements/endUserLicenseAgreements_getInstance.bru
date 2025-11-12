@@ -1,0 +1,22 @@
+meta {
+  name: endUserLicenseAgreements_getInstance
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/endUserLicenseAgreements/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[endUserLicenseAgreements]: 
+  ~fields[territories]: 
+  ~include: 
+  ~limit[territories]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

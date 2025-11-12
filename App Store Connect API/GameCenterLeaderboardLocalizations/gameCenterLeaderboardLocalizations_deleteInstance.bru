@@ -1,0 +1,15 @@
+meta {
+  name: gameCenterLeaderboardLocalizations_deleteInstance
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{baseUrl}}/v1/gameCenterLeaderboardLocalizations/:id
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,25 @@
+meta {
+  name: subscriptions_promotionalOffers_getToManyRelated
+  type: http
+  seq: 22
+}
+
+get {
+  url: {{baseUrl}}/v1/subscriptions/:id/promotionalOffers
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[territory]: 
+  ~fields[subscriptionPromotionalOffers]: 
+  ~fields[subscriptions]: 
+  ~fields[subscriptionPromotionalOfferPrices]: 
+  ~limit: 
+  ~include: 
+  ~limit[prices]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

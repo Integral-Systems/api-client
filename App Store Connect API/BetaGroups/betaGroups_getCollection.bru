@@ -1,0 +1,36 @@
+meta {
+  name: betaGroups_getCollection
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v1/betaGroups
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[name]: 
+  ~filter[isInternalGroup]: 
+  ~filter[publicLinkEnabled]: 
+  ~filter[publicLinkLimitEnabled]: 
+  ~filter[publicLink]: 
+  ~filter[app]: 
+  ~filter[builds]: 
+  ~filter[id]: 
+  ~sort: 
+  ~fields[betaGroups]: 
+  ~fields[apps]: 
+  ~fields[builds]: 
+  ~fields[betaTesters]: 
+  ~fields[betaRecruitmentCriteria]: 
+  ~limit: 
+  ~include: 
+  ~limit[betaTesters]: 
+  ~limit[builds]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,24 @@
+meta {
+  name: appStoreVersionExperimentTreatmentLocalizations_getInstance
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/appStoreVersionExperimentTreatmentLocalizations/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[appStoreVersionExperimentTreatmentLocalizations]: 
+  ~fields[appScreenshotSets]: 
+  ~fields[appPreviewSets]: 
+  ~include: 
+  ~limit[appPreviewSets]: 
+  ~limit[appScreenshotSets]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

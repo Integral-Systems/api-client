@@ -1,0 +1,20 @@
+meta {
+  name: endUserLicenseAgreements_territories_getToManyRelated
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/v1/endUserLicenseAgreements/:id/territories
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[territories]: 
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,18 @@
+meta {
+  name: Describes `getUserChatBoosts` method
+  type: http
+  seq: 37
+}
+
+post {
+  url: {{baseUrl}}/getUserChatBoosts
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "chat_id": "",
+    "user_id": 0
+  }
+}

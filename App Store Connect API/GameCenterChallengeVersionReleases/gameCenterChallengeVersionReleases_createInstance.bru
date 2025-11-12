@@ -1,0 +1,37 @@
+meta {
+  name: gameCenterChallengeVersionReleases_createInstance
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v1/gameCenterChallengeVersionReleases
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "relationships": {
+        "gameCenterDetail": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        },
+        "version": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        }
+      }
+    }
+  }
+}

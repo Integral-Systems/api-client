@@ -1,0 +1,22 @@
+meta {
+  name: analyticsReportRequests_getInstance
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/analyticsReportRequests/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[analyticsReportRequests]: 
+  ~fields[analyticsReports]: 
+  ~include: 
+  ~limit[reports]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

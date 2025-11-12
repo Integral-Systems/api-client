@@ -1,0 +1,19 @@
+meta {
+  name: apps_promotedPurchases_getToManyRelationship
+  type: http
+  seq: 67
+}
+
+get {
+  url: {{baseUrl}}/v1/apps/:id/relationships/promotedPurchases
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

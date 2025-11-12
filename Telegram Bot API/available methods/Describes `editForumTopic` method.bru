@@ -1,0 +1,20 @@
+meta {
+  name: Describes `editForumTopic` method
+  type: http
+  seq: 18
+}
+
+post {
+  url: {{baseUrl}}/editForumTopic
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "chat_id": "",
+    "icon_custom_emoji_id": "",
+    "message_thread_id": 0,
+    "name": ""
+  }
+}

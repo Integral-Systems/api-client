@@ -1,0 +1,20 @@
+meta {
+  name: subscriptionOfferCodeOneTimeUseCodes_getInstance
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/subscriptionOfferCodeOneTimeUseCodes/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[subscriptionOfferCodeOneTimeUseCodes]: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

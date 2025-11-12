@@ -1,0 +1,19 @@
+meta {
+  name: ciProducts_additionalRepositories_getToManyRelationship
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/v1/ciProducts/:id/relationships/additionalRepositories
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

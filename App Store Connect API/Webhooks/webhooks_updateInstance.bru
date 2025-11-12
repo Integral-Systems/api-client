@@ -1,0 +1,31 @@
+meta {
+  name: webhooks_updateInstance
+  type: http
+  seq: 3
+}
+
+patch {
+  url: {{baseUrl}}/v1/webhooks/:id
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "id": "",
+      "attributes": {
+        "enabled": false,
+        "eventTypes": [],
+        "name": "",
+        "secret": "",
+        "url": ""
+      }
+    }
+  }
+}

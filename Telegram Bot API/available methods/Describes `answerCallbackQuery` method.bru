@@ -1,0 +1,21 @@
+meta {
+  name: Describes `answerCallbackQuery` method
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/answerCallbackQuery
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "cache_time": 0,
+    "callback_query_id": "",
+    "show_alert": false,
+    "text": "",
+    "url": ""
+  }
+}

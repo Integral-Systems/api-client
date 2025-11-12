@@ -1,0 +1,15 @@
+meta {
+  name: appCategories_parent_getToOneRelationship
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/v1/appCategories/:id/relationships/parent
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,17 @@
+meta {
+  name: Describes `deleteChatStickerSet` method
+  type: http
+  seq: 14
+}
+
+post {
+  url: {{baseUrl}}/deleteChatStickerSet
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "chat_id": ""
+  }
+}

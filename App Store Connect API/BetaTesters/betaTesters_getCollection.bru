@@ -1,0 +1,36 @@
+meta {
+  name: betaTesters_getCollection
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v1/betaTesters
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[firstName]: 
+  ~filter[lastName]: 
+  ~filter[email]: 
+  ~filter[inviteType]: 
+  ~filter[apps]: 
+  ~filter[betaGroups]: 
+  ~filter[builds]: 
+  ~filter[id]: 
+  ~sort: 
+  ~fields[betaTesters]: 
+  ~fields[apps]: 
+  ~fields[betaGroups]: 
+  ~fields[builds]: 
+  ~limit: 
+  ~include: 
+  ~limit[apps]: 
+  ~limit[betaGroups]: 
+  ~limit[builds]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

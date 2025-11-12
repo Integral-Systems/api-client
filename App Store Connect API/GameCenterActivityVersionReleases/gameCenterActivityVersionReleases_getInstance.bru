@@ -1,0 +1,20 @@
+meta {
+  name: gameCenterActivityVersionReleases_getInstance
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/gameCenterActivityVersionReleases/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[gameCenterActivityVersionReleases]: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

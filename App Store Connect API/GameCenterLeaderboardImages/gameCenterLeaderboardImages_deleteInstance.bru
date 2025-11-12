@@ -1,0 +1,15 @@
+meta {
+  name: gameCenterLeaderboardImages_deleteInstance
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{baseUrl}}/v1/gameCenterLeaderboardImages/:id
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,15 @@
+meta {
+  name: builds_app_getToOneRelationship
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/v1/builds/:id/relationships/app
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

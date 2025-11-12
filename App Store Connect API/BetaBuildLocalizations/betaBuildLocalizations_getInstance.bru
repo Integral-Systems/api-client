@@ -1,0 +1,21 @@
+meta {
+  name: betaBuildLocalizations_getInstance
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/v1/betaBuildLocalizations/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[betaBuildLocalizations]: 
+  ~fields[builds]: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

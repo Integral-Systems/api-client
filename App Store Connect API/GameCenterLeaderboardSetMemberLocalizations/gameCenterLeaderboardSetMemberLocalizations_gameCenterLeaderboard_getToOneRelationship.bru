@@ -1,0 +1,15 @@
+meta {
+  name: gameCenterLeaderboardSetMemberLocalizations_gameCenterLeaderboard_getToOneRelationship
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/v1/gameCenterLeaderboardSetMemberLocalizations/:id/relationships/gameCenterLeaderboard
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

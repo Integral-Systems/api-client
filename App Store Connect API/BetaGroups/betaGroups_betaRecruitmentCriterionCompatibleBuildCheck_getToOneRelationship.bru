@@ -1,0 +1,15 @@
+meta {
+  name: betaGroups_betaRecruitmentCriterionCompatibleBuildCheck_getToOneRelationship
+  type: http
+  seq: 10
+}
+
+get {
+  url: {{baseUrl}}/v1/betaGroups/:id/relationships/betaRecruitmentCriterionCompatibleBuildCheck
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

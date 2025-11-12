@@ -1,0 +1,37 @@
+meta {
+  name: appEncryptionDeclarations_createInstance
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/v1/appEncryptionDeclarations
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "attributes": {
+        "appDescription": "",
+        "containsProprietaryCryptography": false,
+        "containsThirdPartyCryptography": false,
+        "availableOnFrenchStore": false
+      },
+      "relationships": {
+        "app": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        }
+      }
+    }
+  }
+}

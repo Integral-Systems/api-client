@@ -1,0 +1,19 @@
+meta {
+  name: appScreenshotSets_appScreenshots_getToManyRelationship
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/v1/appScreenshotSets/:id/relationships/appScreenshots
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,19 @@
+meta {
+  name: betaCrashLogs_getInstance
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v1/betaCrashLogs/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[betaCrashLogs]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

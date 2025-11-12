@@ -1,0 +1,29 @@
+meta {
+  name: appStoreVersionExperiments_updateInstance
+  type: http
+  seq: 7
+}
+
+patch {
+  url: {{baseUrl}}/v1/appStoreVersionExperiments/:id
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "id": "",
+      "attributes": {
+        "name": "",
+        "trafficProportion": 0,
+        "started": false
+      }
+    }
+  }
+}

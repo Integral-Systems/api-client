@@ -1,0 +1,18 @@
+meta {
+  name: Describes `closeForumTopic` method
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/closeForumTopic
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "chat_id": "",
+    "message_thread_id": 0
+  }
+}

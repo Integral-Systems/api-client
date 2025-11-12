@@ -1,0 +1,19 @@
+meta {
+  name: appStoreVersions_build_getToOneRelated
+  type: http
+  seq: 26
+}
+
+get {
+  url: {{baseUrl}}/v1/appStoreVersions/:id/build
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[builds]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

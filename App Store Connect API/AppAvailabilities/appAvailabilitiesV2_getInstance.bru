@@ -1,0 +1,22 @@
+meta {
+  name: appAvailabilitiesV2_getInstance
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v2/appAvailabilities/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[appAvailabilities]: 
+  ~fields[territoryAvailabilities]: 
+  ~include: 
+  ~limit[territoryAvailabilities]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

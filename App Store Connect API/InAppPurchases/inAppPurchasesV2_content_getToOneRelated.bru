@@ -1,0 +1,21 @@
+meta {
+  name: inAppPurchasesV2_content_getToOneRelated
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{baseUrl}}/v2/inAppPurchases/:id/content
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[inAppPurchaseContents]: 
+  ~fields[inAppPurchases]: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,15 @@
+meta {
+  name: builds_preReleaseVersion_getToOneRelationship
+  type: http
+  seq: 28
+}
+
+get {
+  url: {{baseUrl}}/v1/builds/:id/relationships/preReleaseVersion
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

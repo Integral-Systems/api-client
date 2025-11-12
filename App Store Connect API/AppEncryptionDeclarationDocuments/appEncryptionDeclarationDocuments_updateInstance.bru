@@ -1,0 +1,28 @@
+meta {
+  name: appEncryptionDeclarationDocuments_updateInstance
+  type: http
+  seq: 3
+}
+
+patch {
+  url: {{baseUrl}}/v1/appEncryptionDeclarationDocuments/:id
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "id": "",
+      "attributes": {
+        "sourceFileChecksum": "",
+        "uploaded": false
+      }
+    }
+  }
+}

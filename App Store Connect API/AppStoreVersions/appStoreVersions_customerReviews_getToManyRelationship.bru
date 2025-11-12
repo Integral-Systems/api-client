@@ -1,0 +1,19 @@
+meta {
+  name: appStoreVersions_customerReviews_getToManyRelationship
+  type: http
+  seq: 27
+}
+
+get {
+  url: {{baseUrl}}/v1/appStoreVersions/:id/relationships/customerReviews
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

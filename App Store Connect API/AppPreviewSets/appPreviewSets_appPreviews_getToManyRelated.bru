@@ -1,0 +1,22 @@
+meta {
+  name: appPreviewSets_appPreviews_getToManyRelated
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/v1/appPreviewSets/:id/appPreviews
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[appPreviews]: 
+  ~fields[appPreviewSets]: 
+  ~limit: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

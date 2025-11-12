@@ -1,0 +1,26 @@
+meta {
+  name: users_visibleApps_createToManyRelationship
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/v1/users/:id/relationships/visibleApps
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": [
+      {
+        "type": "",
+        "id": ""
+      }
+    ]
+  }
+}

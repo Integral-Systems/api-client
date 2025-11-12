@@ -1,0 +1,24 @@
+meta {
+  name: appEventLocalizations_getInstance
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/appEventLocalizations/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[appEventLocalizations]: 
+  ~fields[appEventScreenshots]: 
+  ~fields[appEventVideoClips]: 
+  ~include: 
+  ~limit[appEventScreenshots]: 
+  ~limit[appEventVideoClips]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

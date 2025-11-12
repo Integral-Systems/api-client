@@ -1,0 +1,21 @@
+meta {
+  name: Describes `createChatInviteLink` method
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{baseUrl}}/createChatInviteLink
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "chat_id": "-933647200",
+    "creates_join_request": false,
+    "expire_date": 0,
+    "member_limit": 0,
+    "name": ""
+  }
+}

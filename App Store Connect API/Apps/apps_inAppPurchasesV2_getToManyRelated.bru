@@ -1,0 +1,35 @@
+meta {
+  name: apps_inAppPurchasesV2_getToManyRelated
+  type: http
+  seq: 61
+}
+
+get {
+  url: {{baseUrl}}/v1/apps/:id/inAppPurchasesV2
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[productId]: 
+  ~filter[name]: 
+  ~filter[state]: 
+  ~filter[inAppPurchaseType]: 
+  ~sort: 
+  ~fields[inAppPurchases]: 
+  ~fields[inAppPurchaseLocalizations]: 
+  ~fields[inAppPurchaseContents]: 
+  ~fields[inAppPurchaseAppStoreReviewScreenshots]: 
+  ~fields[promotedPurchases]: 
+  ~fields[inAppPurchasePriceSchedules]: 
+  ~fields[inAppPurchaseAvailabilities]: 
+  ~fields[inAppPurchaseImages]: 
+  ~limit: 
+  ~include: 
+  ~limit[inAppPurchaseLocalizations]: 
+  ~limit[images]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,20 @@
+meta {
+  name: builds_icons_getToManyRelated
+  type: http
+  seq: 22
+}
+
+get {
+  url: {{baseUrl}}/v1/builds/:id/icons
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[buildIcons]: 
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,33 @@
+meta {
+  name: gameCenterActivities_updateInstance
+  type: http
+  seq: 3
+}
+
+patch {
+  url: {{baseUrl}}/v1/gameCenterActivities/:id
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "id": "",
+      "attributes": {
+        "referenceName": "",
+        "playStyle": "",
+        "minimumPlayersCount": 0,
+        "maximumPlayersCount": 0,
+        "supportsPartyCode": false,
+        "archived": false,
+        "properties": {}
+      }
+    }
+  }
+}

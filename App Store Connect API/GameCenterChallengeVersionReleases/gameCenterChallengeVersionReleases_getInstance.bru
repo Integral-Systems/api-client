@@ -1,0 +1,20 @@
+meta {
+  name: gameCenterChallengeVersionReleases_getInstance
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/gameCenterChallengeVersionReleases/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[gameCenterChallengeVersionReleases]: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

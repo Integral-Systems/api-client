@@ -1,0 +1,21 @@
+meta {
+  name: customerReviews_response_getToOneRelated
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/v1/customerReviews/:id/response
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[customerReviewResponses]: 
+  ~fields[customerReviews]: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,20 @@
+meta {
+  name: betaFeedbackScreenshotSubmissions_getInstance
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v1/betaFeedbackScreenshotSubmissions/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[betaFeedbackScreenshotSubmissions]: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

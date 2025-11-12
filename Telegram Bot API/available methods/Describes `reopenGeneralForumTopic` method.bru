@@ -1,0 +1,17 @@
+meta {
+  name: Describes `reopenGeneralForumTopic` method
+  type: http
+  seq: 45
+}
+
+post {
+  url: {{baseUrl}}/reopenGeneralForumTopic
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "chat_id": ""
+  }
+}

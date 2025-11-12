@@ -1,0 +1,30 @@
+meta {
+  name: Describes `addStickerToSet` method
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/addStickerToSet
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "",
+    "sticker": {
+      "emoji_list": [],
+      "format": "",
+      "keywords": [],
+      "mask_position": {
+        "point": "",
+        "scale": "",
+        "x_shift": "",
+        "y_shift": ""
+      },
+      "sticker": ""
+    },
+    "user_id": 0
+  }
+}

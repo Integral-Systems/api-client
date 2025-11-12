@@ -1,0 +1,19 @@
+meta {
+  name: gameCenterAchievements_releases_getToManyRelationship
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{baseUrl}}/v1/gameCenterAchievements/:id/relationships/releases
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

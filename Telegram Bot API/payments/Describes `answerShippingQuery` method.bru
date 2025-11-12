@@ -1,0 +1,31 @@
+meta {
+  name: Describes `answerShippingQuery` method
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/answerShippingQuery
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "error_message": "",
+    "ok": false,
+    "shipping_options": [
+      {
+        "id": "",
+        "prices": [
+          {
+            "amount": 0,
+            "label": ""
+          }
+        ],
+        "title": ""
+      }
+    ],
+    "shipping_query_id": ""
+  }
+}

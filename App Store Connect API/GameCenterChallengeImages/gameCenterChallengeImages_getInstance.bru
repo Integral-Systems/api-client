@@ -1,0 +1,19 @@
+meta {
+  name: gameCenterChallengeImages_getInstance
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/gameCenterChallengeImages/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[gameCenterChallengeImages]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

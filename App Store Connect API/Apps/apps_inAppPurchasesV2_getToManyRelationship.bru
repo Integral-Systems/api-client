@@ -1,0 +1,19 @@
+meta {
+  name: apps_inAppPurchasesV2_getToManyRelationship
+  type: http
+  seq: 60
+}
+
+get {
+  url: {{baseUrl}}/v1/apps/:id/relationships/inAppPurchasesV2
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

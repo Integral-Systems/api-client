@@ -1,0 +1,23 @@
+meta {
+  name: gameCenterDetails_classicMatchmakingRequests_getMetrics
+  type: http
+  seq: 32
+}
+
+get {
+  url: {{baseUrl}}/v1/gameCenterDetails/:id/metrics/classicMatchmakingRequests
+  body: none
+  auth: bearer
+}
+
+params:query {
+  granularity: 
+  ~groupBy: 
+  ~filter[result]: 
+  ~sort: 
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

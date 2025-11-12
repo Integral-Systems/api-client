@@ -1,0 +1,20 @@
+meta {
+  name: gameCenterMatchmakingRuleSets_teams_getToManyRelated
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{baseUrl}}/v1/gameCenterMatchmakingRuleSets/:id/teams
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[gameCenterMatchmakingTeams]: 
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

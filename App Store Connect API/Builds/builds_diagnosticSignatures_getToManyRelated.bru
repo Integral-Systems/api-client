@@ -1,0 +1,21 @@
+meta {
+  name: builds_diagnosticSignatures_getToManyRelated
+  type: http
+  seq: 20
+}
+
+get {
+  url: {{baseUrl}}/v1/builds/:id/diagnosticSignatures
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[diagnosticType]: 
+  ~fields[diagnosticSignatures]: 
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

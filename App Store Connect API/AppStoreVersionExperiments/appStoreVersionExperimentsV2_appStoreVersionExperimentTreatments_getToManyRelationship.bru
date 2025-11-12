@@ -1,0 +1,19 @@
+meta {
+  name: appStoreVersionExperimentsV2_appStoreVersionExperimentTreatments_getToManyRelationship
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{baseUrl}}/v2/appStoreVersionExperiments/:id/relationships/appStoreVersionExperimentTreatments
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

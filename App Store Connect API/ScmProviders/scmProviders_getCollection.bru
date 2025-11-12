@@ -1,0 +1,20 @@
+meta {
+  name: scmProviders_getCollection
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v1/scmProviders
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[scmProviders]: 
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,37 @@
+meta {
+  name: gameCenterLeaderboardReleases_createInstance
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v1/gameCenterLeaderboardReleases
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "relationships": {
+        "gameCenterDetail": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        },
+        "gameCenterLeaderboard": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+meta {
+  name: appStoreVersions_getInstance
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/appStoreVersions/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[appStoreVersions]: 
+  ~fields[ageRatingDeclarations]: 
+  ~fields[appStoreVersionLocalizations]: 
+  ~fields[builds]: 
+  ~fields[appStoreVersionPhasedReleases]: 
+  ~fields[gameCenterAppVersions]: 
+  ~fields[routingAppCoverages]: 
+  ~fields[appStoreReviewDetails]: 
+  ~fields[appStoreVersionSubmissions]: 
+  ~fields[appClipDefaultExperiences]: 
+  ~fields[appStoreVersionExperiments]: 
+  ~fields[alternativeDistributionPackages]: 
+  ~include: 
+  ~limit[appStoreVersionExperiments]: 
+  ~limit[appStoreVersionExperimentsV2]: 
+  ~limit[appStoreVersionLocalizations]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

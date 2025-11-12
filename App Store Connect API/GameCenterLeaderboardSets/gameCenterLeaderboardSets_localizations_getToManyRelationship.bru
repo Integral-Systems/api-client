@@ -1,0 +1,19 @@
+meta {
+  name: gameCenterLeaderboardSets_localizations_getToManyRelationship
+  type: http
+  seq: 13
+}
+
+get {
+  url: {{baseUrl}}/v1/gameCenterLeaderboardSets/:id/relationships/localizations
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

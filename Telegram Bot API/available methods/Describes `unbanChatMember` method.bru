@@ -1,0 +1,19 @@
+meta {
+  name: Describes `unbanChatMember` method
+  type: http
+  seq: 76
+}
+
+post {
+  url: {{baseUrl}}/unbanChatMember
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "chat_id": "",
+    "only_if_banned": false,
+    "user_id": 0
+  }
+}

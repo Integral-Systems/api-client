@@ -1,0 +1,37 @@
+meta {
+  name: betaTesterInvitations_createInstance
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v1/betaTesterInvitations
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "relationships": {
+        "betaTester": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        },
+        "app": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        }
+      }
+    }
+  }
+}

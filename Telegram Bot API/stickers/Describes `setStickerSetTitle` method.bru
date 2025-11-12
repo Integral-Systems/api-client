@@ -1,0 +1,18 @@
+meta {
+  name: Describes `setStickerSetTitle` method
+  type: http
+  seq: 15
+}
+
+post {
+  url: {{baseUrl}}/setStickerSetTitle
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "",
+    "title": ""
+  }
+}

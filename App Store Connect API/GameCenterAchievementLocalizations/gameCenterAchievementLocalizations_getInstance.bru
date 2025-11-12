@@ -1,0 +1,22 @@
+meta {
+  name: gameCenterAchievementLocalizations_getInstance
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/gameCenterAchievementLocalizations/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[gameCenterAchievementLocalizations]: 
+  ~fields[gameCenterAchievements]: 
+  ~fields[gameCenterAchievementImages]: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

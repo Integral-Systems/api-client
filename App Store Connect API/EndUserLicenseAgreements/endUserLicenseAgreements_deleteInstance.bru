@@ -1,0 +1,15 @@
+meta {
+  name: endUserLicenseAgreements_deleteInstance
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{baseUrl}}/v1/endUserLicenseAgreements/:id
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

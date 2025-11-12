@@ -1,0 +1,20 @@
+meta {
+  name: sandboxTestersV2_getCollection
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v2/sandboxTesters
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[sandboxTesters]: 
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

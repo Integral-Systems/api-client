@@ -1,0 +1,21 @@
+meta {
+  name: subscriptions_appStoreReviewScreenshot_getToOneRelated
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/v1/subscriptions/:id/appStoreReviewScreenshot
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[subscriptionAppStoreReviewScreenshots]: 
+  ~fields[subscriptions]: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

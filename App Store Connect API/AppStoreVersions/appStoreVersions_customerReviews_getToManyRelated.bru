@@ -1,0 +1,26 @@
+meta {
+  name: appStoreVersions_customerReviews_getToManyRelated
+  type: http
+  seq: 28
+}
+
+get {
+  url: {{baseUrl}}/v1/appStoreVersions/:id/customerReviews
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[territory]: 
+  ~filter[rating]: 
+  ~exists[publishedResponse]: 
+  ~sort: 
+  ~fields[customerReviews]: 
+  ~fields[customerReviewResponses]: 
+  ~limit: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

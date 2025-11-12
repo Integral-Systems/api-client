@@ -1,0 +1,24 @@
+meta {
+  name: gameCenterMatchmakingRules_matchmakingBooleanRuleResults_getMetrics
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/v1/gameCenterMatchmakingRules/:id/metrics/matchmakingBooleanRuleResults
+  body: none
+  auth: bearer
+}
+
+params:query {
+  granularity: 
+  ~groupBy: 
+  ~filter[result]: 
+  ~filter[gameCenterMatchmakingQueue]: 
+  ~sort: 
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

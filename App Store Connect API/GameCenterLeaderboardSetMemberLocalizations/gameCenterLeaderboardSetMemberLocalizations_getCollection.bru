@@ -1,0 +1,25 @@
+meta {
+  name: gameCenterLeaderboardSetMemberLocalizations_getCollection
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v1/gameCenterLeaderboardSetMemberLocalizations
+  body: none
+  auth: bearer
+}
+
+params:query {
+  filter[gameCenterLeaderboardSet]: 
+  filter[gameCenterLeaderboard]: 
+  ~fields[gameCenterLeaderboardSetMemberLocalizations]: 
+  ~fields[gameCenterLeaderboardSets]: 
+  ~fields[gameCenterLeaderboards]: 
+  ~limit: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

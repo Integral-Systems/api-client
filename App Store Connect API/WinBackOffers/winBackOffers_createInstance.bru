@@ -1,0 +1,62 @@
+meta {
+  name: winBackOffers_createInstance
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v1/winBackOffers
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "attributes": {
+        "referenceName": "",
+        "offerId": "",
+        "duration": "",
+        "offerMode": "",
+        "periodCount": 0,
+        "customerEligibilityPaidSubscriptionDurationInMonths": 0,
+        "customerEligibilityTimeSinceLastSubscribedInMonths": {
+          "minimum": 0,
+          "maximum": 0
+        },
+        "customerEligibilityWaitBetweenOffersInMonths": 0,
+        "startDate": "",
+        "endDate": "",
+        "priority": "",
+        "promotionIntent": ""
+      },
+      "relationships": {
+        "subscription": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        },
+        "prices": {
+          "data": [
+            {
+              "type": "",
+              "id": ""
+            }
+          ]
+        }
+      }
+    },
+    "included": [
+      {
+        "type": "",
+        "id": ""
+      }
+    ]
+  }
+}

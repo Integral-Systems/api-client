@@ -1,0 +1,29 @@
+meta {
+  name: inAppPurchasesV2_updateInstance
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{baseUrl}}/v2/inAppPurchases/:id
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "id": "",
+      "attributes": {
+        "name": "",
+        "reviewNote": "",
+        "familySharable": false
+      }
+    }
+  }
+}

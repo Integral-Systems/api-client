@@ -1,0 +1,22 @@
+meta {
+  name: gameCenterDetails_challengeReleases_getToManyRelated
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{baseUrl}}/v1/gameCenterDetails/:id/challengeReleases
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[gameCenterChallengeVersionReleases]: 
+  ~fields[gameCenterChallengeVersions]: 
+  ~limit: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,24 @@
+meta {
+  name: appCategories_getCollection
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v1/appCategories
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[platforms]: 
+  ~exists[parent]: 
+  ~fields[appCategories]: 
+  ~limit: 
+  ~include: 
+  ~limit[subcategories]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,29 @@
+meta {
+  name: sandboxTestersV2_updateInstance
+  type: http
+  seq: 2
+}
+
+patch {
+  url: {{baseUrl}}/v2/sandboxTesters/:id
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "id": "",
+      "attributes": {
+        "territory": "",
+        "interruptPurchases": false,
+        "subscriptionRenewalRate": ""
+      }
+    }
+  }
+}

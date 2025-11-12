@@ -1,0 +1,23 @@
+meta {
+  name: nominations_getInstance
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/v1/nominations/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[nominations]: 
+  ~include: 
+  ~limit[inAppEvents]: 
+  ~limit[relatedApps]: 
+  ~limit[supportedTerritories]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

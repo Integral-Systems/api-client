@@ -1,0 +1,55 @@
+meta {
+  name: appCustomProductPages_createInstance
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v1/appCustomProductPages
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "attributes": {
+        "name": ""
+      },
+      "relationships": {
+        "app": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        },
+        "appCustomProductPageVersions": {
+          "data": [
+            {
+              "type": "",
+              "id": ""
+            }
+          ]
+        },
+        "appStoreVersionTemplate": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        },
+        "customProductPageTemplate": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        }
+      }
+    },
+    "included": []
+  }
+}

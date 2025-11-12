@@ -1,0 +1,32 @@
+meta {
+  name: bundleIds_getCollection
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v1/bundleIds
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[name]: 
+  ~filter[platform]: 
+  ~filter[identifier]: 
+  ~filter[seedId]: 
+  ~filter[id]: 
+  ~sort: 
+  ~fields[bundleIds]: 
+  ~fields[profiles]: 
+  ~fields[bundleIdCapabilities]: 
+  ~fields[apps]: 
+  ~limit: 
+  ~include: 
+  ~limit[bundleIdCapabilities]: 
+  ~limit[profiles]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

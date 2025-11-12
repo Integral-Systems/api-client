@@ -1,0 +1,22 @@
+meta {
+  name: subscriptions_subscriptionLocalizations_getToManyRelated
+  type: http
+  seq: 26
+}
+
+get {
+  url: {{baseUrl}}/v1/subscriptions/:id/subscriptionLocalizations
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[subscriptionLocalizations]: 
+  ~fields[subscriptions]: 
+  ~limit: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

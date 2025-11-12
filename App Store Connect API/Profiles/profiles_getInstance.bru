@@ -1,0 +1,25 @@
+meta {
+  name: profiles_getInstance
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/v1/profiles/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[profiles]: 
+  ~fields[bundleIds]: 
+  ~fields[devices]: 
+  ~fields[certificates]: 
+  ~include: 
+  ~limit[certificates]: 
+  ~limit[devices]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

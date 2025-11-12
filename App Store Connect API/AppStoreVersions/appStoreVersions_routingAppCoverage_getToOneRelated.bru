@@ -1,0 +1,19 @@
+meta {
+  name: appStoreVersions_routingAppCoverage_getToOneRelated
+  type: http
+  seq: 32
+}
+
+get {
+  url: {{baseUrl}}/v1/appStoreVersions/:id/routingAppCoverage
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[routingAppCoverages]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -20,12 +20,12 @@ auth:basic {
 }
 
 body:json {
-  // {
-  //  "index_settings": {
-  //    "index.number_of_replicas": 1
-  //  }
-  //}
   {
-    "indices": "*_log_*"
+    "include_global_state": false,
+    "indices": [
+      ".kibana*",
+      "-.opensearch-security*",
+      "-security-auditlog-2025.11.10"
+  ]
   }
 }

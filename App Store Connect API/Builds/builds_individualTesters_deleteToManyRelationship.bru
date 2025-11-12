@@ -1,0 +1,26 @@
+meta {
+  name: builds_individualTesters_deleteToManyRelationship
+  type: http
+  seq: 25
+}
+
+delete {
+  url: {{baseUrl}}/v1/builds/:id/relationships/individualTesters
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": [
+      {
+        "type": "",
+        "id": ""
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+meta {
+  name: inAppPurchasePricePoints_equalizations_getToManyRelated
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/inAppPurchasePricePoints/:id/equalizations
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[territory]: 
+  ~filter[inAppPurchaseV2]: 
+  ~fields[inAppPurchasePricePoints]: 
+  ~fields[territories]: 
+  ~limit: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

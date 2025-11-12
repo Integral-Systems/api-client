@@ -1,0 +1,24 @@
+meta {
+  name: ciProducts_additionalRepositories_getToManyRelated
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/v1/ciProducts/:id/additionalRepositories
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[id]: 
+  ~fields[scmRepositories]: 
+  ~fields[scmProviders]: 
+  ~fields[scmGitReferences]: 
+  ~limit: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

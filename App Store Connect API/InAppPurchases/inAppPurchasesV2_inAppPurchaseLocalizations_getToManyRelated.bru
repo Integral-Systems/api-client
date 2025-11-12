@@ -1,0 +1,22 @@
+meta {
+  name: inAppPurchasesV2_inAppPurchaseLocalizations_getToManyRelated
+  type: http
+  seq: 17
+}
+
+get {
+  url: {{baseUrl}}/v2/inAppPurchases/:id/inAppPurchaseLocalizations
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[inAppPurchaseLocalizations]: 
+  ~fields[inAppPurchases]: 
+  ~limit: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

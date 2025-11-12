@@ -1,0 +1,22 @@
+meta {
+  name: Describes `setMessageReaction` method
+  type: http
+  seq: 70
+}
+
+post {
+  url: {{baseUrl}}/setMessageReaction
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "chat_id": "",
+    "is_big": false,
+    "message_id": 0,
+    "reaction": [
+      {}
+    ]
+  }
+}

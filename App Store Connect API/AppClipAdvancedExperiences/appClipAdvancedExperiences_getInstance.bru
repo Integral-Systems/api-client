@@ -1,0 +1,21 @@
+meta {
+  name: appClipAdvancedExperiences_getInstance
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/appClipAdvancedExperiences/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[appClipAdvancedExperiences]: 
+  ~include: 
+  ~limit[localizations]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,19 @@
+meta {
+  name: builds_app_getToOneRelated
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/v1/builds/:id/app
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[apps]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

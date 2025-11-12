@@ -1,0 +1,18 @@
+meta {
+  name: Describes `declineChatJoinRequest` method
+  type: http
+  seq: 12
+}
+
+post {
+  url: {{baseUrl}}/declineChatJoinRequest
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "chat_id": "",
+    "user_id": 0
+  }
+}

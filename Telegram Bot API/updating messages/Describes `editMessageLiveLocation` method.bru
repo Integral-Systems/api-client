@@ -1,0 +1,28 @@
+meta {
+  name: Describes `editMessageLiveLocation` method
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/editMessageLiveLocation
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "chat_id": "",
+    "heading": 0,
+    "horizontal_accuracy": "",
+    "inline_message_id": "",
+    "latitude": "",
+    "live_period": 0,
+    "longitude": "",
+    "message_id": 0,
+    "proximity_alert_radius": 0,
+    "reply_markup": {
+      "inline_keyboard": []
+    }
+  }
+}

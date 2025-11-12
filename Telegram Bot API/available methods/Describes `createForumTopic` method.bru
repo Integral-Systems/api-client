@@ -1,0 +1,20 @@
+meta {
+  name: Describes `createForumTopic` method
+  type: http
+  seq: 11
+}
+
+post {
+  url: {{baseUrl}}/createForumTopic
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "chat_id": "",
+    "icon_color": 0,
+    "icon_custom_emoji_id": "",
+    "name": ""
+  }
+}

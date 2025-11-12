@@ -1,0 +1,26 @@
+meta {
+  name: gameCenterActivities_leaderboards_deleteToManyRelationship
+  type: http
+  seq: 8
+}
+
+delete {
+  url: {{baseUrl}}/v1/gameCenterActivities/:id/relationships/leaderboards
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": [
+      {
+        "type": "",
+        "id": ""
+      }
+    ]
+  }
+}

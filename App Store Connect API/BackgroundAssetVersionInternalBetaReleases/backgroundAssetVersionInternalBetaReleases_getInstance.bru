@@ -1,0 +1,20 @@
+meta {
+  name: backgroundAssetVersionInternalBetaReleases_getInstance
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v1/backgroundAssetVersionInternalBetaReleases/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[backgroundAssetVersionInternalBetaReleases]: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

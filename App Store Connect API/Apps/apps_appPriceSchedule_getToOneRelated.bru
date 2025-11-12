@@ -1,0 +1,25 @@
+meta {
+  name: apps_appPriceSchedule_getToOneRelated
+  type: http
+  seq: 25
+}
+
+get {
+  url: {{baseUrl}}/v1/apps/:id/appPriceSchedule
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[appPriceSchedules]: 
+  ~fields[apps]: 
+  ~fields[territories]: 
+  ~fields[appPrices]: 
+  ~include: 
+  ~limit[manualPrices]: 
+  ~limit[automaticPrices]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,43 @@
+meta {
+  name: subscriptionGroups_subscriptions_getToManyRelated
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{baseUrl}}/v1/subscriptionGroups/:id/subscriptions
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[productId]: 
+  ~filter[name]: 
+  ~filter[state]: 
+  ~sort: 
+  ~fields[subscriptions]: 
+  ~fields[subscriptionLocalizations]: 
+  ~fields[subscriptionAppStoreReviewScreenshots]: 
+  ~fields[subscriptionGroups]: 
+  ~fields[subscriptionIntroductoryOffers]: 
+  ~fields[subscriptionPromotionalOffers]: 
+  ~fields[subscriptionOfferCodes]: 
+  ~fields[subscriptionPrices]: 
+  ~fields[promotedPurchases]: 
+  ~fields[subscriptionAvailabilities]: 
+  ~fields[winBackOffers]: 
+  ~fields[subscriptionImages]: 
+  ~limit: 
+  ~include: 
+  ~limit[subscriptionLocalizations]: 
+  ~limit[introductoryOffers]: 
+  ~limit[promotionalOffers]: 
+  ~limit[offerCodes]: 
+  ~limit[prices]: 
+  ~limit[winBackOffers]: 
+  ~limit[images]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

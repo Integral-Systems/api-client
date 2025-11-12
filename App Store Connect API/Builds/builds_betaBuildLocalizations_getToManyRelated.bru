@@ -1,0 +1,20 @@
+meta {
+  name: builds_betaBuildLocalizations_getToManyRelated
+  type: http
+  seq: 14
+}
+
+get {
+  url: {{baseUrl}}/v1/builds/:id/betaBuildLocalizations
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[betaBuildLocalizations]: 
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

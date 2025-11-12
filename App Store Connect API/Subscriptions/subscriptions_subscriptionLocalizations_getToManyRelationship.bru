@@ -1,0 +1,19 @@
+meta {
+  name: subscriptions_subscriptionLocalizations_getToManyRelationship
+  type: http
+  seq: 25
+}
+
+get {
+  url: {{baseUrl}}/v1/subscriptions/:id/relationships/subscriptionLocalizations
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,22 @@
+meta {
+  name: analyticsReports_instances_getToManyRelated
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/v1/analyticsReports/:id/instances
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[granularity]: 
+  ~filter[processingDate]: 
+  ~fields[analyticsReportInstances]: 
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

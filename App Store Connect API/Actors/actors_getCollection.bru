@@ -1,0 +1,21 @@
+meta {
+  name: actors_getCollection
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v1/actors
+  body: none
+  auth: bearer
+}
+
+params:query {
+  filter[id]: 
+  ~fields[actors]: 
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

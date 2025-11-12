@@ -1,0 +1,19 @@
+meta {
+  name: subscriptions_introductoryOffers_getToManyRelationship
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{baseUrl}}/v1/subscriptions/:id/relationships/introductoryOffers
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

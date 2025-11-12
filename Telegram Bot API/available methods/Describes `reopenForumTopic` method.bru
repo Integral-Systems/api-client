@@ -1,0 +1,18 @@
+meta {
+  name: Describes `reopenForumTopic` method
+  type: http
+  seq: 44
+}
+
+post {
+  url: {{baseUrl}}/reopenForumTopic
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "chat_id": "",
+    "message_thread_id": 0
+  }
+}

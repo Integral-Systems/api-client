@@ -1,0 +1,22 @@
+meta {
+  name: subscriptionOfferCodes_customCodes_getToManyRelated
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/v1/subscriptionOfferCodes/:id/customCodes
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[subscriptionOfferCodeCustomCodes]: 
+  ~fields[subscriptionOfferCodes]: 
+  ~limit: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,22 @@
+meta {
+  name: apps_accessibilityDeclarations_getToManyRelated
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/v1/apps/:id/accessibilityDeclarations
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[deviceFamily]: 
+  ~filter[state]: 
+  ~fields[accessibilityDeclarations]: 
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

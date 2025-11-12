@@ -1,0 +1,20 @@
+meta {
+  name: subscriptionPricePoints_getInstance
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v1/subscriptionPricePoints/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[subscriptionPricePoints]: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

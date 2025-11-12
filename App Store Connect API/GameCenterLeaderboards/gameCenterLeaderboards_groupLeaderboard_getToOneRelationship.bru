@@ -1,0 +1,15 @@
+meta {
+  name: gameCenterLeaderboards_groupLeaderboard_getToOneRelationship
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{baseUrl}}/v1/gameCenterLeaderboards/:id/relationships/groupLeaderboard
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

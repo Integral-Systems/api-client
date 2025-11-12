@@ -1,0 +1,20 @@
+meta {
+  name: users_visibleApps_getToManyRelated
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{baseUrl}}/v1/users/:id/visibleApps
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[apps]: 
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

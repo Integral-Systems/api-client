@@ -1,0 +1,35 @@
+meta {
+  name: subscriptionOfferCodeOneTimeUseCodes_createInstance
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v1/subscriptionOfferCodeOneTimeUseCodes
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "attributes": {
+        "numberOfCodes": 0,
+        "expirationDate": ""
+      },
+      "relationships": {
+        "offerCode": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        }
+      }
+    }
+  }
+}

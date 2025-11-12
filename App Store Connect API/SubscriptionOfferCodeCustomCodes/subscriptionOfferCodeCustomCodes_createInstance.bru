@@ -1,0 +1,36 @@
+meta {
+  name: subscriptionOfferCodeCustomCodes_createInstance
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v1/subscriptionOfferCodeCustomCodes
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "attributes": {
+        "customCode": "",
+        "numberOfCodes": 0,
+        "expirationDate": ""
+      },
+      "relationships": {
+        "offerCode": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+meta {
+  name: inAppPurchasesV2_images_getToManyRelated
+  type: http
+  seq: 13
+}
+
+get {
+  url: {{baseUrl}}/v2/inAppPurchases/:id/images
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[inAppPurchaseImages]: 
+  ~fields[inAppPurchases]: 
+  ~limit: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

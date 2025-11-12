@@ -1,0 +1,26 @@
+meta {
+  name: builds_individualTesters_createToManyRelationship
+  type: http
+  seq: 24
+}
+
+post {
+  url: {{baseUrl}}/v1/builds/:id/relationships/individualTesters
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": [
+      {
+        "type": "",
+        "id": ""
+      }
+    ]
+  }
+}

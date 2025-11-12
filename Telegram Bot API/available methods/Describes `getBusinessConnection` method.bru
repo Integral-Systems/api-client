@@ -1,0 +1,17 @@
+meta {
+  name: Describes `getBusinessConnection` method
+  type: http
+  seq: 23
+}
+
+post {
+  url: {{baseUrl}}/getBusinessConnection
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "business_connection_id": ""
+  }
+}

@@ -1,0 +1,37 @@
+meta {
+  name: appPreviews_createInstance
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v1/appPreviews
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "attributes": {
+        "fileSize": 0,
+        "fileName": "",
+        "previewFrameTimeCode": "",
+        "mimeType": ""
+      },
+      "relationships": {
+        "appPreviewSet": {
+          "data": {
+            "type": "",
+            "id": ""
+          }
+        }
+      }
+    }
+  }
+}

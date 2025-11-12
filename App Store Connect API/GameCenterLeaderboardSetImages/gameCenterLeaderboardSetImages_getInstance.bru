@@ -1,0 +1,20 @@
+meta {
+  name: gameCenterLeaderboardSetImages_getInstance
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/gameCenterLeaderboardSetImages/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[gameCenterLeaderboardSetImages]: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

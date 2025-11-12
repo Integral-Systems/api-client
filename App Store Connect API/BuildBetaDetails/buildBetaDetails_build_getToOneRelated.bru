@@ -1,0 +1,36 @@
+meta {
+  name: buildBetaDetails_build_getToOneRelated
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/v1/buildBetaDetails/:id/build
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[builds]: 
+  ~fields[preReleaseVersions]: 
+  ~fields[betaTesters]: 
+  ~fields[betaGroups]: 
+  ~fields[betaBuildLocalizations]: 
+  ~fields[appEncryptionDeclarations]: 
+  ~fields[betaAppReviewSubmissions]: 
+  ~fields[apps]: 
+  ~fields[buildBetaDetails]: 
+  ~fields[appStoreVersions]: 
+  ~fields[buildIcons]: 
+  ~fields[buildBundles]: 
+  ~include: 
+  ~limit[individualTesters]: 
+  ~limit[betaGroups]: 
+  ~limit[betaBuildLocalizations]: 
+  ~limit[icons]: 
+  ~limit[buildBundles]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

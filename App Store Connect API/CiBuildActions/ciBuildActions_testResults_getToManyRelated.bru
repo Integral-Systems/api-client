@@ -1,0 +1,20 @@
+meta {
+  name: ciBuildActions_testResults_getToManyRelated
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{baseUrl}}/v1/ciBuildActions/:id/testResults
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[ciTestResults]: 
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

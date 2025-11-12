@@ -1,0 +1,21 @@
+meta {
+  name: inAppPurchasesV2_appStoreReviewScreenshot_getToOneRelated
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{baseUrl}}/v2/inAppPurchases/:id/appStoreReviewScreenshot
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[inAppPurchaseAppStoreReviewScreenshots]: 
+  ~fields[inAppPurchases]: 
+  ~include: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,23 @@
+meta {
+  name: ciMacOsVersions_xcodeVersions_getToManyRelated
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/v1/ciMacOsVersions/:id/xcodeVersions
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[ciXcodeVersions]: 
+  ~fields[ciMacOsVersions]: 
+  ~limit: 
+  ~include: 
+  ~limit[macOsVersions]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

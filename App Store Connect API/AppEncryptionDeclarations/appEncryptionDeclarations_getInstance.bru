@@ -1,0 +1,23 @@
+meta {
+  name: appEncryptionDeclarations_getInstance
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/v1/appEncryptionDeclarations/:id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[appEncryptionDeclarations]: 
+  ~fields[apps]: 
+  ~fields[appEncryptionDeclarationDocuments]: 
+  ~include: 
+  ~limit[builds]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

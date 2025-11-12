@@ -1,0 +1,27 @@
+meta {
+  name: gameCenterLeaderboardImages_updateInstance
+  type: http
+  seq: 3
+}
+
+patch {
+  url: {{baseUrl}}/v1/gameCenterLeaderboardImages/:id
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "id": "",
+      "attributes": {
+        "uploaded": false
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+meta {
+  name: subscriptionAvailabilities_availableTerritories_getToManyRelated
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/v1/subscriptionAvailabilities/:id/availableTerritories
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[territories]: 
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,27 @@
+meta {
+  name: gameCenterAchievements_groupAchievement_getToOneRelated
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{baseUrl}}/v1/gameCenterAchievements/:id/groupAchievement
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[gameCenterAchievements]: 
+  ~fields[gameCenterDetails]: 
+  ~fields[gameCenterGroups]: 
+  ~fields[gameCenterAchievementLocalizations]: 
+  ~fields[gameCenterAchievementReleases]: 
+  ~fields[gameCenterActivities]: 
+  ~include: 
+  ~limit[localizations]: 
+  ~limit[releases]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

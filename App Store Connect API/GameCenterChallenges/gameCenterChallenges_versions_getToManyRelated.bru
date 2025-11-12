@@ -1,0 +1,27 @@
+meta {
+  name: gameCenterChallenges_versions_getToManyRelated
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{baseUrl}}/v1/gameCenterChallenges/:id/versions
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[gameCenterChallengeVersions]: 
+  ~fields[gameCenterChallenges]: 
+  ~fields[gameCenterChallengeLocalizations]: 
+  ~fields[gameCenterChallengeVersionReleases]: 
+  ~fields[gameCenterChallengeImages]: 
+  ~limit: 
+  ~include: 
+  ~limit[localizations]: 
+  ~limit[releases]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

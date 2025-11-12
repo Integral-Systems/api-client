@@ -1,0 +1,19 @@
+meta {
+  name: appCategories_parent_getToOneRelated
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/v1/appCategories/:id/parent
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[appCategories]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

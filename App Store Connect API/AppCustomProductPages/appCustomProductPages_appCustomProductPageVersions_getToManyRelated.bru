@@ -1,0 +1,25 @@
+meta {
+  name: appCustomProductPages_appCustomProductPageVersions_getToManyRelated
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/v1/appCustomProductPages/:id/appCustomProductPageVersions
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[state]: 
+  ~fields[appCustomProductPageVersions]: 
+  ~fields[appCustomProductPages]: 
+  ~fields[appCustomProductPageLocalizations]: 
+  ~limit: 
+  ~include: 
+  ~limit[appCustomProductPageLocalizations]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,27 @@
+meta {
+  name: appStoreVersionExperimentTreatments_appStoreVersionExperimentTreatmentLocalizations_getToManyRelated
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/v1/appStoreVersionExperimentTreatments/:id/appStoreVersionExperimentTreatmentLocalizations
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[locale]: 
+  ~fields[appStoreVersionExperimentTreatmentLocalizations]: 
+  ~fields[appStoreVersionExperimentTreatments]: 
+  ~fields[appScreenshotSets]: 
+  ~fields[appPreviewSets]: 
+  ~limit: 
+  ~include: 
+  ~limit[appScreenshotSets]: 
+  ~limit[appPreviewSets]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

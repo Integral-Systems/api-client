@@ -1,0 +1,20 @@
+meta {
+  name: Describes `setStickerSetThumbnail` method
+  type: http
+  seq: 14
+}
+
+post {
+  url: {{baseUrl}}/setStickerSetThumbnail
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "format": "",
+    "name": "",
+    "thumbnail": "",
+    "user_id": 0
+  }
+}

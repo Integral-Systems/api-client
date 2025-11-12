@@ -1,0 +1,25 @@
+meta {
+  name: apps_appClips_getToManyRelated
+  type: http
+  seq: 13
+}
+
+get {
+  url: {{baseUrl}}/v1/apps/:id/appClips
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~filter[bundleId]: 
+  ~fields[appClips]: 
+  ~fields[apps]: 
+  ~fields[appClipDefaultExperiences]: 
+  ~limit: 
+  ~include: 
+  ~limit[appClipDefaultExperiences]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

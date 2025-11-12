@@ -1,0 +1,26 @@
+meta {
+  name: gameCenterEnabledVersions_compatibleVersions_deleteToManyRelationship
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{baseUrl}}/v1/gameCenterEnabledVersions/:id/relationships/compatibleVersions
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": [
+      {
+        "type": "",
+        "id": ""
+      }
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+meta {
+  name: ageRatingDeclarations_updateInstance
+  type: http
+  seq: 1
+}
+
+patch {
+  url: {{baseUrl}}/v1/ageRatingDeclarations/:id
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "data": {
+      "type": "",
+      "id": "",
+      "attributes": {
+        "alcoholTobaccoOrDrugUseOrReferences": "",
+        "contests": "",
+        "gambling": false,
+        "gamblingSimulated": "",
+        "kidsAgeBand": "",
+        "lootBox": false,
+        "medicalOrTreatmentInformation": "",
+        "profanityOrCrudeHumor": "",
+        "sexualContentGraphicAndNudity": "",
+        "sexualContentOrNudity": "",
+        "horrorOrFearThemes": "",
+        "matureOrSuggestiveThemes": "",
+        "unrestrictedWebAccess": false,
+        "violenceCartoonOrFantasy": "",
+        "violenceRealisticProlongedGraphicOrSadistic": "",
+        "violenceRealistic": "",
+        "koreaAgeRatingOverride": ""
+      }
+    }
+  }
+}

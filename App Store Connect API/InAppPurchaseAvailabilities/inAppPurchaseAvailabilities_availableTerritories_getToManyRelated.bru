@@ -1,0 +1,20 @@
+meta {
+  name: inAppPurchaseAvailabilities_availableTerritories_getToManyRelated
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/v1/inAppPurchaseAvailabilities/:id/availableTerritories
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[territories]: 
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

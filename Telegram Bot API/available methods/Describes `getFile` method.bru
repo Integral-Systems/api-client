@@ -1,0 +1,17 @@
+meta {
+  name: Describes `getFile` method
+  type: http
+  seq: 29
+}
+
+post {
+  url: {{baseUrl}}/getFile
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "file_id": ""
+  }
+}

@@ -1,0 +1,18 @@
+meta {
+  name: Describes `setChatMenuButton` method
+  type: http
+  seq: 65
+}
+
+post {
+  url: {{baseUrl}}/setChatMenuButton
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "chat_id": 0,
+    "menu_button": {}
+  }
+}

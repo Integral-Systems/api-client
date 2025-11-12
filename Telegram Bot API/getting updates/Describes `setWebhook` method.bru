@@ -1,0 +1,22 @@
+meta {
+  name: Describes `setWebhook` method
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/setWebhook
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "allowed_updates": [],
+    "drop_pending_updates": false,
+    "ip_address": "",
+    "max_connections": 0,
+    "secret_token": "",
+    "url": ""
+  }
+}

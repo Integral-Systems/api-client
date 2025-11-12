@@ -1,0 +1,20 @@
+meta {
+  name: Describes `sendChatAction` method
+  type: http
+  seq: 50
+}
+
+post {
+  url: {{baseUrl}}/sendChatAction
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "action": "",
+    "business_connection_id": "",
+    "chat_id": "",
+    "message_thread_id": 0
+  }
+}

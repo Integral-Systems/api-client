@@ -1,0 +1,59 @@
+meta {
+  name: ciProducts_app_getToOneRelated
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{baseUrl}}/v1/ciProducts/:id/app
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~fields[apps]: 
+  ~fields[appEncryptionDeclarations]: 
+  ~fields[ciProducts]: 
+  ~fields[betaGroups]: 
+  ~fields[appStoreVersions]: 
+  ~fields[preReleaseVersions]: 
+  ~fields[betaAppLocalizations]: 
+  ~fields[builds]: 
+  ~fields[betaLicenseAgreements]: 
+  ~fields[betaAppReviewDetails]: 
+  ~fields[appInfos]: 
+  ~fields[appClips]: 
+  ~fields[endUserLicenseAgreements]: 
+  ~fields[inAppPurchases]: 
+  ~fields[subscriptionGroups]: 
+  ~fields[gameCenterEnabledVersions]: 
+  ~fields[appCustomProductPages]: 
+  ~fields[promotedPurchases]: 
+  ~fields[appEvents]: 
+  ~fields[reviewSubmissions]: 
+  ~fields[subscriptionGracePeriods]: 
+  ~fields[gameCenterDetails]: 
+  ~fields[appStoreVersionExperiments]: 
+  ~include: 
+  ~limit[appEncryptionDeclarations]: 
+  ~limit[betaGroups]: 
+  ~limit[appStoreVersions]: 
+  ~limit[preReleaseVersions]: 
+  ~limit[betaAppLocalizations]: 
+  ~limit[builds]: 
+  ~limit[appInfos]: 
+  ~limit[appClips]: 
+  ~limit[inAppPurchases]: 
+  ~limit[subscriptionGroups]: 
+  ~limit[gameCenterEnabledVersions]: 
+  ~limit[appCustomProductPages]: 
+  ~limit[inAppPurchasesV2]: 
+  ~limit[promotedPurchases]: 
+  ~limit[appEvents]: 
+  ~limit[reviewSubmissions]: 
+  ~limit[appStoreVersionExperimentsV2]: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

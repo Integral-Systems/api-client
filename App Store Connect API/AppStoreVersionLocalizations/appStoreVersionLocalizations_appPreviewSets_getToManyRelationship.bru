@@ -1,0 +1,19 @@
+meta {
+  name: appStoreVersionLocalizations_appPreviewSets_getToManyRelationship
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/v1/appStoreVersionLocalizations/:id/relationships/appPreviewSets
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~limit: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
