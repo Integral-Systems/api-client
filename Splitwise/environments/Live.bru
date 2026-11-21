@@ -1,3 +1,6 @@
-vars:secret [
-  splitwise_token
-]
+vars {
+  splitwise_token: {{vault.splitwise_token}}
+}
+vars:externalsecrets:hashicorp-vault-server {
+  vault: secret-store/data/operations/bruno-client/splitwise/live
+}

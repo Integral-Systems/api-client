@@ -1,6 +1,7 @@
 vars {
+  token: {{vault.token}}
   baseUrl: https://api.appstoreconnect.apple.com
 }
-vars:secret [
-  token
-]
+vars:externalsecrets:hashicorp-vault-server {
+  vault: secret-store/data/operations/bruno-client/app-store-connect-api/environment-1
+}

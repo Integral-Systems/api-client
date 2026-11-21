@@ -1,7 +1,8 @@
 vars {
+  User: {{vault.User}}
+  Password: {{vault.Password}}
   host: https://gw01.int.integral-systems.ch:8443
 }
-vars:secret [
-  User,
-  Password
-]
+vars:externalsecrets:hashicorp-vault-server {
+  vault: secret-store/data/operations/bruno-client/opnsense/gw01
+}

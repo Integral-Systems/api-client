@@ -1,4 +1,7 @@
-vars:secret [
-  user,
-  pass
-]
+vars {
+  user: {{vault.user}}
+  pass: {{vault.pass}}
+}
+vars:externalsecrets:hashicorp-vault-server {
+  vault: secret-store/data/operations/bruno-client/ara/production
+}

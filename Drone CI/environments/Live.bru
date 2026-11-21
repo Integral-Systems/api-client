@@ -1,3 +1,6 @@
-vars:secret [
-  token
-]
+vars {
+  token: {{vault.token}}
+}
+vars:externalsecrets:hashicorp-vault-server {
+  vault: secret-store/data/operations/bruno-client/drone-ci/live
+}
