@@ -1,3 +1,6 @@
-vars:secret [
-  key
-]
+vars {
+  key: {{vault.key}}
+}
+vars:externalsecrets:hashicorp-vault-server {
+  vault: secret-store/data/operations/bruno-client/portainer/live
+}

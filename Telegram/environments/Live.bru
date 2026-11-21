@@ -1,3 +1,6 @@
 vars {
-  bot_token: 5386225720:AAEKgiysSjy-p6Z0yNgDcCl_QmqNjSSPPw4
+  bot_token: {{vault.bot_token}}
+}
+vars:externalsecrets:hashicorp-vault-server {
+  vault: secret-store/data/operations/bruno-client/telegram/live
 }

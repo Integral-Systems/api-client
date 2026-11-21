@@ -1,4 +1,7 @@
-vars:secret [
-  user,
-  password
-]
+vars {
+  user: {{vault.user}}
+  password: {{vault.password}}
+}
+vars:externalsecrets:hashicorp-vault-server {
+  vault: secret-store/data/operations/bruno-client/homeassistant/b18
+}

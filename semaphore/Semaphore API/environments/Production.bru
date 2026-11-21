@@ -1,0 +1,8 @@
+vars {
+  token: {{vault.token}}
+  baseUrl: https://semaphore.int.integral-systems.ch/api
+  project_id: 1
+}
+vars:externalsecrets:hashicorp-vault-server {
+  vault: secret-store/data/operations/bruno-client/semaphore-api/production
+}

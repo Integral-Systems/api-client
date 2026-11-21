@@ -1,3 +1,6 @@
-vars:secret [
-  bot_token
-]
+vars {
+  bot_token: {{vault.bot_token}}
+}
+vars:externalsecrets:hashicorp-vault-server {
+  vault: secret-store/data/operations/bruno-client/telegram/sinnyside-up
+}

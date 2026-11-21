@@ -1,0 +1,6 @@
+# Secrets: never commit
+.env
+.env.*
+*.secrets.env
+!vault.secrets.env
+.DS_Store

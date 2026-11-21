@@ -1,7 +1,8 @@
 vars {
+  client-id: {{vault.client-id}}
+  client-secret: {{vault.client-secret}}
   host: http://localhost:8000
 }
-vars:secret [
-  client-id,
-  client-secret
-]
+vars:externalsecrets:hashicorp-vault-server {
+  vault: secret-store/data/operations/bruno-client/casdoor/local
+}
